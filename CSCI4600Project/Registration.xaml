@@ -9,7 +9,7 @@
     <Grid>
         <Label Content="Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="77,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        
+
         <RadioButton Content="Male" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,1.421"/>
         <RadioButton Content="Female" HorizontalAlignment="Left" Margin="108,48,0,0" VerticalAlignment="Top"/>
         
