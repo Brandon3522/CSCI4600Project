@@ -1,0 +1,20 @@
+Scenario 1:
+	A new user enters the system. First, they make a new account and add their personal 
+information to the account. They then login to the system and begin to register for courses. After they 
+register for courses, they check their info to make sure that all the courses were registered 
+correctly. Then they check their currently enrolled courses to copy the times and dates for their 
+classes.
+
+Scenario 2:
+      A student is expelled from the university. A staff member logs in and accesses the 
+database. The staff member checks the student’s information to make sure they are the correct 
+student. They then edit the student’s account information to remove them from their courses. 
+They finally add to the student’s information why they were expelled so that the student is not 
+let back into the university and in case the university needs it for legal purposes.
+
+Scenario 3:
+      A student is getting ready to graduate. The student logs into the system. The student 
+checks their GPA to see what should go on their resume. The student then checks their already 
+completed courses to see if there are any they need to retake to raise their GPA. A staff 
+member then logs into the system. The staff member edits the students account to show that 
+they are ready to graduate.

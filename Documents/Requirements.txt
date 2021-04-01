@@ -1,0 +1,68 @@
+Student Registration System Requirements
+
+Team members
+Brandon Sitz and Weston Abner
+
+Purpose
+The purpose of this project is to build a student registry system that allows students to track their courses and enroll in new courses. 
+
+Requirements
+1. Name: Add_student
+Type: Functional
+Summary: Students will be added to the registration system. 
+
+2. Name: Add_staff
+Type: Functional
+Summary: Staff will be added to the registration system.
+
+3. Name: Add_course
+Type: Functional
+Summary: Add course to the current course list.
+
+4. Name: View_current_course
+Type: Functional
+Summary: View courses currently enrolled in.
+
+5. Name: View_completed_course
+Type: Functional
+Summary: View courses previously completed.
+
+6. Name: Calculate_gpa
+Type: Functional
+Summary: Will calculate the students current gpa.
+
+7. Name: Display_major
+Type: Functional
+Summary: Will store and display the students current major.
+
+8. Name: Display_time_date
+Type: Functional
+Summary: Displays the system time and date.
+
+9. Name: Display_class_information
+Type: Functional
+Summary: Will display location, time, and date of class.
+
+10. Name: Drop_course
+Type: Functional
+Summary: Drop course from current course list.
+
+11. Name: Delete_student
+Type: Functional
+Summary: Delete student from student registration system.
+
+12. Name: Delete_staff
+Type: Functional
+Summary: Delete staff from student registration system.
+
+13. Name: Platform_os
+Type: Constraint
+Summary: The target platform operating system is Windows 10.
+
+14. Name: Student_security
+Type: Risk
+Summary: Student personal information will be stored securely.
+
+15. Name: Staff_security
+Type: Risk
+Summary: Staff personal information will be stored securely.
