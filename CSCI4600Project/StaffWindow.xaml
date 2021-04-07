@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600Project"
         mc:Ignorable="d"
-        Title="StaffWindow" Height="450" Width="800">
+        Title="StaffWindow" Height="600" Width="900" Background="Gray" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Label Content="Welcome, " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Content="Staff Name" HorizontalAlignment="Left" Margin="75,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.013,0.382" FontWeight="Bold"/>
+
+            <Button Content="Logout" HorizontalAlignment="Left" Margin="10,519,0,0" VerticalAlignment="Top" Width="110" Height="40"/>
+
+            <Button Content="Account" HorizontalAlignment="Left" Margin="10,450,0,0" VerticalAlignment="Top" Width="110" Height="40"/>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Label Content="Students:" Grid.Column="1" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <DataGrid x:Name="DataStudent" Grid.Column="1" HorizontalAlignment="Left" Height="259" Margin="10,36,0,0" VerticalAlignment="Top" Width="672"/>
+            <Button HorizontalAlignment="Left" Margin="571,300,0,0" VerticalAlignment="Top" Width="110" Height="40" Grid.Column="1" Content="Remove"/>
+        </Grid>
     </Grid>
 </Window>
