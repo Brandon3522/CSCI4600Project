@@ -30,5 +30,10 @@ namespace CSCI4600Project
             mainWindow.Show();
             this.Close();
         }
+
+        private void Register_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
