@@ -7,17 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Background="Gray" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Welcome to the Name University" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="400" FontSize="20"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="395*"/>
+            <ColumnDefinition Width="397*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Welcome to the Name University" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="400" FontSize="20" Grid.ColumnSpan="2"/>
 
-        <Label x:Name="UsernameLabel" Content="Username" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="362,59,352,0" Width="78" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Center" Height="23" Margin="335,90,337,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="UsernameLabel" Content="Username" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="362,59,352,0" Width="78" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2"/>
 
-        <Label x:Name="PasswordLabel" Content="Password" HorizontalAlignment="Left" Margin="362,145,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="335,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="PasswordLabel" Content="Password" HorizontalAlignment="Left" Margin="362,145,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="335,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
 
-        <Button x:Name="Login" Content="Login" HorizontalAlignment="Left" Margin="300,235,0,0" VerticalAlignment="Top" Width="75" Height="28"/>
+        <Button x:Name="Login" Content="Login" HorizontalAlignment="Left" Margin="300,235,0,0" VerticalAlignment="Top" Width="75" Height="28" Click="Login_Click"/>
 
-        <Button x:Name="CreateAccount" Content="Create Account" HorizontalAlignment="Left" Margin="407,235,0,0" VerticalAlignment="Top" Width="89" Height="28" Click="CreateAccount_Click"/>
+        <Button x:Name="CreateAccount" Content="Create Account" HorizontalAlignment="Left" Margin="12,235,0,0" VerticalAlignment="Top" Width="89" Height="28" Click="CreateAccount_Click" Grid.Column="1"/>
+        <TextBox x:Name="PasswordTextBox_Copy" HorizontalAlignment="Left" Height="23" Margin="335,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

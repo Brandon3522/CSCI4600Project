@@ -23,5 +23,19 @@ namespace CSCI4600Project
         {
             InitializeComponent();
         }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
+
+        private void AccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            AccountInfoStudent accountInfoStudent = new AccountInfoStudent();
+            accountInfoStudent.Show();
+            this.Close();
+        }
     }
 }

@@ -31,5 +31,12 @@ namespace CSCI4600Project
             registration.Show();
             this.Close();
         }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            StudentWindow studentWindow = new StudentWindow();
+            studentWindow.Show();
+            this.Close();
+        }
     }
 }

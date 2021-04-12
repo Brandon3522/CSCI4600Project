@@ -15,26 +15,24 @@ using System.Windows.Shapes;
 namespace CSCI4600Project
 {
     /// <summary>
-    /// Interaction logic for StaffWindow.xaml
+    /// Interaction logic for AccountInfoStudent.xaml
     /// </summary>
-    public partial class StaffWindow : Window
+    public partial class AccountInfoStudent : Window
     {
-        public StaffWindow()
+        public AccountInfoStudent()
         {
             InitializeComponent();
         }
 
-        private void AccountButton_Click(object sender, RoutedEventArgs e)
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            AccountInfoStaff accountInfoStaff = new AccountInfoStaff();
-            accountInfoStaff.Show();
-            this.Close();
+
         }
 
-        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        private void MainWindowButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            StudentWindow studentWindow = new StudentWindow();
+            studentWindow.Show();
             this.Close();
         }
     }

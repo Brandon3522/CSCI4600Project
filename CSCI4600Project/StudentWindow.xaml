@@ -16,9 +16,9 @@
             <Label Content="Welcome, " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Content="Student Name" HorizontalAlignment="Left" Margin="75,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.013,0.382" FontWeight="Bold"/>
 
-            <Button Content="Logout" HorizontalAlignment="Left" Margin="10,519,0,0" VerticalAlignment="Top" Width="110" Height="40"/>
+            <Button x:Name="LogoutButton" Content="Logout" HorizontalAlignment="Left" Margin="10,519,0,0" VerticalAlignment="Top" Width="110" Height="40" Click="LogoutButton_Click"/>
 
-            <Button Content="Account" HorizontalAlignment="Left" Margin="10,450,0,0" VerticalAlignment="Top" Width="110" Height="40"/>
+            <Button x:Name="AccountButton" Content="Account" HorizontalAlignment="Left" Margin="10,450,0,0" VerticalAlignment="Top" Width="110" Height="40" Click="AccountButton_Click"/>
         </Grid>
 
         <Grid Grid.Column="1">
