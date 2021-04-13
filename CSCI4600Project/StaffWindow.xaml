@@ -23,8 +23,8 @@
 
         <Grid Grid.Column="1">
             <Label Content="Students:" Grid.Column="1" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <DataGrid x:Name="DataStudent" Grid.Column="1" HorizontalAlignment="Left" Height="259" Margin="10,36,0,0" VerticalAlignment="Top" Width="672"/>
-            <Button HorizontalAlignment="Left" Margin="571,300,0,0" VerticalAlignment="Top" Width="110" Height="40" Grid.Column="1" Content="Remove"/>
+            <DataGrid x:Name="StudentListDataGrid" Grid.Column="1" HorizontalAlignment="Left" Height="259" Margin="10,36,0,0" VerticalAlignment="Top" Width="672"/>
+            <Button x:Name="RemoveButton" HorizontalAlignment="Left" Margin="571,300,0,0" VerticalAlignment="Top" Width="110" Height="40" Grid.Column="1" Content="Remove" Click="RemoveButton_Click"/>
         </Grid>
     </Grid>
 </Window>

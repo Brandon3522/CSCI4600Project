@@ -25,10 +25,10 @@
             <Label Content="Courses:" Grid.Column="1" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <DataGrid x:Name="DataStudent" Grid.Column="1" HorizontalAlignment="Left" Height="259" Margin="10,36,0,0" VerticalAlignment="Top" Width="672"/>
 
-            <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="9,300,0,0" VerticalAlignment="Top" Width="120"/>
-            <Button HorizontalAlignment="Left" Margin="571,300,0,0" VerticalAlignment="Top" Width="110" Height="40" Grid.Column="1" Content="Remove"/>
+            <ComboBox x:Name="CourseList" Grid.Column="1" HorizontalAlignment="Left" Margin="9,300,0,0" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="RemoveCourseButton" HorizontalAlignment="Left" Margin="571,300,0,0" VerticalAlignment="Top" Width="110" Height="40" Grid.Column="1" Content="Remove" Click="RemoveCourseButton_Click"/>
 
-            <Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Height="40" Grid.Column="1" Margin="456,300,0,0"/>
+            <Button x:Name="AddCourseButton" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Height="40" Grid.Column="1" Margin="456,300,0,0" Click="AddCourseButton_Click"/>
         </Grid>
     </Grid>
 </Window>

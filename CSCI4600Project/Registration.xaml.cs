@@ -23,7 +23,7 @@ namespace CSCI4600Project
         {
             InitializeComponent();
         }
-
+        // Return to Login
         private void LoginScreen_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
@@ -33,6 +33,11 @@ namespace CSCI4600Project
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
+            // Verify all information inputted
+            // Take user information and create Student or Staff based on selection
+            // Add the user to the Registration
+            // User should now be able to log in
+
 
         }
     }

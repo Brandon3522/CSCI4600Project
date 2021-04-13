@@ -23,19 +23,28 @@ namespace CSCI4600Project
         {
             InitializeComponent();
         }
-
+        // View account information
         private void AccountButton_Click(object sender, RoutedEventArgs e)
         {
             AccountInfoStaff accountInfoStaff = new AccountInfoStaff();
             accountInfoStaff.Show();
             this.Close();
         }
-
+        // Logout
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
+        }
+        // Remove student from Data Grid
+        private void RemoveButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Verify this is the student to be removed
+            // Remove student from StudentListDataGrid
+            // Remove student from Registration list
+
+
         }
     }
 }

@@ -24,16 +24,21 @@ namespace CSCI4600Project
         {
             InitializeComponent();
         }
-
+        // Navigate to Registration Window
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
         {
             Registration registration = new Registration();
             registration.Show();
             this.Close();
         }
-
+        // Login to system
         private void Login_Click(object sender, RoutedEventArgs e)
         {
+            // Check if user is Student or Staff
+            // Check file for username and password
+            // If found allow access, if not throw error
+
+
             StudentWindow studentWindow = new StudentWindow();
             studentWindow.Show();
             this.Close();

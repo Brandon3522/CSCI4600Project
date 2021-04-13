@@ -23,19 +23,37 @@ namespace CSCI4600Project
         {
             InitializeComponent();
         }
-
+        // Logout from system
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
         }
-
+        // View account information
         private void AccountButton_Click(object sender, RoutedEventArgs e)
         {
             AccountInfoStudent accountInfoStudent = new AccountInfoStudent();
             accountInfoStudent.Show();
             this.Close();
+        }
+
+        private void AddCourseButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Add selected course from comboBox into DataStudent Data Grid
+            // Add selected course to student course list
+
+
+
+        }
+
+        private void RemoveCourseButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Remove selected course from Data Grid
+            // Remove course from student course list
+
+
+
         }
     }
 }

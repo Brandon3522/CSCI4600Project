@@ -19,16 +19,21 @@ namespace CSCI4600Project
     /// </summary>
     public partial class AccountInfoStudent : Window
     {
+        // Needs to bind completed courses to CompletedClasses list box
+
         public AccountInfoStudent()
         {
             InitializeComponent();
         }
-
+        // Update student information
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
+            // Verfiy information isn't blank
+            // Update student information, needs to be updated in Registration maybe
+
 
         }
-
+        // Navigate to Main Window
         private void MainWindowButton_Click(object sender, RoutedEventArgs e)
         {
             StudentWindow studentWindow = new StudentWindow();

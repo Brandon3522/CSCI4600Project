@@ -19,16 +19,22 @@ namespace CSCI4600Project
     /// </summary>
     public partial class AccountInfoStaff : Window
     {
+        // Bind student registration list to StudentList
+
         public AccountInfoStaff()
         {
             InitializeComponent();
         }
-
+        // Update account info
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
+            // Verfiy info isnt empty
+            // Message box to verify
+            // Update Staff information
+
 
         }
-
+        // Navigate to Main Window
         private void MainWindowButton_Click(object sender, RoutedEventArgs e)
         {
             StaffWindow staffWindow = new StaffWindow();
