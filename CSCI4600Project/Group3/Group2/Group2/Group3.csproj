@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1E3333AC-F025-48DF-8C47-F7840851CA4F}</ProjectGuid>
+    <ProjectGuid>{E1580017-C857-43EB-A521-088DE02E76F8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CSCI4600Project</RootNamespace>
-    <AssemblyName>CSCI4600Project</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RootNamespace>Group2</RootNamespace>
+    <AssemblyName>Group2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -51,58 +51,12 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="AccountInfoStaff.xaml.cs">
-      <DependentUpon>AccountInfoStaff.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AccountInfoStudent.xaml.cs">
-      <DependentUpon>AccountInfoStudent.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="IFormatter.cs" />
-    <Compile Include="Registration.xaml.cs">
-      <DependentUpon>Registration.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="StaffWindow.xaml.cs">
-      <DependentUpon>StaffWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="StudentWindow.xaml.cs">
-      <DependentUpon>StudentWindow.xaml</DependentUpon>
-    </Compile>
-    <Page Include="AccountInfoStaff.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AccountInfoStudent.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="Registration.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="StaffWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="StudentWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Compile Include="staff.cs" />
+    <Compile Include="Course.cs" />
+    <Compile Include="Interface1.cs" />
+    <Compile Include="Properties\iformater.cs" />
+    <Compile Include="Registration.cs" />
+    <Compile Include="Student.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
