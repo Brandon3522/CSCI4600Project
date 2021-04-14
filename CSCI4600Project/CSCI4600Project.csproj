@@ -61,13 +61,17 @@
     <Compile Include="AccountInfoStudent.xaml.cs">
       <DependentUpon>AccountInfoStudent.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Course.cs" />
     <Compile Include="IFormatter.cs" />
     <Compile Include="Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RegistrationClass.cs" />
+    <Compile Include="Staff.cs" />
     <Compile Include="StaffWindow.xaml.cs">
       <DependentUpon>StaffWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Student.cs" />
     <Compile Include="StudentWindow.xaml.cs">
       <DependentUpon>StudentWindow.xaml</DependentUpon>
     </Compile>
