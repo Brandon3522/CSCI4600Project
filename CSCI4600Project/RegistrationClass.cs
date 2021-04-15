@@ -25,6 +25,12 @@ namespace CSCI4600Project
         {
             students.Add(c);
         }
+
+        public void AddStaff(Staff s)
+        {
+            staff.Add(s);
+        }
+
         public string getccoursesinfo()
         {
             string t = "";

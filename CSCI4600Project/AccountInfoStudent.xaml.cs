@@ -29,7 +29,7 @@ namespace CSCI4600Project
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             // Verfiy information isn't blank
-            // Update student information, needs to be updated in Registration maybe
+            // Update student information, needs to be updated in Registration file
 
 
         }

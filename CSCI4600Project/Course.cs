@@ -24,7 +24,6 @@ namespace CSCI4600Project
             this.location = location;
             this.chours = chours;
             this.score = score;
-
         }
 
         public string getinfo()

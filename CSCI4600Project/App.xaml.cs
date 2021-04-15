@@ -13,5 +13,6 @@ namespace CSCI4600Project
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

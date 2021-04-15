@@ -20,9 +20,12 @@ namespace CSCI4600Project
     /// </summary>
     public partial class MainWindow : Window
     {
+        // RegistrationClass registrationClass = new RegistrationClass();
+        //((App) Application.Current).
         public MainWindow()
         {
             InitializeComponent();
+
         }
         // Navigate to Registration Window
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
@@ -38,10 +41,20 @@ namespace CSCI4600Project
             // Check file for username and password
             // If found allow access, if not throw error
 
+            if (UsernameText.Text == "" || PasswordText.Text == "")
+            {
+                MessageBox.Show("Please verify Username and Password", "Empty Username or Password", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                // Check registration for user
+                // If found allow access to Student or Staff window
+                StudentWindow studentWindow = new StudentWindow();
+                studentWindow.Show();
+                this.Close();
+            }
 
-            StudentWindow studentWindow = new StudentWindow();
-            studentWindow.Show();
-            this.Close();
+            
         }
     }
 }

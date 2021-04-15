@@ -13,18 +13,22 @@ namespace CSCI4600Project
         public int StudentId { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
+        public string Password { get; private set; }
+        public string Gender { get; private set; }
         public string major { get; set; }
         List<Course> ccourses;
         List<Course> fcourses;
 
 
         //Student method
-        public Student(int StudentId, string major, string FirstName, string LastName)
+        public Student(int StudentId, string major, string FirstName, string LastName, string password, string gender)
         {
             this.StudentId = StudentId;
             this.FirstName = FirstName;
             this.LastName = LastName;
             this.major = major;
+            this.Password = password;
+            this.Gender = gender;
             ccourses = new List<Course>();
             fcourses = new List<Course>();
         }
