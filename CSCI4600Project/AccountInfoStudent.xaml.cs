@@ -20,10 +20,40 @@ namespace CSCI4600Project
     public partial class AccountInfoStudent : Window
     {
         // Needs to bind completed courses to CompletedClasses list box
+        Student student = new Student(0, "Computer Science", "Billy", "Bob", "Pass", "Male");
+
+        List<Course> courses = new List<Course>();
+        
+       
 
         public AccountInfoStudent()
         {
             InitializeComponent();
+
+            Course CSharp = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
+            Course C = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
+            Course Cd = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
+            courses.Add(CSharp);
+            courses.Add(C);
+            courses.Add(Cd);
+
+            foreach (var Ca in courses)
+            {
+                CompletedClasses.Items.Add(Ca);
+            }
+
+            // List Box
+
+            Course English = new Course("English", "Mondays and tuesdays", "8:00", "English building", 4, 0);
+            Course CSharp0 = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
+            Course Cpp = new Course("Cpp", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
+
+            student.addfcourse(English);
+            student.addfcourse(CSharp0);
+            student.addfcourse(Cpp);
+
+            StudentfCourseList.Items.Add(student.Getfcoursesinfo()) ;
+
         }
         // Update student information
         private void UpdateButton_Click(object sender, RoutedEventArgs e)

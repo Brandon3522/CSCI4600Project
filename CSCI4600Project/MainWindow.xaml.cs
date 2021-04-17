@@ -37,8 +37,8 @@ namespace CSCI4600Project
         // Login to system
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            // Check if user is Student or Staff
-            // Check file for username and password
+            // Check if user is Student or Staff and open respective window
+            // Check file for registration id then username and password
             // If found allow access, if not throw error
 
             if (UsernameText.Text == "" || PasswordText.Text == "")
@@ -47,7 +47,7 @@ namespace CSCI4600Project
             }
             else
             {
-                // Check registration for user
+                // Check registration file for user
                 // If found allow access to Student or Staff window
                 StudentWindow studentWindow = new StudentWindow();
                 studentWindow.Show();

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 namespace CSCI4600Project
 {
     [Serializable]
-    public class Student
+    public class Student : IEnumerable
     {
         //Fields, Get/Set
         public int StudentId { get; private set; }
@@ -51,6 +52,11 @@ namespace CSCI4600Project
         public void addccourse(Course course)
         {
             ccourses.Add(course);
+        }
+
+        public void addfcourse(Course course)
+        {
+            fcourses.Add(course);
         }
 
         public void endsemester()
@@ -108,6 +114,16 @@ namespace CSCI4600Project
 
         }
 
+        public List<Course> CourseList()
+        {
+            List<Course> courses = new List<Course>();
+            foreach (Course c in ccourses)
+            {
+                courses.Add(c);
+            }
+            return courses;
+        }
+
         public string Getfcoursesinfo()
         {
             string t = "";
@@ -125,7 +141,7 @@ namespace CSCI4600Project
         {
             int x = 0;
 
-            foreach (Course c in ccourses)
+            foreach (Course c in ccourses.ToList())
             {
                 if (s == c.cname)
                 {
@@ -137,6 +153,11 @@ namespace CSCI4600Project
 
 
 
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+           return ccourses.GetEnumerator();
         }
     }
 }
