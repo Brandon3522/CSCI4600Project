@@ -140,7 +140,7 @@ namespace CSCI4600Project
             
             StudentListBox.Items.Add(student.Getccourseinfo(course));
 
-            DataStudent.ItemsSource = student.Getccoursesinfo();
+            //DataStudent.ItemsSource = student.Getccoursesinfo();
 
         }
 

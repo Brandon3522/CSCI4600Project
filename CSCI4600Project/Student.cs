@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 namespace CSCI4600Project
 {
     [Serializable]
-    public class Student : IEnumerable
+    public class Student
     {
         //Fields, Get/Set
-        public int StudentId { get; private set; }
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public string Password { get; private set; }
-        public string Gender { get; private set; }
+        public int StudentId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Password { get; set; }
+        public string Gender { get; set; }
         public string major { get; set; }
         List<Course> ccourses;
         List<Course> fcourses;
@@ -32,6 +32,11 @@ namespace CSCI4600Project
             this.Gender = gender;
             ccourses = new List<Course>();
             fcourses = new List<Course>();
+        }
+
+        public Student()
+        {
+
         }
         public string studentinfo()
         {
@@ -155,9 +160,6 @@ namespace CSCI4600Project
 
         }
 
-        public IEnumerator GetEnumerator()
-        {
-           return ccourses.GetEnumerator();
-        }
+      
     }
 }

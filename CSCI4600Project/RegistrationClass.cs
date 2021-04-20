@@ -10,8 +10,8 @@ namespace CSCI4600Project
     public class RegistrationClass
     {
         //Student list
-        List<Student> students;
-        List<Staff> staff;
+        public List<Student> students;
+        public List<Staff> staff;
 
         //Registration method
         public RegistrationClass()
@@ -125,6 +125,7 @@ namespace CSCI4600Project
             Student student1 = new Student(1, "English", "Tom", "Y", "Password", "Male");
             Student student2 = new Student(2, "CS", "Tomyyyyy", "Y", "Password", "Male");
             Student student3 = new Student(3, "Engineering", "Bobbyyy", "Y", "Password", "Male");
+
         }
 
     }

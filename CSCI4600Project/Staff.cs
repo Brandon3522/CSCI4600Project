@@ -9,14 +9,19 @@ namespace CSCI4600Project
     [Serializable]
     public class Staff
     {
-        public int staffId;
-        public string firstname;
-        public string lastname;
+        public int staffId { get; set; }
+        public string firstname { get; set; }
+        public string lastname { get; set; }
         public Staff(int sid, string fname, string lname)
         {
             this.staffId = sid;
             this.firstname = fname;
             this.lastname = lname;
+        }
+
+        public Staff()
+        {
+
         }
 
         public string info()

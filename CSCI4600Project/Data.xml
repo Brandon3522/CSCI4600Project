@@ -1,1 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+<?xml version="1.0"?>
+<RegistrationClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <students>
+    <Student>
+      <StudentId>0</StudentId>
+      <FirstName>Bob</FirstName>
+      <LastName>Y</LastName>
+      <Password>Password</Password>
+      <Gender>Male</Gender>
+      <major>English</major>
+    </Student>
+    <Student>
+      <StudentId>1</StudentId>
+      <FirstName>Tom</FirstName>
+      <LastName>Y</LastName>
+      <Password>Password</Password>
+      <Gender>Male</Gender>
+      <major>English</major>
+    </Student>
+    <Student>
+      <StudentId>2</StudentId>
+      <FirstName>Tomyyyyy</FirstName>
+      <LastName>Y</LastName>
+      <Password>Password</Password>
+      <Gender>Male</Gender>
+      <major>CS</major>
+    </Student>
+    <Student>
+      <StudentId>3</StudentId>
+      <FirstName>Bobbyyy</FirstName>
+      <LastName>Y</LastName>
+      <Password>Password</Password>
+      <Gender>Male</Gender>
+      <major>Engineering</major>
+    </Student>
+  </students>
+  <staff />
+</RegistrationClass>

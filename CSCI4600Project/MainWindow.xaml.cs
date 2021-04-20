@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,28 @@ namespace CSCI4600Project
         public MainWindow()
         {
             InitializeComponent();
+
+            Student student0 = new Student(0, "English", "Bob", "Y", "Password", "Male");
+            Student student1 = new Student(1, "English", "Tom", "Y", "Password", "Male");
+            Student student2 = new Student(2, "CS", "Tomyyyyy", "Y", "Password", "Male");
+            Student student3 = new Student(3, "Engineering", "Bobbyyy", "Y", "Password", "Male");
+
+            registrationClass.Addstudent(student0);
+            registrationClass.Addstudent(student1);
+            registrationClass.Addstudent(student2);
+            registrationClass.Addstudent(student3);
+
             string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
+
+            XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
+
+            FileStream file0 = System.IO.File.Create("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml");
+
+            write0.Serialize(file0, registrationClass);
+
+            file0.Close();
+
+
             doc.Load(filePath);
             //((App)Application.Current).
         }
