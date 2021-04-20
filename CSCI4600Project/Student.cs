@@ -98,7 +98,7 @@ namespace CSCI4600Project
             {
                 if (s == c.cname)
                 {
-                    t = c.getinfo();
+                    t = c.getinfo() + "\n";
                 }
             }
 
@@ -111,7 +111,7 @@ namespace CSCI4600Project
             string t = "";
             foreach (Course c in ccourses)
             {
-                t = t + c.getinfo();
+                t = t + c.getinfo() + "\n";
             }
 
 

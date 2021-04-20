@@ -34,23 +34,31 @@ namespace CSCI4600Project
         {
             InitializeComponent();
 
-            Student student0 = new Student(0, "English", "Bob", "Y", "Password", "Male");
-            Student student1 = new Student(1, "English", "Tom", "Y", "Password", "Male");
-            Student student2 = new Student(2, "CS", "Tomyyyyy", "Y", "Password", "Male");
-            Student student3 = new Student(3, "Engineering", "Bobbyyy", "Y", "Password", "Male");
+            Student student0 = new Student(0, "English", "Billy", "Bob", "Password", "Male");
+
+            Student student1 = new Student(1, "CS", "Tom", "Bob", "Password", "Male");
 
             Course course = new Course("English", "Monday", "8:00", "English building", 4, 90);
 
-            Course course1 = new Course("C#", "Thursday", "10:00", "CS building", 4, 90);
+            Course course1 = new Course("English", "Monday", "8:00", "English building", 4, 90);
 
             student0.addccourse(course);
 
-            student2.addccourse(course1);
+            student0.addccourse(course1);
+
+
+
+            student1.addccourse(course1);
+            student1.addccourse(course);
+
+            //student0.addccourse(course);
+
+            //student2.addccourse(course1);
 
             registrationClass.Addstudent(student0);
             registrationClass.Addstudent(student1);
-            registrationClass.Addstudent(student2);
-            registrationClass.Addstudent(student3);
+            //registrationClass.Addstudent(student2);
+            //registrationClass.Addstudent(student3);
 
             string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
 

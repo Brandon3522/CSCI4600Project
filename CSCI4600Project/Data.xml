@@ -11,21 +11,19 @@
           <chours>4</chours>
           <score>90</score>
         </Course>
+        <Course>
+          <cname>English</cname>
+          <days>Monday</days>
+          <time>8:00</time>
+          <location>English building</location>
+          <chours>4</chours>
+          <score>90</score>
+        </Course>
       </ccourses>
       <fcourses />
       <StudentId>0</StudentId>
-      <FirstName>Bob</FirstName>
-      <LastName>Y</LastName>
-      <Password>Password</Password>
-      <Gender>Male</Gender>
-      <major>English</major>
-    </Student>
-    <Student>
-      <ccourses />
-      <fcourses />
-      <StudentId>1</StudentId>
-      <FirstName>Tom</FirstName>
-      <LastName>Y</LastName>
+      <FirstName>Billy</FirstName>
+      <LastName>Bob</LastName>
       <Password>Password</Password>
       <Gender>Male</Gender>
       <major>English</major>
@@ -33,31 +31,29 @@
     <Student>
       <ccourses>
         <Course>
-          <cname>C#</cname>
-          <days>Thursday</days>
-          <time>10:00</time>
-          <location>CS building</location>
+          <cname>English</cname>
+          <days>Monday</days>
+          <time>8:00</time>
+          <location>English building</location>
+          <chours>4</chours>
+          <score>90</score>
+        </Course>
+        <Course>
+          <cname>English</cname>
+          <days>Monday</days>
+          <time>8:00</time>
+          <location>English building</location>
           <chours>4</chours>
           <score>90</score>
         </Course>
       </ccourses>
       <fcourses />
-      <StudentId>2</StudentId>
-      <FirstName>Tomyyyyy</FirstName>
-      <LastName>Y</LastName>
+      <StudentId>1</StudentId>
+      <FirstName>Tom</FirstName>
+      <LastName>Bob</LastName>
       <Password>Password</Password>
       <Gender>Male</Gender>
       <major>CS</major>
-    </Student>
-    <Student>
-      <ccourses />
-      <fcourses />
-      <StudentId>3</StudentId>
-      <FirstName>Bobbyyy</FirstName>
-      <LastName>Y</LastName>
-      <Password>Password</Password>
-      <Gender>Male</Gender>
-      <major>Engineering</major>
     </Student>
   </students>
   <staff />

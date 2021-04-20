@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.Serialization;
+using System.Xml.XPath;
 
 namespace CSCI4600Project
 {
@@ -22,24 +27,67 @@ namespace CSCI4600Project
        // List<Course> courses = new List<Course>();
         Student student = new Student(0, "Computer Science", "Billy", "Bob", "Pass", "Male");
         RegistrationClass registration0 = new RegistrationClass();
+        Student student1 = new Student();
 
-        
+
         public StudentWindow()
         {
             InitializeComponent();
 
-            registration0.Addstudent(student);
+          //  registration0.Addstudent(student);
 
+            //////////////// XML ////////////////////
+            // Open file and deserialze to RegistrationClass object
+            string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
+
+            XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
+
+            FileStream filestream = new FileStream(filePath, FileMode.Open);
+
+            registration0 = (RegistrationClass)write0.Deserialize(filestream);
+
+            filestream.Close();
+            //
             
+            student1 = registration0.FindStudent("Billy");
 
-           // BindGrid(C);
+            ListReload();
 
-            
+
+            //// Save RegistrationClass object to xml file
+            //XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
+
+            //FileStream file0 = System.IO.File.Create("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml");
+
+            //write0.Serialize(file0, registration0);
+
+            //file0.Close();
+            //////////////////////
+
+            // FileStream file0 = System.IO.File.Create("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml");
+
+            // write0.Serialize(file0, registrationClass);
+
+            //  file0.Close();
+
+
+            // BindGrid(C);
+
+
 
         }
         // Logout from system
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
+            // Save RegistrationClass object to xml file
+            XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
+
+            FileStream file0 = System.IO.File.Create("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml");
+
+            write1.Serialize(file0, registration0);
+
+            file0.Close();
+            ////////////////////
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
@@ -47,6 +95,15 @@ namespace CSCI4600Project
         // View account information
         private void AccountButton_Click(object sender, RoutedEventArgs e)
         {
+            // Save RegistrationClass object to xml file
+            XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
+
+            FileStream file0 = System.IO.File.Create("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml");
+
+            write1.Serialize(file0, registration0);
+
+            file0.Close();
+            ////////////////////
             AccountInfoStudent accountInfoStudent = new AccountInfoStudent();
             accountInfoStudent.Show();
             this.Close();
@@ -54,13 +111,13 @@ namespace CSCI4600Project
 
         private void AddCourseButton_Click(object sender, RoutedEventArgs e)
         {
-            // Add selected course from comboBox into DataStudent Data Grid
+            // Add selected course from comboBox into StudentList
             // Add selected course to student course list
 
             if (CourseList.Text == "Cpp")
             {
                 Course Cpp = new Course("Cpp", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
-                student.addccourse(Cpp);
+                student1.addccourse(Cpp);
                 BindGrid(Cpp.cname);
 
             }
@@ -68,7 +125,7 @@ namespace CSCI4600Project
             if (CourseList.Text == "C#")
             {
                 Course CSharp = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
-                student.addccourse(CSharp);
+                student1.addccourse(CSharp);
                 BindGrid(CSharp.cname);
 
             }
@@ -100,9 +157,10 @@ namespace CSCI4600Project
 
             bool b = selected.Contains("Cpp");
 
+
             if (b)
             {
-                student.removeccourse("Cpp");
+                student1.removeccourse("Cpp");
                 MessageBox.Show("IF");
             }
 
@@ -114,33 +172,17 @@ namespace CSCI4600Project
 
           //  student.removeccourse((string)selected);
 
-            ListReload();
-
-            //try
-            //{
-            //    var selectedItem = DataStudent.SelectedIndex;
-            //    DataStudent.Items.Remove(selectedItem);
-            //}
-            //catch (Exception)
-            //{
-
-            //    throw;
-            //}
-            
-
+            ListReload();       
 
         }
 
         public void BindGrid(string course)
         {
             //courses.Add(new Course("C++", "Mondays and tuesdays", "8:00", "CS building", 4, 0));
-            //DataStudent.ItemsSource = courses;
-
             //string[] courses = student.Getccoursesinfo();
-            
-            StudentListBox.Items.Add(student.Getccourseinfo(course));
+            StudentListBox.Items.Add(student1.Getccourseinfo(course));
 
-            //DataStudent.ItemsSource = student.Getccoursesinfo();
+
 
         }
 
@@ -148,7 +190,9 @@ namespace CSCI4600Project
         {
             StudentListBox.Items.Clear();
 
-            StudentListBox.Items.Add(student.Getccoursesinfo());
+
+
+            StudentListBox.Items.Add(student1.Getccoursesinfo());
         }
         
 
