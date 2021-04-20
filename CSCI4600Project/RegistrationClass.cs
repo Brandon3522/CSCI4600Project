@@ -118,7 +118,14 @@ namespace CSCI4600Project
             }
             return result;
         }
-        //Remove Course Method
+        
+        public void LoadRegistration()
+        {
+            Student student0 = new Student(0, "English", "Bob", "Y", "Password", "Male");
+            Student student1 = new Student(1, "English", "Tom", "Y", "Password", "Male");
+            Student student2 = new Student(2, "CS", "Tomyyyyy", "Y", "Password", "Male");
+            Student student3 = new Student(3, "Engineering", "Bobbyyy", "Y", "Password", "Male");
+        }
 
     }
 }

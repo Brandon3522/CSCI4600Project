@@ -13,6 +13,13 @@ namespace CSCI4600Project
     /// </summary>
     public partial class App : Application
     {
+        //RegistrationClass registration = new RegistrationClass();
 
+        //protected override void OnStartup(StartupEventArgs e)
+        //{
+        //    MainWindow window = new MainWindow();
+        //    window.Show();
+        //    registration.LoadRegistration();
+        //}
     }
 }

@@ -20,10 +20,16 @@ namespace CSCI4600Project
     public partial class Registration : Window
     {
         RegistrationClass registration = new RegistrationClass();
+
+        
         public Registration()
         {
             InitializeComponent();
+            
+            
+
             IDLabel.Content = 0;
+            
 
         }
         // Return to Login

@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.Serialization;
+using System.Xml.XPath;
 
 namespace CSCI4600Project
 {
@@ -20,19 +24,27 @@ namespace CSCI4600Project
     /// </summary>
     public partial class MainWindow : Window
     {
-        // RegistrationClass registrationClass = new RegistrationClass();
-        //((App) Application.Current).
+         RegistrationClass registrationClass = new RegistrationClass();
+
+        XmlDocument doc = new XmlDocument();
+        
+
         public MainWindow()
         {
             InitializeComponent();
-
+            string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
+            doc.Load(filePath);
+            //((App)Application.Current).
         }
+
+
+
         // Navigate to Registration Window
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
         {
             Registration registration = new Registration();
             registration.Show();
-            this.Close();
+            this.Hide();
         }
         // Login to system
         private void Login_Click(object sender, RoutedEventArgs e)
@@ -51,7 +63,7 @@ namespace CSCI4600Project
                 // If found allow access to Student or Staff window
                 StudentWindow studentWindow = new StudentWindow();
                 studentWindow.Show();
-                this.Close();
+                this.Hide();
             }
 
             

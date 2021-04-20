@@ -21,12 +21,14 @@ namespace CSCI4600Project
     {
        // List<Course> courses = new List<Course>();
         Student student = new Student(0, "Computer Science", "Billy", "Bob", "Pass", "Male");
-        RegistrationClass registration = new RegistrationClass();
+        RegistrationClass registration0 = new RegistrationClass();
+
+        
         public StudentWindow()
         {
             InitializeComponent();
 
-            registration.Addstudent(student);
+            registration0.Addstudent(student);
 
             
 

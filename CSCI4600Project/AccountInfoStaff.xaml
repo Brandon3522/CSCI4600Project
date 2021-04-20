@@ -41,8 +41,7 @@
 
         <Grid Grid.Column="1">
             <Label Content="Student List:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-            <ListBox x:Name="StudentList" HorizontalAlignment="Left" Height="207" Margin="10,38,0,0" VerticalAlignment="Top" Width="475"/>
-            <ListBox x:Name="StaffStudentList" HorizontalAlignment="Left" Height="169" Margin="10,250,0,0" VerticalAlignment="Top" Width="475"/>
+            <ListBox x:Name="StudentList" HorizontalAlignment="Left" Height="218" Margin="10,38,0,0" VerticalAlignment="Top" Width="522"/>
 
 
         </Grid>

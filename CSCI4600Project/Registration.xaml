@@ -20,6 +20,10 @@
         <ComboBox x:Name="MajorComboBox" HorizontalAlignment="Left" Margin="77,178,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="English"/>
             <ComboBoxItem Content="Computer Science"/>
+            <ComboBoxItem Content="Mathematics"/>
+            <ComboBoxItem Content="Psychology"/>
+            <ComboBoxItem Content="Science"/>
+            <ComboBoxItem Content="Engineering"/>            
         </ComboBox>
 
         <Label Content="Registration ID:" HorizontalAlignment="Left" Margin="273,14,0,0" VerticalAlignment="Top"/>

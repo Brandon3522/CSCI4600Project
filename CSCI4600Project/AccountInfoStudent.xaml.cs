@@ -44,9 +44,9 @@ namespace CSCI4600Project
 
             // List Box
 
-            Course English = new Course("English", "Mondays and tuesdays", "8:00", "English building", 4, 0);
-            Course CSharp0 = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
-            Course Cpp = new Course("Cpp", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
+            Course English = new Course("English", "Mondays and tuesdays", "8:00", "English building", 4, 90);
+            Course CSharp0 = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 4, 86);
+            Course Cpp = new Course("Cpp", "Mondays and tuesdays", "8:00", "CS building", 4, 94);
 
             student.addfcourse(English);
             student.addfcourse(CSharp0);
