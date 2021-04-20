@@ -39,6 +39,14 @@ namespace CSCI4600Project
             Student student2 = new Student(2, "CS", "Tomyyyyy", "Y", "Password", "Male");
             Student student3 = new Student(3, "Engineering", "Bobbyyy", "Y", "Password", "Male");
 
+            Course course = new Course("English", "Monday", "8:00", "English building", 4, 90);
+
+            Course course1 = new Course("C#", "Thursday", "10:00", "CS building", 4, 90);
+
+            student0.addccourse(course);
+
+            student2.addccourse(course1);
+
             registrationClass.Addstudent(student0);
             registrationClass.Addstudent(student1);
             registrationClass.Addstudent(student2);

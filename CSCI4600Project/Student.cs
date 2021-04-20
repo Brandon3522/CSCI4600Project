@@ -17,8 +17,8 @@ namespace CSCI4600Project
         public string Password { get; set; }
         public string Gender { get; set; }
         public string major { get; set; }
-        List<Course> ccourses;
-        List<Course> fcourses;
+       public List<Course> ccourses;
+       public List<Course> fcourses;
 
 
         //Student method

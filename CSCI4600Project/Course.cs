@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 namespace CSCI4600Project
 {
     [Serializable]
-    public class Course : IEnumerable
+    public class Course
     {
-        public string cname { get; private set; }
-        public string days { get; private set; }
-        public string time { get; private set; }
-        public string location { get; private set; }
-        public int chours { get; private set; }
-        public int score { get; private set; }
+        public string cname { get; set; }
+        public string days { get; set; }
+        public string time { get; set; }
+        public string location { get; set; }
+        public int chours { get; set; }
+        public int score { get; set; }
         List<Course> courses = new List<Course>();
 
         public Course(string cname, string days, string time, string location, int chours, int score)
@@ -28,10 +28,11 @@ namespace CSCI4600Project
             this.score = score;
         }
 
-        public IEnumerator GetEnumerator()
+        public Course()
         {
-            return courses.GetEnumerator();
+
         }
+
 
         //public override string ToString()
         //{
