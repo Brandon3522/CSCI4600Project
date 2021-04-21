@@ -33,6 +33,10 @@ namespace CSCI4600Project
 
         }
 
+        public override string ToString()
+        {
+            return cname + " | " + days + " | " + time + " | " + location + " | " + chours + " | " + "\n";
+        }
 
         //public override string ToString()
         //{
@@ -44,6 +48,11 @@ namespace CSCI4600Project
         //}
 
         public string getinfo()
+        {
+            return cname + " | " + days + " | " + time + " | " + location + " | " + chours + " | " + "\n";
+        }
+
+        public string getfcourseinfo()
         {
             return cname + " | " + days + " | " + time + " | " + location + " | " + chours + " | " + score + "\n";
         }

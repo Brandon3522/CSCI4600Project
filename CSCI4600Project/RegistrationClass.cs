@@ -105,6 +105,18 @@ namespace CSCI4600Project
             }
             return result;
         }
+
+        public string DisplayStudents()
+        {
+            string result = "student not found";
+
+            foreach (Student c in students)
+            {
+                    result = c.studentinfo();
+            }
+            return result;
+        }
+
         public void removestudent(string name)
         {
             int x = 0;

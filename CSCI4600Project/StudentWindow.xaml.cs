@@ -24,10 +24,9 @@ namespace CSCI4600Project
     /// </summary>
     public partial class StudentWindow : Window
     {
-       // List<Course> courses = new List<Course>();
-        Student student = new Student(0, "Computer Science", "Billy", "Bob", "Pass", "Male");
         RegistrationClass registration0 = new RegistrationClass();
         Student student1 = new Student();
+        string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
 
 
         public StudentWindow()
@@ -38,7 +37,7 @@ namespace CSCI4600Project
 
             //////////////// XML ////////////////////
             // Open file and deserialze to RegistrationClass object
-            string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
+
 
             XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
 
@@ -49,9 +48,11 @@ namespace CSCI4600Project
             filestream.Close();
             //
             
-            student1 = registration0.FindStudent("Billy");
+            // Replace FindStudent name with currently logged in user **********************
+            student1 = registration0.FindStudent("bob");
 
             ListReload();
+            // BindGrid(C);
 
 
             //// Save RegistrationClass object to xml file
@@ -64,25 +65,14 @@ namespace CSCI4600Project
             //file0.Close();
             //////////////////////
 
-            // FileStream file0 = System.IO.File.Create("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml");
-
-            // write0.Serialize(file0, registrationClass);
-
-            //  file0.Close();
-
-
-            // BindGrid(C);
-
-
-
         }
         // Logout from system
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-            // Save RegistrationClass object to xml file
+            //////////////////// Save RegistrationClass object to xml file
             XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
-            FileStream file0 = System.IO.File.Create("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml");
+            FileStream file0 = System.IO.File.OpenWrite(filePath);
 
             write1.Serialize(file0, registration0);
 
@@ -95,10 +85,10 @@ namespace CSCI4600Project
         // View account information
         private void AccountButton_Click(object sender, RoutedEventArgs e)
         {
-            // Save RegistrationClass object to xml file
+            //////////////////// Save RegistrationClass object to xml file
             XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
-            FileStream file0 = System.IO.File.Create("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml");
+            FileStream file0 = System.IO.File.OpenWrite(filePath);
 
             write1.Serialize(file0, registration0);
 
@@ -109,6 +99,7 @@ namespace CSCI4600Project
             this.Close();
         }
 
+        // switch statement to determine what course is selected
         private void AddCourseButton_Click(object sender, RoutedEventArgs e)
         {
             // Add selected course from comboBox into StudentList
@@ -130,6 +121,24 @@ namespace CSCI4600Project
 
             }
 
+            if (CourseList.Text == "Python")
+            {
+                Course Python = new Course("Python", "Mondays and tuesdays", "11:00", "CS building", 4, 0);
+                student1.addccourse(Python);
+                BindGrid(Python.cname);
+
+            }
+
+            if (CourseList.Text == "Calculus")
+            {
+                Course Calculus = new Course("Calculus", "Mondays and tuesdays", "1:00", "CS building", 4, 0);
+                student1.addccourse(Calculus);
+                BindGrid(Calculus.cname);
+
+            }
+
+
+
 
         }
 
@@ -139,49 +148,94 @@ namespace CSCI4600Project
             // how to get course name from dataGrid
             // MessageBox.Show("Deleted");
 
-            string info = student.Getccoursesinfo();
-;            MessageBox.Show(info);
+            //string info = student.Getccoursesinfo();
+            //MessageBox.Show(info);
 
         }
 
+        // switch statement to determine what course is removed
         private void RemoveCourseButton_Click(object sender, RoutedEventArgs e)
         {
             // Remove selected course from Data Grid
             // Remove course from student course list
-            //var selectedItem = DataStudent.SelectedItem;
-            //DataStudent.Items.Remove(selectedItem);
 
             var selected = (string)StudentListBox.SelectedItem;
-
-            //  MessageBox.Show((string)selected);
-
-            bool b = selected.Contains("Cpp");
+           //   var selected = StudentListBox.SelectedItem;
 
 
-            if (b)
+
+            //switch (selected)
+            //{
+            //    case "English":
+            //        student1.removeccourse("English");
+            //        break;
+
+            //    case "Cpp":
+            //        student1.removeccourse("Cpp");
+            //        break;
+
+            //    case "C#":
+            //        student1.removeccourse("C#");
+            //        break;
+
+            //    case "Python":
+            //        student1.removeccourse("Python");
+            //        break;
+
+            //    case "Data Structures":
+            //        student1.removeccourse("Data Structures");
+            //        break;
+
+            //    case "Calculus":
+            //        student1.removeccourse("Calculus");
+            //        break;
+
+            //    default:
+            //        MessageBox.Show(selected);
+            //        break;
+            //}
+
+            bool cpp = selected.Contains("Cpp");
+            bool english = selected.Contains("English");
+            bool c = selected.Contains("C#");
+            bool python = selected.Contains("Python");
+            bool dataStructures = selected.Contains("Data Structures");
+            bool calculus = selected.Contains("Calculus");
+
+            if (cpp)
             {
                 student1.removeccourse("Cpp");
-                MessageBox.Show("IF");
+            }
+            if (english)
+            {
+                student1.removeccourse("English");
+            }
+            if (c)
+            {
+                student1.removeccourse("C#");
+            }
+            if (python)
+            {
+                student1.removeccourse("Python");
+            }
+            if (dataStructures)
+            {
+                student1.removeccourse("Data Structures");
+            }
+            if (calculus)
+            {
+                student1.removeccourse("Calculus");
             }
 
-           // student.removeccourse("Cpp");
-
-           //  StudentListBox.Selected
 
             StudentListBox.Items.Remove(selected);
-
-          //  student.removeccourse((string)selected);
-
             ListReload();       
 
         }
 
         public void BindGrid(string course)
         {
-            //courses.Add(new Course("C++", "Mondays and tuesdays", "8:00", "CS building", 4, 0));
-            //string[] courses = student.Getccoursesinfo();
             StudentListBox.Items.Add(student1.Getccourseinfo(course));
-
 
 
         }
@@ -190,9 +244,14 @@ namespace CSCI4600Project
         {
             StudentListBox.Items.Clear();
 
+            //  StudentListBox.Items.Add(student1.Getccoursesinfo());
 
+            foreach (var item in student1.ccourses)
+            {
+                StudentListBox.Items.Add(item);
+            }
 
-            StudentListBox.Items.Add(student1.Getccoursesinfo());
+            //   StudentListBox.Items.Add(student1.Getccoursesinfo());
         }
         
 

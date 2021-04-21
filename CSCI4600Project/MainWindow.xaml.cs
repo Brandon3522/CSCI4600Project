@@ -34,45 +34,45 @@ namespace CSCI4600Project
         {
             InitializeComponent();
 
-            Student student0 = new Student(0, "English", "Billy", "Bob", "Password", "Male");
+            //Student student0 = new Student(0, "English", "Billy", "Bob", "Password", "Male");
 
-            Student student1 = new Student(1, "CS", "Tom", "Bob", "Password", "Male");
+            //Student student1 = new Student(1, "CS", "Tom", "Bob", "Password", "Male");
 
-            Course course = new Course("English", "Monday", "8:00", "English building", 4, 90);
+            //Course course = new Course("English", "Monday", "8:00", "English building", 4, 90);
 
-            Course course1 = new Course("English", "Monday", "8:00", "English building", 4, 90);
+            //Course course1 = new Course("English", "Monday", "8:00", "English building", 4, 90);
 
-            student0.addccourse(course);
+            //student0.addccourse(course);
 
-            student0.addccourse(course1);
+            //student0.addccourse(course1);
 
 
 
-            student1.addccourse(course1);
-            student1.addccourse(course);
+            //student1.addccourse(course1);
+            //student1.addccourse(course);
 
             //student0.addccourse(course);
 
             //student2.addccourse(course1);
 
-            registrationClass.Addstudent(student0);
-            registrationClass.Addstudent(student1);
+            //registrationClass.Addstudent(student0);
+            //registrationClass.Addstudent(student1);
             //registrationClass.Addstudent(student2);
             //registrationClass.Addstudent(student3);
 
             string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
 
-            XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
+            //XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
 
-            FileStream file0 = System.IO.File.Create("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml");
+            //FileStream file0 = new FileStream("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml", FileMode.OpenOrCreate);
 
-            write0.Serialize(file0, registrationClass);
+            //write0.Serialize(file0, registrationClass);
 
-            file0.Close();
-
-
+            //file0.Close();
             doc.Load(filePath);
-            //((App)Application.Current).
+            
+
+
         }
 
 
@@ -82,7 +82,7 @@ namespace CSCI4600Project
         {
             Registration registration = new Registration();
             registration.Show();
-            this.Hide();
+            this.Close();
         }
         // Login to system
         private void Login_Click(object sender, RoutedEventArgs e)
@@ -99,9 +99,13 @@ namespace CSCI4600Project
             {
                 // Check registration file for user
                 // If found allow access to Student or Staff window
+
+
+
+
                 StudentWindow studentWindow = new StudentWindow();
                 studentWindow.Show();
-                this.Hide();
+                this.Close();
             }
 
             

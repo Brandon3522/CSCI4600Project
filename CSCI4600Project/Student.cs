@@ -17,12 +17,14 @@ namespace CSCI4600Project
         public string Password { get; set; }
         public string Gender { get; set; }
         public string major { get; set; }
+        public bool Permission { get; set; }
        public List<Course> ccourses;
        public List<Course> fcourses;
 
 
         //Student method
-        public Student(int StudentId, string major, string FirstName, string LastName, string password, string gender)
+        public Student(int StudentId, string major, string FirstName, string LastName, 
+            string password, string gender, bool permission = false)
         {
             this.StudentId = StudentId;
             this.FirstName = FirstName;
@@ -30,6 +32,7 @@ namespace CSCI4600Project
             this.major = major;
             this.Password = password;
             this.Gender = gender;
+            this.Permission = permission;
             ccourses = new List<Course>();
             fcourses = new List<Course>();
         }
@@ -134,7 +137,7 @@ namespace CSCI4600Project
             string t = "";
             foreach (Course c in fcourses)
             {
-                t = t + c.getinfo();
+                t = t + c.getfcourseinfo();
             }
 
 

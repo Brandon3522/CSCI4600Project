@@ -2,58 +2,48 @@
 <RegistrationClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <students>
     <Student>
-      <ccourses>
-        <Course>
-          <cname>English</cname>
-          <days>Monday</days>
-          <time>8:00</time>
-          <location>English building</location>
-          <chours>4</chours>
-          <score>90</score>
-        </Course>
-        <Course>
-          <cname>English</cname>
-          <days>Monday</days>
-          <time>8:00</time>
-          <location>English building</location>
-          <chours>4</chours>
-          <score>90</score>
-        </Course>
-      </ccourses>
+      <ccourses />
       <fcourses />
       <StudentId>0</StudentId>
-      <FirstName>Billy</FirstName>
-      <LastName>Bob</LastName>
-      <Password>Password</Password>
+      <FirstName>B</FirstName>
+      <LastName>S</LastName>
+      <Password>g</Password>
       <Gender>Male</Gender>
-      <major>English</major>
+      <major>Computer Science</major>
+      <Permission>false</Permission>
     </Student>
     <Student>
-      <ccourses>
-        <Course>
-          <cname>English</cname>
-          <days>Monday</days>
-          <time>8:00</time>
-          <location>English building</location>
-          <chours>4</chours>
-          <score>90</score>
-        </Course>
-        <Course>
-          <cname>English</cname>
-          <days>Monday</days>
-          <time>8:00</time>
-          <location>English building</location>
-          <chours>4</chours>
-          <score>90</score>
-        </Course>
-      </ccourses>
+      <ccourses />
       <fcourses />
-      <StudentId>1</StudentId>
-      <FirstName>Tom</FirstName>
-      <LastName>Bob</LastName>
-      <Password>Password</Password>
+      <StudentId>0</StudentId>
+      <FirstName>John</FirstName>
+      <LastName>S</LastName>
+      <Password>Passw</Password>
       <Gender>Male</Gender>
-      <major>CS</major>
+      <major>Psychology</major>
+      <Permission>false</Permission>
+    </Student>
+    <Student>
+      <ccourses />
+      <fcourses />
+      <StudentId>0</StudentId>
+      <FirstName>bob</FirstName>
+      <LastName>sagot</LastName>
+      <Password>pass</Password>
+      <Gender>Male</Gender>
+      <major>Mathematics</major>
+      <Permission>false</Permission>
+    </Student>
+    <Student>
+      <ccourses />
+      <fcourses />
+      <StudentId>0</StudentId>
+      <FirstName>Brsd</FirstName>
+      <LastName>rga</LastName>
+      <Password>pass</Password>
+      <Gender>Male</Gender>
+      <major>Mathematics</major>
+      <Permission>false</Permission>
     </Student>
   </students>
   <staff />

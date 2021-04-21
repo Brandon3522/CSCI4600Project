@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,9 +30,20 @@ namespace CSCI4600Project
         public Registration()
         {
             InitializeComponent();
-            
-            
 
+            ///////////// load xml
+            string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
+
+            XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
+
+            FileStream filestream = new FileStream(filePath, FileMode.Open);
+
+            registration = (RegistrationClass)write0.Deserialize(filestream);
+
+            filestream.Close();
+            ////////////
+
+            // Needs to be updated or removed
             IDLabel.Content = 0;
             
 
@@ -81,6 +93,17 @@ namespace CSCI4600Project
                     // need to add user to file
                     Student student = new Student(registrationID, major, Fname, Lname, pass, gender);
                     registration.Addstudent(student);
+
+                    //////////////////// Save RegistrationClass object to xml file
+                    XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
+
+                    FileStream file0 = new FileStream("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml", FileMode.OpenOrCreate);
+
+                    write1.Serialize(file0, registration);
+
+                    file0.Close();
+                    ////////////////////
+
                     MessageBox.Show("Student registered", "Registration successful", MessageBoxButton.OK);
                 }
                 else
@@ -88,6 +111,17 @@ namespace CSCI4600Project
                     // need to add user to file
                     Staff staff = new Staff(registrationID, Fname, Lname);
                     registration.AddStaff(staff);
+
+                    //////////////////// Save RegistrationClass object to xml file
+                    XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
+
+                    FileStream file0 = new FileStream("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml", FileMode.OpenOrCreate);
+
+                    write1.Serialize(file0, registration);
+
+                    file0.Close();
+                    ////////////////////
+
                     MessageBox.Show("Staff registered", "Registration successful", MessageBoxButton.OK);
                 }
 
