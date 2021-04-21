@@ -31,7 +31,6 @@ namespace CSCI4600Project
         RegistrationClass registration0 = new RegistrationClass();
         Student student1 = new Student();
        
-
         public AccountInfoStudent()
         {
             InitializeComponent();

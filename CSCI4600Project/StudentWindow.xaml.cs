@@ -37,8 +37,6 @@ namespace CSCI4600Project
 
             //////////////// XML ////////////////////
             // Open file and deserialze to RegistrationClass object
-
-
             XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
 
             FileStream filestream = new FileStream(filePath, FileMode.Open);
@@ -52,10 +50,10 @@ namespace CSCI4600Project
             // Check file for FirstName that matches the logged in user
             string userName = "John";
             student1 = registration0.FindStudent(userName);
+            //////////////////////////////
 
             ListReload();
             // BindGrid(C);
-
 
             //// Save RegistrationClass object to xml file
             //XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
@@ -80,6 +78,7 @@ namespace CSCI4600Project
 
             file0.Close();
             ////////////////////
+            
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
@@ -96,6 +95,7 @@ namespace CSCI4600Project
 
             file0.Close();
             ////////////////////
+
             AccountInfoStudent accountInfoStudent = new AccountInfoStudent();
             accountInfoStudent.Show();
             this.Close();
@@ -206,42 +206,6 @@ namespace CSCI4600Project
             //        MessageBox.Show(selected);
             //        break;
             //}
-
-            //bool cpp = selected.Contains("Cpp");
-            //bool english = selected.Contains("English");
-            //bool c = selected.Contains("C#");
-            //bool python = selected.Contains("Python");
-            //bool dataStructures = selected.Contains("Data Structures");
-            //bool calculus = selected.Contains("Calculus");
-
-            //if (cpp)
-            //{
-            //    student1.removeccourse("Cpp");
-            //}
-            //if (english)
-            //{
-            //    student1.removeccourse("English");
-            //}
-            //if (c)
-            //{
-            //    student1.removeccourse("C#");
-            //}
-            //if (python)
-            //{
-            //    student1.removeccourse("Python");
-            //}
-            //if (dataStructures)
-            //{
-            //    student1.removeccourse("Data Structures");
-            //}
-            //if (calculus)
-            //{
-            //    student1.removeccourse("Calculus");
-            //}
-
-
-
-
         }
 
         public void BindGrid(string course)
@@ -257,29 +221,6 @@ namespace CSCI4600Project
                 throw new Exception();
                 
             }
-
-
-            
-
-        //    try
-        //    {
-        //        for (int i = 0; i < student1.CourseList().Count; i++)
-        //        {
-        //            StudentListBox.Items.Add(student1.Getccourseinfo(course)); 
-        //        }
-
-        //        foreach (var item in CourseList)
-        //        {
-        //            StudentListBox.Items.Add(item);
-        //        }
-
-        //    }
-        //    catch (Exception e)
-        //    {
-
-        //        throw new Exception("Oh No, Exception: " + e.Message);
-        //    }
-
          }
 
         public void ListReload()
@@ -305,13 +246,5 @@ namespace CSCI4600Project
             //   StudentListBox.Items.Add(student1.Getccoursesinfo());
         }
         
-
-
-        //public string LoadCourses()
-        //{
-        //    List<Course> courses = new List<Course>();
-        //    courses.Add(new Course("C++", "Mondays and tuesdays", "8:00", "CS building", 4, 0));
-        //    return courses;
-        //}
     }
-    }
+ }

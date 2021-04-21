@@ -66,6 +66,14 @@
           <chours>4</chours>
           <score>0</score>
         </Course>
+        <Course>
+          <cname>Python</cname>
+          <days>Mondays and tuesdays</days>
+          <time>11:00</time>
+          <location>CS building</location>
+          <chours>4</chours>
+          <score>0</score>
+        </Course>
       </ccourses>
       <fcourses />
       <StudentId>1</StudentId>

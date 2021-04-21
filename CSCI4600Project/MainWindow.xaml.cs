@@ -94,8 +94,6 @@ namespace CSCI4600Project
 
             //////////////// XML ////////////////////
             // Open file and deserialze to RegistrationClass object
-
-
             XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
 
             FileStream filestream = new FileStream(filePath, FileMode.Open);
@@ -129,9 +127,6 @@ namespace CSCI4600Project
             {
                 // Check registration file for user
                 // If found allow access to Student or Staff window
-
-                
-
 
 
                 StudentWindow studentWindow = new StudentWindow();

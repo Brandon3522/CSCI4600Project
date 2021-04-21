@@ -46,9 +46,6 @@ namespace CSCI4600Project
             {
                 StudentsList.Items.Add(item);
             }
-
-
-
         }
         // View account information
         private void AccountButton_Click(object sender, RoutedEventArgs e)
