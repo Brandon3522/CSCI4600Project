@@ -54,10 +54,10 @@ namespace CSCI4600Project
             //
 
             // completed courses test
-            //Course C = new Course("English", "Mondays and tuesdays", "8:00", "English building", 4, 90);
-            //Course B = new Course("C++", "Mondays and tuesdays", "8:00", "CS building", 4, 90);
-            //student1.addfcourse(C);
-            //student1.addfcourse(B);
+            Course C = new Course("English", "Mondays and tuesdays", "8:00", "English building", 4, 90);
+            Course B = new Course("C++", "Mondays and tuesdays", "8:00", "CS building", 4, 90);
+            student1.addfcourse(C);
+            student1.addfcourse(B);
 
             // Populate account info wtih Student info
             FirstNameText.Text = userName;
@@ -81,8 +81,9 @@ namespace CSCI4600Project
             if (registration0.HasfCourses(student1))
             {
                 CompletedClasses.Items.Add(student1.Getfcoursesinfo());
-                GPAinfo.Content = student1.calcgpa();
             }
+
+            GPAinfo.Content = student1.calcgpa();
 
         }
         // Update student information
