@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,10 +25,46 @@ namespace CSCI4600Project
     public partial class AccountInfoStaff : Window
     {
         // Bind student registration list to StudentList
+        RegistrationClass registration0 = new RegistrationClass();
+        Staff staff = new Staff();
+        string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
 
         public AccountInfoStaff()
         {
             InitializeComponent();
+
+            // Open file and deserialze to RegistrationClass object
+            XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
+
+            FileStream filestream = new FileStream(filePath, FileMode.Open);
+
+            registration0 = (RegistrationClass)write0.Deserialize(filestream);
+
+            filestream.Close();
+            //
+
+            // Check file for FirstName that matches the logged in user
+            string userName = "";
+            userName = registration0.getUserLoggedIn();
+            staff = registration0.FindStaff(userName);
+
+
+            // Populate account info with Staff info
+            FirstNameText.Text = userName;
+            LastNameText.Text = staff.GetLastName();
+
+            if (staff.GetGender() == "Male")
+            {
+                MaleRadioButton.IsChecked = true;
+            }
+            else
+            {
+                FemaleRadioButton.IsChecked = true;
+            }
+
+            PassText.Text = "Admin";
+            //
+
         }
         // Update account info
         private void UpdateButton_Click(object sender, RoutedEventArgs e)

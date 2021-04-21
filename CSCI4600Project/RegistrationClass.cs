@@ -12,7 +12,7 @@ namespace CSCI4600Project
         //Student list
         public List<Student> students;
         public List<Staff> staff;
-        public string UserLoggedIn { get; set; }
+        public string _UserLoggedIn { get; set; }
 
         //Registration method
         public RegistrationClass()
@@ -23,7 +23,17 @@ namespace CSCI4600Project
 
         public RegistrationClass(string userName)
         {
-            this.UserLoggedIn = userName;
+            this._UserLoggedIn = userName;
+        }
+
+        public string getUserLoggedIn()
+        {
+            return _UserLoggedIn;
+        }
+
+        public void UserLoggedIn(string user)
+        {
+            _UserLoggedIn = user;
         }
 
         //Add Registration Info Method
@@ -35,6 +45,34 @@ namespace CSCI4600Project
         public void AddStaff(Staff s)
         {
             staff.Add(s);
+        }
+
+
+        public bool HasfCourses(Student student)
+        {
+            bool hasCourse = false;
+            if (student.fcourses.Count >= 1)
+            {
+                hasCourse = true;
+                return hasCourse;
+            }
+            else
+                return hasCourse;
+        }
+
+        public string FindStudentName(string name)
+        {
+            string result = "student not found";
+
+            foreach (Student c in students)
+            {
+                if (c.FirstName == name)
+                {
+                    result = c.FirstName;
+                }
+
+            }
+            return result;
         }
 
         public Student FindStudent(string name)

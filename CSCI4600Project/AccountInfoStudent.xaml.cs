@@ -47,45 +47,42 @@ namespace CSCI4600Project
             filestream.Close();
             //
 
-            // Replace FindStudent name with currently logged in user **********************
             // Check file for FirstName that matches the logged in user
-            string userName = "Tom";
+            string userName = "";
+            userName = registration0.getUserLoggedIn();
             student1 = registration0.FindStudent(userName);
+            //
 
-            // add some finished courses for testing
-            Course C = new Course("English", "Mondays and tuesdays", "8:00", "English building", 4, 90);
-            Course B = new Course("C++", "Mondays and tuesdays", "8:00", "CS building", 4, 90);
-            student1.addfcourse(C);
-            student1.addfcourse(B);
+            // completed courses test
+            //Course C = new Course("English", "Mondays and tuesdays", "8:00", "English building", 4, 90);
+            //Course B = new Course("C++", "Mondays and tuesdays", "8:00", "CS building", 4, 90);
+            //student1.addfcourse(C);
+            //student1.addfcourse(B);
 
-            // populate course list with finished courses
-            CompletedClasses.Items.Add(student1.Getfcoursesinfo());
+            // Populate account info wtih Student info
+            FirstNameText.Text = userName;
+            LastNameText.Text = student.GetLastName();
+
+            if (student1.GetGender() == "Male")
+            {
+                MaleRadioButton.IsChecked = true;
+            }
+            else
+            {
+                FemaleRadioButton.IsChecked = true;
+            }
+
+            PassText.Text = student.GetPassword();
+
+            MajorCombo.Text = student1.GetMajor();
+            //
             
 
-
-            //Course CSharp = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
-            //Course C = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
-            //Course Cd = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
-            //courses.Add(CSharp);
-            //courses.Add(C);
-            //courses.Add(Cd);
-
-            //foreach (var Ca in courses)
-            //{
-            //    CompletedClasses.Items.Add(Ca);
-            //}
-
-            // List Box
-
-            //Course English = new Course("English", "Mondays and tuesdays", "8:00", "English building", 4, 90);
-            //Course CSharp0 = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 4, 86);
-            //Course Cpp = new Course("Cpp", "Mondays and tuesdays", "8:00", "CS building", 4, 94);
-
-            //student.addfcourse(English);
-            //student.addfcourse(CSharp0);
-            //student.addfcourse(Cpp);
-
-            //StudentfCourseList.Items.Add(student.Getfcoursesinfo()) ;
+            if (registration0.HasfCourses(student1))
+            {
+                CompletedClasses.Items.Add(student1.Getfcoursesinfo());
+                GPAinfo.Content = student1.calcgpa();
+            }
 
         }
         // Update student information

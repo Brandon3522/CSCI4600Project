@@ -71,9 +71,8 @@ namespace CSCI4600Project
 
             //file0.Close();
 
+            // Load XML file
             doc.Load(filePath);
-
-
         }
 
 
@@ -103,38 +102,86 @@ namespace CSCI4600Project
             filestream.Close();
             //
 
-
-
-
             if (UsernameText.Text == "" || PasswordText.Text == "")
             {
                 MessageBox.Show("Please verify Username and Password", "Empty Username or Password", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            //if ()
-            //{
+            string user = UsernameText.Text;
 
-            //}
-
-            else if (PasswordText.Text.Contains("Admin"))
+            if (registrationClass.FindStudentName(user) == user)
             {
-                    StaffWindow staffWindow = new StaffWindow();
-                    staffWindow.Show();
-                    this.Close();
-                
-            }
-            else
-            {
-                // Check registration file for user
-                // If found allow access to Student or Staff window
+                //string UserLoggedIn = user;
 
+                registrationClass.UserLoggedIn(user);
 
+                //////////////////// Save RegistrationClass object to xml file
+                XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
+
+                FileStream file0 = System.IO.File.Create(filePath);
+
+                write1.Serialize(file0, registrationClass);
+
+                file0.Close();
+                ////////////////////
+
+                MessageBox.Show("User logged in as Student", "Success", MessageBoxButton.OK);
                 StudentWindow studentWindow = new StudentWindow();
                 studentWindow.Show();
                 this.Close();
+
             }
 
-            
+            if (registrationClass.FindStudentName(user) != user && registrationClass.findstaff(user) != user)
+            {
+                MessageBox.Show("Please enter a valid username / password", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            if (registrationClass.findstaff(user) == user && PasswordText.Text.Contains("Admin"))
+            {
+
+                registrationClass.UserLoggedIn(user);
+
+                //////////////////// Save RegistrationClass object to xml file
+                XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
+
+                FileStream file0 = System.IO.File.Create(filePath);
+
+                write1.Serialize(file0, registrationClass);
+
+                file0.Close();
+                ////////////////////
+
+                MessageBox.Show("User logged in as Admin", "Success", MessageBoxButton.OK);
+                StaffWindow staffWindow = new StaffWindow();
+                staffWindow.Show();
+                this.Close();
+
+                // need to update
+                if (!PasswordText.Text.Contains("Admin") || registrationClass.findstaff(user) != user)
+                {
+                    
+                }
+
+            }
+            //if (PasswordText.Text.Contains("Admin"))
+            //{
+            //    StaffWindow staffWindow = new StaffWindow();
+            //    staffWindow.Show();
+            //    this.Close();
+            //}
+            //else
+            //{
+            //    // Check registration file for user
+            //    // If found allow access to Student or Staff window
+
+
+            //    //StudentWindow studentWindow = new StudentWindow();
+            //    //studentWindow.Show();
+            //    //this.Close();
+            //}
+
+
         }
     }
 }

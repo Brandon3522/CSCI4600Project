@@ -17,7 +17,7 @@
         <TextBox x:Name="PasswordText" HorizontalAlignment="Left" Height="23" Margin="77,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
         <Label Content="Major:" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="MajorComboBox" HorizontalAlignment="Left" Margin="77,178,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox x:Name="MajorComboBox" HorizontalAlignment="Left" Margin="77,178,0,0" VerticalAlignment="Top" Width="137">
             <ComboBoxItem Content="English"/>
             <ComboBoxItem Content="Computer Science"/>
             <ComboBoxItem Content="Mathematics"/>
@@ -25,9 +25,6 @@
             <ComboBoxItem Content="Science"/>
             <ComboBoxItem Content="Engineering"/>            
         </ComboBox>
-
-        <Label Content="Registration ID:" HorizontalAlignment="Left" Margin="273,14,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="IDLabel" Content="ID #" HorizontalAlignment="Left" Margin="369,14,0,0" VerticalAlignment="Top"/>
 
         <Button x:Name="Register" Content="Register" HorizontalAlignment="Left" Margin="10,389,0,0" VerticalAlignment="Top" Width="75" Click="Register_Click"/>
 

@@ -43,10 +43,6 @@ namespace CSCI4600Project
             filestream.Close();
             ////////////
 
-            // Needs to be updated or removed
-            IDLabel.Content = 0;
-            
-
         }
         // Return to Login
         private void LoginScreen_Click(object sender, RoutedEventArgs e)
@@ -109,7 +105,7 @@ namespace CSCI4600Project
                 else
                 {
                     // need to add user to file
-                    Staff staff = new Staff(registrationID, Fname, Lname);
+                    Staff staff = new Staff(registrationID, Fname, Lname, gender);
                     registration.AddStaff(staff);
 
                     //////////////////// Save RegistrationClass object to xml file

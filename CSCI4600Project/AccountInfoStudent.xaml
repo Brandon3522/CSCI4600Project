@@ -17,27 +17,26 @@
             <TextBox HorizontalAlignment="Left" Height="23" Margin="77,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
             <RadioButton Content="Male" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,1.421"/>
-            <RadioButton Content="Female" HorizontalAlignment="Left" Margin="108,90,0,0" VerticalAlignment="Top"/>
+            <RadioButton x:Name="FemaleRadioButton" Content="Female" HorizontalAlignment="Left" Margin="108,90,0,0" VerticalAlignment="Top"/>
 
             <Label Content="Password:" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top"/>
             <TextBox HorizontalAlignment="Left" Height="23" Margin="77,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Label Content="Last Name:" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top"/>
             <TextBox HorizontalAlignment="Left" Height="23" Margin="77,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Label Content="First Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="77,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="FirstNameText" HorizontalAlignment="Left" Height="23" Margin="77,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
-            <RadioButton Content="Male" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,1.421"/>
-            <RadioButton Content="Female" HorizontalAlignment="Left" Margin="108,90,0,0" VerticalAlignment="Top"/>
+            <RadioButton x:Name="MaleRadioButton" Content="Male" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,1.421"/>
 
             <Label Content="Password:" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top"/>
             <TextBox HorizontalAlignment="Left" Height="23" Margin="77,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
             <Label Content="Major:" HorizontalAlignment="Left" Margin="11,148,0,0" VerticalAlignment="Top"/>
             <Label Content="Last Name:" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="77,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="LastNameText" HorizontalAlignment="Left" Height="23" Margin="77,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Margin="10,389,0,0" VerticalAlignment="Top" Width="75" Click="UpdateButton_Click"/>
             <Button x:Name="MainWindowButton" Content="Main Window" HorizontalAlignment="Left" Margin="122,389,0,0" VerticalAlignment="Top" Width="80" Click="MainWindowButton_Click"/>
-            <ComboBox HorizontalAlignment="Left" Margin="77,152,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox x:Name="MajorCombo" HorizontalAlignment="Left" Margin="77,152,0,0" VerticalAlignment="Top" Width="143">
                 <ComboBoxItem Content="English"/>
                 <ComboBoxItem Content="Computer Science"/>
                 <ComboBoxItem Content="Mathematics"/>
@@ -46,8 +45,8 @@
                 <ComboBoxItem Content="Engineering"/>
             </ComboBox>
             <Label Content="GPA:" HorizontalAlignment="Left" Margin="11,179,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="77,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="GPAinfo" HorizontalAlignment="Left" Height="23" Margin="77,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="PassText" HorizontalAlignment="Left" Height="23" Margin="77,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="GPAinfo" Content="" HorizontalAlignment="Left" Margin="77,179,0,0" VerticalAlignment="Top" Width="120"/>
         </Grid>
 
         <Grid Grid.Column="1">

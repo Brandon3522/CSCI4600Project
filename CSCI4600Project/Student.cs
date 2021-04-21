@@ -43,6 +43,27 @@ namespace CSCI4600Project
         {
 
         }
+
+        public string GetLastName()
+        {
+            return LastName;
+        }
+
+        public string GetPassword()
+        {
+            return Password;
+        }
+
+        public string GetGender()
+        {
+            return Gender;
+        }
+
+        public string GetMajor()
+        {
+            return major;
+        }
+
         public string studentinfo()
         {
             string s = "";
@@ -68,6 +89,7 @@ namespace CSCI4600Project
         {
             fcourses.Add(course);
         }
+
 
         public void endsemester()
         {
@@ -106,8 +128,6 @@ namespace CSCI4600Project
                     t = c.getinfo() + "\n";
                 }
             }
-
-
             return t;
 
         }
@@ -127,10 +147,6 @@ namespace CSCI4600Project
 
                 throw new Exception("Exception: " + e.Message);
             }
-
-          
-
-
             return t;
 
         }
@@ -154,8 +170,6 @@ namespace CSCI4600Project
 
            
             return courses;
-
-
 
         }
 
@@ -212,8 +226,6 @@ namespace CSCI4600Project
         {
             return StudentId + " | " + FirstName + " " + LastName + " | " + Gender + " | " + major + " | " + "\n";
         }
-
-
 
     }
 }

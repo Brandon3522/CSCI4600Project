@@ -38,17 +38,6 @@
       <Permission>false</Permission>
     </Student>
     <Student>
-      <ccourses />
-      <fcourses />
-      <StudentId>1</StudentId>
-      <FirstName>Bob</FirstName>
-      <LastName>bob</LastName>
-      <Password>pass</Password>
-      <Gender>Male</Gender>
-      <major>English</major>
-      <Permission>false</Permission>
-    </Student>
-    <Student>
       <ccourses>
         <Course>
           <cname>Cpp</cname>
@@ -84,6 +73,42 @@
       <major>Mathematics</major>
       <Permission>false</Permission>
     </Student>
+    <Student>
+      <ccourses>
+        <Course>
+          <cname>Cpp</cname>
+          <days>Mondays and tuesdays</days>
+          <time>8:00</time>
+          <location>CS building</location>
+          <chours>4</chours>
+          <score>0</score>
+        </Course>
+        <Course>
+          <cname>C#</cname>
+          <days>Mondays and tuesdays</days>
+          <time>8:00</time>
+          <location>CS building</location>
+          <chours>4</chours>
+          <score>0</score>
+        </Course>
+      </ccourses>
+      <fcourses />
+      <StudentId>1</StudentId>
+      <FirstName>Billy</FirstName>
+      <LastName>Bob</LastName>
+      <Password>Pass</Password>
+      <Gender>Male</Gender>
+      <major>Computer Science</major>
+      <Permission>false</Permission>
+    </Student>
   </students>
-  <staff />
+  <staff>
+    <Staff>
+      <StaffId>0</StaffId>
+      <Firstname>Brandon</Firstname>
+      <Lastname>s</Lastname>
+      <Permission>true</Permission>
+    </Staff>
+  </staff>
+  <_UserLoggedIn>Billy</_UserLoggedIn>
 </RegistrationClass>

@@ -25,6 +25,7 @@ namespace CSCI4600Project
     public partial class StaffWindow : Window
     {
         RegistrationClass registration0 = new RegistrationClass();
+        Staff staff = new Staff();
         string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
 
         public StaffWindow()
@@ -42,10 +43,19 @@ namespace CSCI4600Project
             filestream.Close();
             //
 
+            // Check file for FirstName that matches the logged in user
+            string userName = "";
+            userName = registration0.getUserLoggedIn();
+            staff = registration0.FindStaff(userName);
+            //
+
+            // Add students to List box
             foreach (var item in registration0.students)
             {
                 StudentsList.Items.Add(item);
             }
+            //
+
         }
         // View account information
         private void AccountButton_Click(object sender, RoutedEventArgs e)

@@ -27,13 +27,10 @@ namespace CSCI4600Project
         RegistrationClass registration0 = new RegistrationClass();
         Student student1 = new Student();
         string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
-
-
+        
         public StudentWindow()
         {
             InitializeComponent();
-
-          //  registration0.Addstudent(student);
 
             //////////////// XML ////////////////////
             // Open file and deserialze to RegistrationClass object
@@ -46,24 +43,16 @@ namespace CSCI4600Project
             filestream.Close();
             //
 
-            // Replace FindStudent name with currently logged in user **********************
             // Check file for FirstName that matches the logged in user
-            string userName = "John";
+            string userName = "";
+            userName = registration0.getUserLoggedIn();
             student1 = registration0.FindStudent(userName);
-            //////////////////////////////
+            //
+
+            // Label = current user
+            StudentNameLabel.Content = userName;
 
             ListReload();
-            // BindGrid(C);
-
-            //// Save RegistrationClass object to xml file
-            //XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
-
-            //FileStream file0 = System.IO.File.Create("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml");
-
-            //write0.Serialize(file0, registration0);
-
-            //file0.Close();
-            //////////////////////
 
         }
         // Logout from system
@@ -141,30 +130,13 @@ namespace CSCI4600Project
 
         }
 
-        private void Delete_Click(object sender, RoutedEventArgs e)
-        {
-            // remove deleted course from student
-            // how to get course name from dataGrid
-            // MessageBox.Show("Deleted");
-
-            //string info = student.Getccoursesinfo();
-            //MessageBox.Show(info);
-
-        }
-
         // switch statement to determine what course is removed
         private void RemoveCourseButton_Click(object sender, RoutedEventArgs e)
         {
             // Remove selected course from ListBox
             // Remove course from student course list
 
-           // var selected = (string)StudentListBox.SelectedItem;
-            //   var selected = StudentListBox.SelectedItem;
-
-            //////////////////////// new method
             var selected0 = (Course)StudentListBox.SelectedItem;
-            // selected0 = Course object
-
 
            MessageBox.Show(selected0.getinfo());
 
@@ -227,8 +199,6 @@ namespace CSCI4600Project
         {
             StudentListBox.Items.Clear();
 
-            //  StudentListBox.Items.Add(student1.Getccoursesinfo());
-
             try
             {
                 foreach (var item in student1.CourseList())
@@ -242,8 +212,7 @@ namespace CSCI4600Project
                 MessageBox.Show("Exception: " + e.Message);
                 throw new Exception("Oh No, Exception: " + e.Message);
             }
-            
-            //   StudentListBox.Items.Add(student1.Getccoursesinfo());
+
         }
         
     }

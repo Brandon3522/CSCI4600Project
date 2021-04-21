@@ -38,23 +38,6 @@ namespace CSCI4600Project
             return cname + " | " + days + " | " + time + " | " + location + " | " + chours + " | " + "\n";
         }
 
-        //public override string ToString()
-        //{
-        //    foreach (Course C in courses)
-        //    {
-        //        return $"Name: {C.cname} {C.chours} {C.score}";
-        //    }
-        //    return "The list remains empty.";
-        //}
-
-        //public string GetCourseName(string cName)
-        //{
-        //    return Course.cName
-        //}
-
-
-
-
         public string getinfo()
         {
             return cname + " | " + days + " | " + time + " | " + location + " | " + chours + " | " + "\n";
