@@ -26,6 +26,7 @@ namespace CSCI4600Project
         public Student(int StudentId, string major, string FirstName, string LastName, 
             string password, string gender, bool permission = false)
         {
+            StudentId += 1;
             this.StudentId = StudentId;
             this.FirstName = FirstName;
             this.LastName = LastName;
@@ -35,6 +36,7 @@ namespace CSCI4600Project
             this.Permission = permission;
             ccourses = new List<Course>();
             fcourses = new List<Course>();
+
         }
 
         public Student()
@@ -112,10 +114,21 @@ namespace CSCI4600Project
         public string Getccoursesinfo()
         {
             string t = "";
-            foreach (Course c in ccourses)
+
+            try
             {
-                t = t + c.getinfo() + "\n";
+                foreach (Course c in ccourses)
+                {
+                    t = t + c.getinfo() + "\n";
+                }
             }
+            catch (Exception e)
+            {
+
+                throw new Exception("Exception: " + e.Message);
+            }
+
+          
 
 
             return t;
@@ -125,11 +138,42 @@ namespace CSCI4600Project
         public List<Course> CourseList()
         {
             List<Course> courses = new List<Course>();
+
+            try
+            {
+                foreach (Course c in ccourses)
+                {
+                    courses.Add(c);
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception("Exception: " + e.Message);
+            }
+
+           
+            return courses;
+
+
+
+        }
+
+        public Course CcourseReturn(string courseName)
+        {
+            Course course1 = new Course();
+
             foreach (Course c in ccourses)
             {
-                courses.Add(c);
+                if (courseName == c.cname)
+                {
+                    course1 = c;
+                    return course1;
+                }
+                    
             }
-            return courses;
+
+            return null;
         }
 
         public string Getfcoursesinfo()
@@ -157,12 +201,30 @@ namespace CSCI4600Project
                 }
                 x += 1;
             }
-
-
-
-
         }
 
-      
+        public Course RemoveCourse(Course C)
+        {
+            int x = 0;
+            Course Co = new Course();
+            foreach (Course c in ccourses.ToList())
+            {
+                if (C == c)
+                {
+                    ccourses.RemoveAt(x);
+                    return Co;
+                }
+                x += 1;
+            }
+            return null;
+        }
+
+        public override string ToString()
+        {
+            return StudentId + " | " + FirstName + " " + LastName + " | " + Gender + " | " + major + " | " + "\n";
+        }
+
+
+
     }
 }

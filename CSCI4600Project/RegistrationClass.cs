@@ -12,12 +12,18 @@ namespace CSCI4600Project
         //Student list
         public List<Student> students;
         public List<Staff> staff;
+        public string UserLoggedIn { get; set; }
 
         //Registration method
         public RegistrationClass()
         {
             students = new List<Student>();
             staff = new List<Staff>();
+        }
+
+        public RegistrationClass(string userName)
+        {
+            this.UserLoggedIn = userName;
         }
 
         //Add Registration Info Method
@@ -106,13 +112,13 @@ namespace CSCI4600Project
             return result;
         }
 
-        public string DisplayStudents()
+        public Student DisplayStudents()
         {
-            string result = "student not found";
+            Student result = new Student();
 
             foreach (Student c in students)
             {
-                    result = c.studentinfo();
+                result = c;
             }
             return result;
         }

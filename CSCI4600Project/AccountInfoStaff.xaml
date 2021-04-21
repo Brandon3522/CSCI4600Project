@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600Project"
         mc:Ignorable="d"
-        Title="AccountInfoStaff" Height="450" Width="800" Background="Gray" WindowStartupLocation="CenterScreen">
+        Title="AccountInfoStaff" Height="450" Width="400" Background="Gray" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
@@ -39,12 +39,7 @@
 
         </Grid>
 
-        <Grid Grid.Column="1">
-            <Label Content="Student List:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-            <ListBox x:Name="StudentList" HorizontalAlignment="Left" Height="218" Margin="10,38,0,0" VerticalAlignment="Top" Width="522"/>
-
-
-        </Grid>
+        <Grid Grid.Column="1"/>
 
 
     </Grid>

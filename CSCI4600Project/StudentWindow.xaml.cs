@@ -47,9 +47,11 @@ namespace CSCI4600Project
 
             filestream.Close();
             //
-            
+
             // Replace FindStudent name with currently logged in user **********************
-            student1 = registration0.FindStudent("bob");
+            // Check file for FirstName that matches the logged in user
+            string userName = "Tom";
+            student1 = registration0.FindStudent(userName);
 
             ListReload();
             // BindGrid(C);
@@ -137,9 +139,6 @@ namespace CSCI4600Project
 
             }
 
-
-
-
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
@@ -156,11 +155,22 @@ namespace CSCI4600Project
         // switch statement to determine what course is removed
         private void RemoveCourseButton_Click(object sender, RoutedEventArgs e)
         {
-            // Remove selected course from Data Grid
+            // Remove selected course from ListBox
             // Remove course from student course list
 
-            var selected = (string)StudentListBox.SelectedItem;
-           //   var selected = StudentListBox.SelectedItem;
+           // var selected = (string)StudentListBox.SelectedItem;
+            //   var selected = StudentListBox.SelectedItem;
+
+            //////////////////////// new method
+            var selected0 = (Course)StudentListBox.SelectedItem;
+
+            student1.RemoveCourse(selected0);
+
+
+
+
+            /////////////////////////
+
 
 
 
@@ -195,50 +205,70 @@ namespace CSCI4600Project
             //        break;
             //}
 
-            bool cpp = selected.Contains("Cpp");
-            bool english = selected.Contains("English");
-            bool c = selected.Contains("C#");
-            bool python = selected.Contains("Python");
-            bool dataStructures = selected.Contains("Data Structures");
-            bool calculus = selected.Contains("Calculus");
+            //bool cpp = selected.Contains("Cpp");
+            //bool english = selected.Contains("English");
+            //bool c = selected.Contains("C#");
+            //bool python = selected.Contains("Python");
+            //bool dataStructures = selected.Contains("Data Structures");
+            //bool calculus = selected.Contains("Calculus");
 
-            if (cpp)
-            {
-                student1.removeccourse("Cpp");
-            }
-            if (english)
-            {
-                student1.removeccourse("English");
-            }
-            if (c)
-            {
-                student1.removeccourse("C#");
-            }
-            if (python)
-            {
-                student1.removeccourse("Python");
-            }
-            if (dataStructures)
-            {
-                student1.removeccourse("Data Structures");
-            }
-            if (calculus)
-            {
-                student1.removeccourse("Calculus");
-            }
+            //if (cpp)
+            //{
+            //    student1.removeccourse("Cpp");
+            //}
+            //if (english)
+            //{
+            //    student1.removeccourse("English");
+            //}
+            //if (c)
+            //{
+            //    student1.removeccourse("C#");
+            //}
+            //if (python)
+            //{
+            //    student1.removeccourse("Python");
+            //}
+            //if (dataStructures)
+            //{
+            //    student1.removeccourse("Data Structures");
+            //}
+            //if (calculus)
+            //{
+            //    student1.removeccourse("Calculus");
+            //}
 
 
-            StudentListBox.Items.Remove(selected);
+            StudentListBox.Items.Remove(selected0);
             ListReload();       
 
         }
 
         public void BindGrid(string course)
         {
-            StudentListBox.Items.Add(student1.Getccourseinfo(course));
+           // StudentListBox.Items.Add(student1.Getccourseinfo(course));
 
+            StudentListBox.Items.Add(student1.CcourseReturn(course));
 
-        }
+        //    try
+        //    {
+        //        for (int i = 0; i < student1.CourseList().Count; i++)
+        //        {
+        //            StudentListBox.Items.Add(student1.Getccourseinfo(course)); 
+        //        }
+
+        //        foreach (var item in CourseList)
+        //        {
+        //            StudentListBox.Items.Add(item);
+        //        }
+
+        //    }
+        //    catch (Exception e)
+        //    {
+
+        //        throw new Exception("Oh No, Exception: " + e.Message);
+        //    }
+
+         }
 
         public void ListReload()
         {
@@ -246,11 +276,20 @@ namespace CSCI4600Project
 
             //  StudentListBox.Items.Add(student1.Getccoursesinfo());
 
-            foreach (var item in student1.ccourses)
+            try
             {
-                StudentListBox.Items.Add(item);
-            }
+                foreach (var item in student1.CourseList())
+                {
+                    StudentListBox.Items.Add(item);
+                }
 
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception("Oh No, Exception: " + e.Message);
+            }
+            
             //   StudentListBox.Items.Add(student1.Getccoursesinfo());
         }
         

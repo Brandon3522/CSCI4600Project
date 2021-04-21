@@ -42,6 +42,12 @@ namespace CSCI4600Project
             filestream.Close();
             //
 
+            foreach (var item in registration0.students)
+            {
+                StudentsList.Items.Add(item);
+            }
+
+
 
         }
         // View account information
@@ -64,6 +70,7 @@ namespace CSCI4600Project
             // Verify this is the student to be removed
             // Remove student from StudentListDataGrid
             // Remove student from Registration list
+
 
 
         }

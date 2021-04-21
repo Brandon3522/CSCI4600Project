@@ -47,6 +47,14 @@ namespace CSCI4600Project
         //    return "The list remains empty.";
         //}
 
+        //public string GetCourseName(string cName)
+        //{
+        //    return Course.cName
+        //}
+
+
+
+
         public string getinfo()
         {
             return cname + " | " + days + " | " + time + " | " + location + " | " + chours + " | " + "\n";

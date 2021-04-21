@@ -48,8 +48,10 @@ namespace CSCI4600Project
             filestream.Close();
             //
 
-            // replace name with currrently logged in user *****************************
-            student1 = registration0.FindStudent("bob");
+            // Replace FindStudent name with currently logged in user **********************
+            // Check file for FirstName that matches the logged in user
+            string userName = "Tom";
+            student1 = registration0.FindStudent(userName);
 
             // add some finished courses for testing
             Course C = new Course("English", "Mondays and tuesdays", "8:00", "English building", 4, 90);

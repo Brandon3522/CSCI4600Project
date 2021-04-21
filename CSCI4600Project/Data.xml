@@ -2,47 +2,75 @@
 <RegistrationClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <students>
     <Student>
-      <ccourses />
+      <ccourses>
+        <Course>
+          <cname>English</cname>
+          <days>Monday</days>
+          <time>8:00</time>
+          <location>English building</location>
+          <chours>4</chours>
+          <score>90</score>
+        </Course>
+        <Course>
+          <cname>English</cname>
+          <days>Monday</days>
+          <time>8:00</time>
+          <location>English building</location>
+          <chours>4</chours>
+          <score>90</score>
+        </Course>
+        <Course>
+          <cname>English</cname>
+          <days>Monday</days>
+          <time>8:00</time>
+          <location>English building</location>
+          <chours>4</chours>
+          <score>90</score>
+        </Course>
+      </ccourses>
       <fcourses />
-      <StudentId>0</StudentId>
-      <FirstName>B</FirstName>
-      <LastName>S</LastName>
-      <Password>g</Password>
+      <StudentId>1</StudentId>
+      <FirstName>Billy</FirstName>
+      <LastName>Bob</LastName>
+      <Password>Password</Password>
       <Gender>Male</Gender>
-      <major>Computer Science</major>
+      <major>English</major>
       <Permission>false</Permission>
     </Student>
     <Student>
-      <ccourses />
+      <ccourses>
+        <Course>
+          <cname>English</cname>
+          <days>Monday</days>
+          <time>8:00</time>
+          <location>English building</location>
+          <chours>4</chours>
+          <score>90</score>
+        </Course>
+        <Course>
+          <cname>Calculus</cname>
+          <days>Mondays and tuesdays</days>
+          <time>1:00</time>
+          <location>CS building</location>
+          <chours>4</chours>
+          <score>0</score>
+        </Course>
+        <Course>
+          <cname>Cpp</cname>
+          <days>Mondays and tuesdays</days>
+          <time>8:00</time>
+          <location>CS building</location>
+          <chours>4</chours>
+          <score>0</score>
+        </Course>
+      </ccourses>
       <fcourses />
-      <StudentId>0</StudentId>
-      <FirstName>John</FirstName>
-      <LastName>S</LastName>
-      <Password>Passw</Password>
+      <StudentId>2</StudentId>
+      <FirstName>Tom</FirstName>
+      <LastName>Bob</LastName>
+      <Password>Password</Password>
       <Gender>Male</Gender>
-      <major>Psychology</major>
-      <Permission>false</Permission>
-    </Student>
-    <Student>
-      <ccourses />
-      <fcourses />
-      <StudentId>0</StudentId>
-      <FirstName>bob</FirstName>
-      <LastName>sagot</LastName>
-      <Password>pass</Password>
-      <Gender>Male</Gender>
-      <major>Mathematics</major>
-      <Permission>false</Permission>
-    </Student>
-    <Student>
-      <ccourses />
-      <fcourses />
-      <StudentId>0</StudentId>
-      <FirstName>Brsd</FirstName>
-      <LastName>rga</LastName>
-      <Password>pass</Password>
-      <Gender>Male</Gender>
-      <major>Mathematics</major>
+      <major>CS</major>
       <Permission>false</Permission>
     </Student>
   </students>

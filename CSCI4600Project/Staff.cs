@@ -15,6 +15,7 @@ namespace CSCI4600Project
         public bool Permission { get; set; }
         public Staff(int sid, string fname, string lname, bool permission = true)
         {
+            StaffId += 100;
             this.StaffId = sid;
             this.Firstname = fname;
             this.Lastname = lname;
