@@ -193,7 +193,7 @@ namespace CSCI4600Project
         {
             int x = 0;
 
-            foreach (Course c in ccourses.ToList())
+            foreach (Course c in ccourses)
             {
                 if (s == c.cname)
                 {
@@ -203,20 +203,9 @@ namespace CSCI4600Project
             }
         }
 
-        public Course RemoveCourse(Course C)
+        public void RemoveCourse(Course course)
         {
-            int x = 0;
-            Course Co = new Course();
-            foreach (Course c in ccourses.ToList())
-            {
-                if (C == c)
-                {
-                    ccourses.RemoveAt(x);
-                    return Co;
-                }
-                x += 1;
-            }
-            return null;
+            ccourses.Remove(course);
         }
 
         public override string ToString()

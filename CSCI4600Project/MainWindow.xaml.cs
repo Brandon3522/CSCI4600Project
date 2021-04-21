@@ -40,30 +40,27 @@ namespace CSCI4600Project
 
             //Student student0 = new Student(0, "English", "Billy", "Bob", "Password", "Male");
 
-            //Student student1 = new Student(1, "CS", "Tom", "Bob", "Password", "Male");
-
-            //Course course = new Course("English", "Monday", "8:00", "English building", 4, 90);
-
-            //Course course1 = new Course("English", "Monday", "8:00", "English building", 4, 90);
-
             //student0.addccourse(course);
 
             //student0.addccourse(course1);
-
-
-
-            //student1.addccourse(course1);
-            //student1.addccourse(course);
-
             //student0.addccourse(course);
 
             ////student2.addccourse(course1);
 
             //registrationClass.Addstudent(student0);
-            //registrationClass.Addstudent(student1);
             //registrationClass.Addstudent(student2);
             //registrationClass.Addstudent(student3);
 
+            //Student student1 = new Student(1, "CS", "Tom", "Bob", "Password", "Male");
+
+            //Course course = new Course("English", "Monday", "8:00", "English building", 4, 0);
+
+            //Course course1 = new Course("Engineering", "Monday", "10:00", "Engineering building", 4, 0);
+
+            //student1.addccourse(course1);
+            //student1.addccourse(course);
+
+            //registrationClass.Addstudent(student1);
 
 
             //XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
@@ -74,8 +71,7 @@ namespace CSCI4600Project
 
             //file0.Close();
 
-
-            // doc.Load(filePath);
+            doc.Load(filePath);
 
 
         }

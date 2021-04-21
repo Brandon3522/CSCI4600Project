@@ -53,6 +53,16 @@ namespace CSCI4600Project
         // View account information
         private void AccountButton_Click(object sender, RoutedEventArgs e)
         {
+            //////////////////// Save RegistrationClass object to xml file
+            XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
+
+            FileStream file0 = System.IO.File.Create(filePath);
+
+            write1.Serialize(file0, registration0);
+
+            file0.Close();
+            ////////////////////
+
             AccountInfoStaff accountInfoStaff = new AccountInfoStaff();
             accountInfoStaff.Show();
             this.Close();
@@ -60,6 +70,16 @@ namespace CSCI4600Project
         // Logout
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
+            //////////////////// Save RegistrationClass object to xml file
+            XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
+
+            FileStream file0 = System.IO.File.Create(filePath);
+
+            write1.Serialize(file0, registration0);
+
+            file0.Close();
+            ////////////////////
+
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
@@ -71,6 +91,26 @@ namespace CSCI4600Project
             // Remove student from StudentListDataGrid
             // Remove student from Registration list
 
+            var selected = (Student)StudentsList.SelectedItem;
+
+            MessageBox.Show(selected.ToString());
+
+            registration0.removeStudent(selected);
+
+            StudentsList.Items.Clear();
+
+            try
+            {
+                foreach (var item in registration0.DisplayStudents())
+                {
+                    StudentsList.Items.Add(item);
+                }
+            }
+            catch (Exception a)
+            {
+                MessageBox.Show("Exception: " + a.Message);
+                throw new Exception(a.Message);
+            }
 
 
         }

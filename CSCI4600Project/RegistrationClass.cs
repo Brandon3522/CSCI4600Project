@@ -112,30 +112,20 @@ namespace CSCI4600Project
             return result;
         }
 
-        public Student DisplayStudents()
+        public List<Student> DisplayStudents()
         {
-            Student result = new Student();
+            List<Student> result = new List<Student>();
 
             foreach (Student c in students)
             {
-                result = c;
+                result.Add(c);
             }
             return result;
         }
 
-        public void removestudent(string name)
+        public void removeStudent(Student student)
         {
-            int x = 0;
-
-            foreach (Student c in students)
-            {
-                if (c.FirstName == name)
-                {
-                    students.RemoveAt(x);
-                }
-                x += 1;
-
-            }
+            students.Remove(student);
 
         }
         public void removestaff(int id)

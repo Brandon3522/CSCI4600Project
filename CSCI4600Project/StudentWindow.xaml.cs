@@ -50,7 +50,7 @@ namespace CSCI4600Project
 
             // Replace FindStudent name with currently logged in user **********************
             // Check file for FirstName that matches the logged in user
-            string userName = "Tom";
+            string userName = "John";
             student1 = registration0.FindStudent(userName);
 
             ListReload();
@@ -74,7 +74,7 @@ namespace CSCI4600Project
             //////////////////// Save RegistrationClass object to xml file
             XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
-            FileStream file0 = System.IO.File.OpenWrite(filePath);
+            FileStream file0 = System.IO.File.Create(filePath);
 
             write1.Serialize(file0, registration0);
 
@@ -90,7 +90,7 @@ namespace CSCI4600Project
             //////////////////// Save RegistrationClass object to xml file
             XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
-            FileStream file0 = System.IO.File.OpenWrite(filePath);
+            FileStream file0 = System.IO.File.Create(filePath);
 
             write1.Serialize(file0, registration0);
 
@@ -163,16 +163,18 @@ namespace CSCI4600Project
 
             //////////////////////// new method
             var selected0 = (Course)StudentListBox.SelectedItem;
+            // selected0 = Course object
 
-            student1.RemoveCourse(selected0);
 
+           MessageBox.Show(selected0.getinfo());
 
+           student1.RemoveCourse(selected0);
+
+            StudentListBox.Items.Remove(selected0);
+            ListReload();
 
 
             /////////////////////////
-
-
-
 
             //switch (selected)
             //{
@@ -238,16 +240,26 @@ namespace CSCI4600Project
             //}
 
 
-            StudentListBox.Items.Remove(selected0);
-            ListReload();       
+
 
         }
 
         public void BindGrid(string course)
         {
-           // StudentListBox.Items.Add(student1.Getccourseinfo(course));
+            // StudentListBox.Items.Add(student1.Getccourseinfo(course));
+            try
+            {
+                StudentListBox.Items.Add(student1.CcourseReturn(course));
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Exception: " + e.Message);
+                throw new Exception();
+                
+            }
 
-            StudentListBox.Items.Add(student1.CcourseReturn(course));
+
+            
 
         //    try
         //    {
@@ -286,7 +298,7 @@ namespace CSCI4600Project
             }
             catch (Exception e)
             {
-
+                MessageBox.Show("Exception: " + e.Message);
                 throw new Exception("Oh No, Exception: " + e.Message);
             }
             
