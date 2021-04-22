@@ -3,13 +3,60 @@
   <students>
     <Student>
       <ccourses />
-      <fcourses />
+      <fcourses>
+        <Course>
+          <cname>English 1020</cname>
+          <days>Monday and Tuesday</days>
+          <time>8:00</time>
+          <location>English building</location>
+          <chours>3</chours>
+          <score>3</score>
+        </Course>
+        <Course>
+          <cname>Ruby</cname>
+          <days>Monday and Tuesday</days>
+          <time>9:00</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>4</score>
+        </Course>
+        <Course>
+          <cname>Calculus 3</cname>
+          <days>Monday and Thursday</days>
+          <time>9:00</time>
+          <location>Mathematics building</location>
+          <chours>4</chours>
+          <score>4</score>
+        </Course>
+      </fcourses>
       <StudentId>1</StudentId>
       <FirstName>John</FirstName>
       <LastName>Smith</LastName>
       <Password>Password</Password>
       <Gender>Male</Gender>
       <major>Computer Science</major>
+      <Permission>false</Permission>
+    </Student>
+    <Student>
+      <ccourses />
+      <fcourses />
+      <StudentId>1</StudentId>
+      <FirstName>Mary</FirstName>
+      <LastName>Ann</LastName>
+      <Password>Password</Password>
+      <Gender>Female</Gender>
+      <major>English</major>
+      <Permission>false</Permission>
+    </Student>
+    <Student>
+      <ccourses />
+      <fcourses />
+      <StudentId>1</StudentId>
+      <FirstName>Susan</FirstName>
+      <LastName>Dover</LastName>
+      <Password>Dover12</Password>
+      <Gender>Female</Gender>
+      <major>Engineering</major>
       <Permission>false</Permission>
     </Student>
   </students>
