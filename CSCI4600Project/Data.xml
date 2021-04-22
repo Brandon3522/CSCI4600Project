@@ -59,6 +59,42 @@
       <major>Engineering</major>
       <Permission>false</Permission>
     </Student>
+    <Student>
+      <ccourses>
+        <Course>
+          <cname>C++</cname>
+          <days>Monday and Tuesday</days>
+          <time>8:00</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+        <Course>
+          <cname>History</cname>
+          <days>Tuesday and Thursday</days>
+          <time>7:00</time>
+          <location>History building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+        <Course>
+          <cname>Java</cname>
+          <days>Tuesday, Wednesday, and Thursday</days>
+          <time>9:00</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+      </ccourses>
+      <fcourses />
+      <StudentId>1</StudentId>
+      <FirstName>Tommy</FirstName>
+      <LastName>Smith</LastName>
+      <Password>Pass</Password>
+      <Gender>Male</Gender>
+      <major>Engineering</major>
+      <Permission>false</Permission>
+    </Student>
   </students>
   <staff>
     <Staff>
