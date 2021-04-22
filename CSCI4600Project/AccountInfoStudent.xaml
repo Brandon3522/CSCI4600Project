@@ -54,6 +54,24 @@
         <Grid Grid.Column="1">
             <ListBox x:Name="CompletedClasses" HorizontalAlignment="Left" Height="221" Margin="10,46,0,0" VerticalAlignment="Top" Width="622"/>
             <Label Content="Completed Classes:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+            <Label x:Name="LiveTimeLabel" Content="" HorizontalAlignment="Left" Margin="552,378,0,0" VerticalAlignment="Top" Height="31" Width="72">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="White" Offset="0.474"/>
+                        <GradientStop Color="#FF080808" Offset="0.9"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="LiveTimeLabel_Copy" Content="" HorizontalAlignment="Left" Margin="480,378,0,0" VerticalAlignment="Top" Height="31" Width="72">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="White" Offset="0.474"/>
+                        <GradientStop Color="#FF080808" Offset="0.9"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
 
 
         </Grid>

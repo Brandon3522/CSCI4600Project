@@ -32,13 +32,31 @@
             <ComboBoxItem Content="Engineering"/>
         </ComboBox>
 
-        <Button x:Name="Register" Content="Register" HorizontalAlignment="Left" Margin="10,379,0,0" VerticalAlignment="Top" Width="84" Click="Register_Click" Height="32"/>
+        <Button x:Name="Register" Content="Register" HorizontalAlignment="Left" Margin="12,369,0,0" VerticalAlignment="Top" Width="84" Click="Register_Click" Height="32"/>
 
-        <Button x:Name="LoginScreen" Content="Login" HorizontalAlignment="Left" Margin="122,379,0,0" VerticalAlignment="Top" Width="84" Click="LoginScreen_Click" Height="32"/>
+        <Button x:Name="LoginScreen" Content="Login" HorizontalAlignment="Left" Margin="130,369,0,0" VerticalAlignment="Top" Width="84" Click="LoginScreen_Click" Height="32"/>
         <CheckBox x:Name="StudentCheck" Content="Student" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="StaffCheck" Content="Staff" HorizontalAlignment="Left" Margin="108,154,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.184,0.626"/>
         <Label Content="Last Name:" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="LastNameText" HorizontalAlignment="Left" Height="25" Margin="94,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="LiveTimeLabel" Content="" HorizontalAlignment="Left" Margin="403,378,0,0" VerticalAlignment="Top" Height="31" Width="72">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.474"/>
+                    <GradientStop Color="#FF080808" Offset="0.9"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Label x:Name="LiveTimeLabel_Copy" Content="" HorizontalAlignment="Left" Margin="331,378,0,0" VerticalAlignment="Top" Height="31" Width="72">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.474"/>
+                    <GradientStop Color="#FF080808" Offset="0.9"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
 
     </Grid>
 </Window>

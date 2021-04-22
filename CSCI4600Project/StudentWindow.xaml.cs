@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
@@ -31,6 +32,16 @@ namespace CSCI4600Project
         public StudentWindow()
         {
             InitializeComponent();
+
+            // date.time
+            DispatcherTimer LiveTime = new DispatcherTimer();
+            LiveTime.Interval = TimeSpan.FromSeconds(1);
+            LiveTime.Tick += timer_Tick;
+            LiveTime.Start();
+            DispatcherTimer LiveTime1 = new DispatcherTimer();
+            LiveTime.Interval = TimeSpan.FromSeconds(1);
+            LiveTime.Tick += timer_Tick1;
+            LiveTime.Start();
 
             //////////////// XML ////////////////////
             // Open file and deserialze to RegistrationClass object
@@ -63,6 +74,17 @@ namespace CSCI4600Project
             ListReload();
 
         }
+
+        void timer_Tick(object sender, EventArgs e)
+        {
+            LiveTimeLabel.Content = DateTime.Now.ToString();
+        }
+
+        void timer_Tick1(object sender, EventArgs e)
+        {
+            LiveTimeLabel_Copy.Content = DateTime.Now.ToString("HH:mm:ss");
+        }
+
         // Logout from system
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {

@@ -61,6 +61,24 @@
 
             <Button x:Name="AddCourseButton" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Height="40" Margin="559,319,0,0" Click="AddCourseButton_Click"/>
             <ListBox x:Name="StudentListBox" HorizontalAlignment="Left" Height="266" Margin="10,48,0,0" VerticalAlignment="Top" Width="774"/>
+            <Label x:Name="LiveTimeLabel" Content="" HorizontalAlignment="Left" Margin="703,530,0,0" VerticalAlignment="Top" Height="31" Width="72">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="White" Offset="0.474"/>
+                        <GradientStop Color="#FF080808" Offset="0.9"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <Label x:Name="LiveTimeLabel_Copy" Content="" HorizontalAlignment="Left" Margin="631,530,0,0" VerticalAlignment="Top" Height="31" Width="72">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="White" Offset="0.474"/>
+                        <GradientStop Color="#FF080808" Offset="0.9"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
         </Grid>
     </Grid>
 </Window>
