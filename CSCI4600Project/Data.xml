@@ -16,7 +16,7 @@
           <days>Mondays and tuesdays</days>
           <time>11:00</time>
           <location>CS building</location>
-          <chours>4</chours>
+          <chours>3</chours>
           <score>0</score>
         </Course>
         <Course>
@@ -24,7 +24,7 @@
           <days>Mondays and tuesdays</days>
           <time>8:00</time>
           <location>CS building</location>
-          <chours>4</chours>
+          <chours>3</chours>
           <score>0</score>
         </Course>
       </ccourses>
@@ -44,7 +44,7 @@
           <days>Mondays and tuesdays</days>
           <time>8:00</time>
           <location>CS building</location>
-          <chours>4</chours>
+          <chours>3</chours>
           <score>0</score>
         </Course>
         <Course>
@@ -52,7 +52,7 @@
           <days>Mondays and tuesdays</days>
           <time>8:00</time>
           <location>CS building</location>
-          <chours>4</chours>
+          <chours>3</chours>
           <score>0</score>
         </Course>
         <Course>
@@ -60,11 +60,28 @@
           <days>Mondays and tuesdays</days>
           <time>11:00</time>
           <location>CS building</location>
-          <chours>4</chours>
+          <chours>3</chours>
           <score>0</score>
         </Course>
       </ccourses>
-      <fcourses />
+      <fcourses>
+        <Course>
+          <cname>English</cname>
+          <days>Mondays and tuesdays</days>
+          <time>8:00</time>
+          <location>English building</location>
+          <chours>3</chours>
+          <score>3</score>
+        </Course>
+        <Course>
+          <cname>C++</cname>
+          <days>Mondays and tuesdays</days>
+          <time>8:00</time>
+          <location>CS building</location>
+          <chours>3</chours>
+          <score>4</score>
+        </Course>
+      </fcourses>
       <StudentId>1</StudentId>
       <FirstName>John</FirstName>
       <LastName>john</LastName>
@@ -80,7 +97,7 @@
           <days>Mondays and tuesdays</days>
           <time>8:00</time>
           <location>CS building</location>
-          <chours>4</chours>
+          <chours>3</chours>
           <score>0</score>
         </Course>
         <Course>
@@ -110,5 +127,5 @@
       <Permission>true</Permission>
     </Staff>
   </staff>
-  <_UserLoggedIn>John</_UserLoggedIn>
+  <_UserLoggedIn>Brandon</_UserLoggedIn>
 </RegistrationClass>

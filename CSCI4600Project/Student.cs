@@ -103,15 +103,9 @@ namespace CSCI4600Project
         {
             int h = 0;
             int s = 0;
-            foreach (Course c in ccourses)
-            {
-                h += c.chours;
-                s += c.score;
-            }
-
             foreach (Course c in fcourses)
             {
-                h += c.chours;
+                h += 1;
                 s += c.score;
             }
             int gpa = s / h;

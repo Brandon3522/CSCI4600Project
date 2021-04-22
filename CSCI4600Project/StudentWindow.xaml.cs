@@ -49,6 +49,12 @@ namespace CSCI4600Project
             student1 = registration0.FindStudent(userName);
             //
 
+            // competed courses test
+            //Course C = new Course("English", "Mondays and tuesdays", "8:00", "English building", 4, 3);
+            //Course B = new Course("C++", "Mondays and tuesdays", "8:00", "CS building", 4, 4);
+            //student1.addfcourse(C);
+            //student1.addfcourse(B);
+
             // Label = current user
             StudentNameLabel.Content = userName;
 
@@ -98,7 +104,7 @@ namespace CSCI4600Project
 
             if (CourseList.Text == "Cpp")
             {
-                Course Cpp = new Course("Cpp", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
+                Course Cpp = new Course("Cpp", "Mondays and tuesdays", "8:00", "CS building", 3, 0);
                 student1.addccourse(Cpp);
                 BindGrid(Cpp.cname);
 
@@ -106,7 +112,7 @@ namespace CSCI4600Project
 
             if (CourseList.Text == "C#")
             {
-                Course CSharp = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 4, 0);
+                Course CSharp = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 3, 0);
                 student1.addccourse(CSharp);
                 BindGrid(CSharp.cname);
 
@@ -114,7 +120,7 @@ namespace CSCI4600Project
 
             if (CourseList.Text == "Python")
             {
-                Course Python = new Course("Python", "Mondays and tuesdays", "11:00", "CS building", 4, 0);
+                Course Python = new Course("Python", "Mondays and tuesdays", "11:00", "CS building", 3, 0);
                 student1.addccourse(Python);
                 BindGrid(Python.cname);
 
@@ -122,7 +128,7 @@ namespace CSCI4600Project
 
             if (CourseList.Text == "Calculus")
             {
-                Course Calculus = new Course("Calculus", "Mondays and tuesdays", "1:00", "CS building", 4, 0);
+                Course Calculus = new Course("Calculus", "Mondays and tuesdays", "1:00", "CS building", 3, 0);
                 student1.addccourse(Calculus);
                 BindGrid(Calculus.cname);
 

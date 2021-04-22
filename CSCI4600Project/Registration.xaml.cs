@@ -25,15 +25,13 @@ namespace CSCI4600Project
     public partial class Registration : Window
     {
         RegistrationClass registration = new RegistrationClass();
+        string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
 
-        
         public Registration()
         {
             InitializeComponent();
 
             ///////////// load xml
-            string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
-
             XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
 
             FileStream filestream = new FileStream(filePath, FileMode.Open);

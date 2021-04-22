@@ -27,6 +27,7 @@ namespace CSCI4600Project
         // Needs to bind completed courses to CompletedClasses list box
         Student student = new Student(0, "Computer Science", "Billy", "Bob", "Pass", "Male");
         List<Course> courses = new List<Course>();
+        string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
 
         RegistrationClass registration0 = new RegistrationClass();
         Student student1 = new Student();
@@ -36,8 +37,6 @@ namespace CSCI4600Project
             InitializeComponent();
 
             // Open file and deserialze to RegistrationClass object
-            string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
-
             XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
 
             FileStream filestream = new FileStream(filePath, FileMode.Open);
@@ -54,10 +53,10 @@ namespace CSCI4600Project
             //
 
             // completed courses test
-            Course C = new Course("English", "Mondays and tuesdays", "8:00", "English building", 4, 90);
-            Course B = new Course("C++", "Mondays and tuesdays", "8:00", "CS building", 4, 90);
-            student1.addfcourse(C);
-            student1.addfcourse(B);
+            //Course C = new Course("English", "Mondays and tuesdays", "8:00", "English building", 4, 4);
+            //Course B = new Course("C++", "Mondays and tuesdays", "8:00", "CS building", 4, 3);
+            //student1.addfcourse(C);
+            //student1.addfcourse(B);
 
             // Populate account info wtih Student info
             FirstNameText.Text = userName;
