@@ -5,7 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600Project"
         mc:Ignorable="d"
-        Title="StaffWindow" Height="600" Width="900" Background="Gray" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontSize="16" FontFamily="Times New Roman">
+        Title="StaffWindow" Height="600" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontSize="16" FontFamily="Times New Roman">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="White"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -23,8 +29,8 @@
 
         <Grid Grid.Column="1">
             <Label Content="Students:" Grid.Column="1" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24"/>
-            <Button x:Name="RemoveButton" HorizontalAlignment="Left" Margin="574,311,0,0" VerticalAlignment="Top" Width="110" Height="40" Content="Remove" Click="RemoveButton_Click"/>
-            <ListBox x:Name="StudentsList" HorizontalAlignment="Left" Height="259" Margin="11,47,0,0" VerticalAlignment="Top" Width="673"/>
+            <Button x:Name="RemoveButton" HorizontalAlignment="Left" Margin="674,325,0,0" VerticalAlignment="Top" Width="110" Height="40" Content="Remove" Click="RemoveButton_Click"/>
+            <ListBox x:Name="StudentsList" HorizontalAlignment="Left" Height="273" Margin="11,47,0,0" VerticalAlignment="Top" Width="773"/>
         </Grid>
     </Grid>
 </Window>

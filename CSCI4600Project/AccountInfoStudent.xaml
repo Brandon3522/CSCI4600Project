@@ -5,7 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600Project"
         mc:Ignorable="d"
-        Title="AccountInfoStudent" Height="450" Width="800" Background="Gray" WindowStartupLocation="CenterScreen" FontSize="16" FontFamily="Times New Roman">
+        Title="AccountInfoStudent" Height="450" Width="900" WindowStartupLocation="CenterScreen" FontSize="16" FontFamily="Times New Roman">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="White"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
@@ -46,7 +52,7 @@
         </Grid>
 
         <Grid Grid.Column="1">
-            <ListBox x:Name="CompletedClasses" HorizontalAlignment="Left" Height="214" Margin="10,46,0,0" VerticalAlignment="Top" Width="522"/>
+            <ListBox x:Name="CompletedClasses" HorizontalAlignment="Left" Height="221" Margin="10,46,0,0" VerticalAlignment="Top" Width="622"/>
             <Label Content="Completed Classes:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
 
 

@@ -40,34 +40,18 @@
     <Student>
       <ccourses>
         <Course>
-          <cname>Cpp</cname>
-          <days>Mondays and tuesdays</days>
-          <time>8:00</time>
-          <location>CS building</location>
+          <cname>COBOL</cname>
+          <days>Friday</days>
+          <time>1:30</time>
+          <location>Computer Science building</location>
           <chours>3</chours>
           <score>0</score>
         </Course>
         <Course>
-          <cname>C#</cname>
-          <days>Mondays and tuesdays</days>
-          <time>8:00</time>
-          <location>CS building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-        <Course>
-          <cname>Python</cname>
-          <days>Mondays and tuesdays</days>
-          <time>11:00</time>
-          <location>CS building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-        <Course>
-          <cname>Calculus</cname>
-          <days>Mondays and tuesdays</days>
-          <time>1:00</time>
-          <location>CS building</location>
+          <cname>Software Engineering</cname>
+          <days>Monday and Friday</days>
+          <time>1:30</time>
+          <location>Computer Science building</location>
           <chours>3</chours>
           <score>0</score>
         </Course>
@@ -171,5 +155,5 @@
       <Permission>true</Permission>
     </Staff>
   </staff>
-  <_UserLoggedIn>Tommy</_UserLoggedIn>
+  <_UserLoggedIn>John</_UserLoggedIn>
 </RegistrationClass>

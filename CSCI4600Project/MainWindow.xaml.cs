@@ -106,6 +106,7 @@ namespace CSCI4600Project
             if (UsernameText.Text == "" || PasswordText.Text == "")
             {
                 MessageBox.Show("Please verify Username and Password", "Empty Username or Password", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
 
             string user = UsernameText.Text;
@@ -133,7 +134,7 @@ namespace CSCI4600Project
 
             }
 
-            if (registrationClass.FindStudentName(user) != user && registrationClass.findstaff(user) != user)
+            else if (registrationClass.FindStudentName(user) != user && registrationClass.findstaff(user) != user)
             {
                 MessageBox.Show("Please enter a valid username / password", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
             }

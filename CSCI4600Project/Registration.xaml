@@ -5,7 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600Project"
         mc:Ignorable="d"
-        Title="Registration" Height="450" Width="500" Background="Gray" WindowStartupLocation="CenterScreen" FontSize="16" FontFamily="Times New Roman">
+        Title="Registration" Height="450" Width="500" WindowStartupLocation="CenterScreen" FontSize="16" FontFamily="Times New Roman">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="White"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <Label Content="First Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="FirstNameText" HorizontalAlignment="Left" Height="25" Margin="94,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

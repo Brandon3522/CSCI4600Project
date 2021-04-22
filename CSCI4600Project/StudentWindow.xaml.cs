@@ -102,6 +102,13 @@ namespace CSCI4600Project
             // Add selected course from comboBox into StudentList
             // Add selected course to student course list
 
+            
+            if (student1.CourseList().Count >= 5)
+            {
+                MessageBox.Show("Only 5 classes or less allowed per semester", "Classes", MessageBoxButton.OK);
+                return;
+            }
+
             if (CourseList.Text == "C++")
             {
                 Course Cpp = new Course("C++", "Monday and Tuesday", "8:00", "Computer Science building", 3, 0);
