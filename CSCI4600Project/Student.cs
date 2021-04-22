@@ -221,7 +221,7 @@ namespace CSCI4600Project
 
         public override string ToString()
         {
-            return StudentId + " | " + FirstName + " " + LastName + " | " + Gender + " | " + major + " | " + "\n";
+            return FirstName + " " + LastName + " | " + Gender + " | " + major + " | " + "\n";
         }
 
     }

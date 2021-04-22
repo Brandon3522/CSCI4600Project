@@ -103,7 +103,7 @@ namespace CSCI4600Project
             filestream.Close();
             //
 
-            if (UsernameText.Text == "" || PasswordText.Text == "")
+            if (UsernameText.Text == "" || PasswordText.Password == "")
             {
                 MessageBox.Show("Please verify Username and Password", "Empty Username or Password", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -139,7 +139,7 @@ namespace CSCI4600Project
                 MessageBox.Show("Please enter a valid username / password", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            if (registrationClass.findstaff(user) == user && PasswordText.Text.Contains("Admin"))
+            if (registrationClass.findstaff(user) == user && PasswordText.Password.Contains("Admin"))
             {
 
                 registrationClass.UserLoggedIn(user);
@@ -160,7 +160,7 @@ namespace CSCI4600Project
                 this.Close();
 
                 // need to update
-                if (!PasswordText.Text.Contains("Admin") || registrationClass.findstaff(user) != user)
+                if (!PasswordText.Password.Contains("Admin") || registrationClass.findstaff(user) != user)
                 {
                     
                 }
