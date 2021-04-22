@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600Project"
         mc:Ignorable="d"
-        Title="StaffWindow" Height="600" Width="900" Background="Gray" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="StaffWindow" Height="600" Width="900" Background="Gray" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontSize="16" FontFamily="Times New Roman">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -14,7 +14,7 @@
 
         <Grid Grid.Column="0">
             <Label Content="Welcome, " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <Label Content="Administrator" HorizontalAlignment="Left" Margin="75,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.013,0.382" FontWeight="Bold"/>
+            <Label Content="Admin" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.013,0.382" FontWeight="Bold"/>
 
             <Button x:Name="LogoutButton" Content="Logout" HorizontalAlignment="Left" Margin="10,519,0,0" VerticalAlignment="Top" Width="110" Height="40" Click="LogoutButton_Click"/>
 
@@ -22,9 +22,9 @@
         </Grid>
 
         <Grid Grid.Column="1">
-            <Label Content="Students:" Grid.Column="1" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-            <Button x:Name="RemoveButton" HorizontalAlignment="Left" Margin="571,300,0,0" VerticalAlignment="Top" Width="110" Height="40" Grid.Column="1" Content="Remove" Click="RemoveButton_Click"/>
-            <ListBox x:Name="StudentsList" HorizontalAlignment="Left" Height="259" Margin="11,36,0,0" VerticalAlignment="Top" Width="673"/>
+            <Label Content="Students:" Grid.Column="1" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24"/>
+            <Button x:Name="RemoveButton" HorizontalAlignment="Left" Margin="574,311,0,0" VerticalAlignment="Top" Width="110" Height="40" Content="Remove" Click="RemoveButton_Click"/>
+            <ListBox x:Name="StudentsList" HorizontalAlignment="Left" Height="259" Margin="11,47,0,0" VerticalAlignment="Top" Width="673"/>
         </Grid>
     </Grid>
 </Window>

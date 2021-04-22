@@ -35,17 +35,17 @@ namespace CSCI4600Project
 
         public override string ToString()
         {
-            return cname + " | " + days + " | " + time + " | " + location + " | " + chours + " | " + score + "\n";
+            return cname + " | " + days + " | " + time + " | " + location + " | " + "Credit hours: " + chours + " | " + "Score: " + score + "\n";
         }
 
         public string getinfo()
         {
-            return cname + " | " + days + " | " + time + " | " + location + " | " + chours + " | " + "\n";
+            return cname + " | " + days + " | " + time + " | " + location + " | " + "Credit hours: " + chours + " | " + "\n";
         }
 
         public string getfcourseinfo()
         {
-            return cname + " | " + days + " | " + time + " | " + location + " | " + chours + " | " + score + "\n";
+            return cname + " | " + days + " | " + time + " | " + location + " | " + "Credit hours: " + chours + " | " + "Score: " + score + "\n";
         }
     }
 }

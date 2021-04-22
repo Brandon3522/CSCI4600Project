@@ -34,8 +34,6 @@ namespace CSCI4600Project
 
         public MainWindow()
         {
-
-
             InitializeComponent();
 
             //Student student0 = new Student(0, "English", "Billy", "Bob", "Password", "Male");
@@ -71,8 +69,11 @@ namespace CSCI4600Project
 
             //file0.Close();
 
+
             // Load XML file
             doc.Load(filePath);
+
+
         }
 
 

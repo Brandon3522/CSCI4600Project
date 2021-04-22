@@ -63,6 +63,14 @@
           <chours>3</chours>
           <score>0</score>
         </Course>
+        <Course>
+          <cname>Calculus</cname>
+          <days>Mondays and tuesdays</days>
+          <time>1:00</time>
+          <location>CS building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
       </ccourses>
       <fcourses>
         <Course>
@@ -101,11 +109,11 @@
           <score>0</score>
         </Course>
         <Course>
-          <cname>C#</cname>
+          <cname>Python</cname>
           <days>Mondays and tuesdays</days>
-          <time>8:00</time>
+          <time>11:00</time>
           <location>CS building</location>
-          <chours>4</chours>
+          <chours>3</chours>
           <score>0</score>
         </Course>
       </ccourses>
@@ -113,6 +121,42 @@
       <StudentId>1</StudentId>
       <FirstName>Billy</FirstName>
       <LastName>Bob</LastName>
+      <Password>Pass</Password>
+      <Gender>Male</Gender>
+      <major>Computer Science</major>
+      <Permission>false</Permission>
+    </Student>
+    <Student>
+      <ccourses>
+        <Course>
+          <cname>Cpp</cname>
+          <days>Mondays and tuesdays</days>
+          <time>8:00</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+        <Course>
+          <cname>Calculus</cname>
+          <days>Mondays and tuesdays</days>
+          <time>1:00</time>
+          <location>CS building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+        <Course>
+          <cname>Software Engineering</cname>
+          <days>Monday and Friday</days>
+          <time>1:30</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+      </ccourses>
+      <fcourses />
+      <StudentId>1</StudentId>
+      <FirstName>Tommy</FirstName>
+      <LastName>Smith</LastName>
       <Password>Pass</Password>
       <Gender>Male</Gender>
       <major>Computer Science</major>
@@ -127,5 +171,5 @@
       <Permission>true</Permission>
     </Staff>
   </staff>
-  <_UserLoggedIn>Brandon</_UserLoggedIn>
+  <_UserLoggedIn>Tommy</_UserLoggedIn>
 </RegistrationClass>

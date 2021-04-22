@@ -108,8 +108,11 @@ namespace CSCI4600Project
                 h += 1;
                 s += c.score;
             }
-            int gpa = s / h;
-            return gpa;
+            if (h == 0)
+                return 0;
+
+                int gpa = s / h;
+                return gpa;
         }
         //Get information method
         public string Getccourseinfo(string s)

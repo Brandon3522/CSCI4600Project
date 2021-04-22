@@ -82,7 +82,17 @@ namespace CSCI4600Project
                 CompletedClasses.Items.Add(student1.Getfcoursesinfo());
             }
 
-            GPAinfo.Content = student1.calcgpa();
+            try
+            {
+                GPAinfo.Content = student1.calcgpa();
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+
+            
 
         }
         // Update student information

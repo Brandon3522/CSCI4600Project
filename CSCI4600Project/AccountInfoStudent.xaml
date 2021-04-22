@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSCI4600Project"
         mc:Ignorable="d"
-        Title="AccountInfoStudent" Height="450" Width="800" Background="Gray" WindowStartupLocation="CenterScreen">
+        Title="AccountInfoStudent" Height="450" Width="800" Background="Gray" WindowStartupLocation="CenterScreen" FontSize="16" FontFamily="Times New Roman">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
@@ -14,29 +14,25 @@
 
         <Grid Grid.Column="0">
             <Label Content="First Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="77,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
             <RadioButton Content="Male" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,1.421"/>
             <RadioButton x:Name="FemaleRadioButton" Content="Female" HorizontalAlignment="Left" Margin="108,90,0,0" VerticalAlignment="Top"/>
 
             <Label Content="Password:" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="77,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Label Content="Last Name:" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="77,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Label Content="First Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="FirstNameText" HorizontalAlignment="Left" Height="23" Margin="77,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="FirstNameText" HorizontalAlignment="Left" Height="25" Margin="100,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
             <RadioButton x:Name="MaleRadioButton" Content="Male" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,1.421"/>
 
             <Label Content="Password:" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="77,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
-            <Label Content="Major:" HorizontalAlignment="Left" Margin="11,148,0,0" VerticalAlignment="Top"/>
+            <Label Content="Major:" HorizontalAlignment="Left" Margin="11,157,0,0" VerticalAlignment="Top"/>
             <Label Content="Last Name:" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="LastNameText" HorizontalAlignment="Left" Height="23" Margin="77,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Margin="10,389,0,0" VerticalAlignment="Top" Width="75" Click="UpdateButton_Click"/>
-            <Button x:Name="MainWindowButton" Content="Main Window" HorizontalAlignment="Left" Margin="122,389,0,0" VerticalAlignment="Top" Width="80" Click="MainWindowButton_Click"/>
-            <ComboBox x:Name="MajorCombo" HorizontalAlignment="Left" Margin="77,152,0,0" VerticalAlignment="Top" Width="143">
+            <TextBox x:Name="LastNameText" HorizontalAlignment="Left" Height="25" Margin="99,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Margin="10,368,0,0" VerticalAlignment="Top" Width="80" Click="UpdateButton_Click" Height="32"/>
+            <Button x:Name="MainWindowButton" Content="Main Window" HorizontalAlignment="Left" Margin="121,368,0,0" VerticalAlignment="Top" Width="98" Click="MainWindowButton_Click" Height="32"/>
+            <ComboBox x:Name="MajorCombo" HorizontalAlignment="Left" Margin="77,161,0,0" VerticalAlignment="Top" Width="153">
                 <ComboBoxItem Content="English"/>
                 <ComboBoxItem Content="Computer Science"/>
                 <ComboBoxItem Content="Mathematics"/>
@@ -44,14 +40,14 @@
                 <ComboBoxItem Content="Science"/>
                 <ComboBoxItem Content="Engineering"/>
             </ComboBox>
-            <Label Content="GPA:" HorizontalAlignment="Left" Margin="11,179,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="PassText" HorizontalAlignment="Left" Height="23" Margin="77,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <Label x:Name="GPAinfo" Content="" HorizontalAlignment="Left" Margin="77,179,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label Content="GPA:" HorizontalAlignment="Left" Margin="11,199,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="PassText" HorizontalAlignment="Left" Height="25" Margin="99,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="GPAinfo" Content="" HorizontalAlignment="Left" Margin="77,199,0,0" VerticalAlignment="Top" Width="120"/>
         </Grid>
 
         <Grid Grid.Column="1">
-            <ListBox x:Name="CompletedClasses" Grid.Column="1" HorizontalAlignment="Left" Height="207" Margin="10,38,0,0" VerticalAlignment="Top" Width="475"/>
-            <Label Content="Completed Classes:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top"/>
+            <ListBox x:Name="CompletedClasses" HorizontalAlignment="Left" Height="214" Margin="10,46,0,0" VerticalAlignment="Top" Width="522"/>
+            <Label Content="Completed Classes:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
 
 
         </Grid>

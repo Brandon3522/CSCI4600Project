@@ -102,9 +102,9 @@ namespace CSCI4600Project
             // Add selected course from comboBox into StudentList
             // Add selected course to student course list
 
-            if (CourseList.Text == "Cpp")
+            if (CourseList.Text == "C++")
             {
-                Course Cpp = new Course("Cpp", "Mondays and tuesdays", "8:00", "CS building", 3, 0);
+                Course Cpp = new Course("C++", "Monday and Tuesday", "8:00", "Computer Science building", 3, 0);
                 student1.addccourse(Cpp);
                 BindGrid(Cpp.cname);
 
@@ -112,7 +112,7 @@ namespace CSCI4600Project
 
             if (CourseList.Text == "C#")
             {
-                Course CSharp = new Course("C#", "Mondays and tuesdays", "8:00", "CS building", 3, 0);
+                Course CSharp = new Course("C#", "Friday", "8:00", "Computer Science building", 3, 0);
                 student1.addccourse(CSharp);
                 BindGrid(CSharp.cname);
 
@@ -120,7 +120,7 @@ namespace CSCI4600Project
 
             if (CourseList.Text == "Python")
             {
-                Course Python = new Course("Python", "Mondays and tuesdays", "11:00", "CS building", 3, 0);
+                Course Python = new Course("Python", "Wednesday", "11:00", "Computer Science building", 3, 0);
                 student1.addccourse(Python);
                 BindGrid(Python.cname);
 
@@ -128,7 +128,55 @@ namespace CSCI4600Project
 
             if (CourseList.Text == "Calculus")
             {
-                Course Calculus = new Course("Calculus", "Mondays and tuesdays", "1:00", "CS building", 3, 0);
+                Course Calculus = new Course("Calculus", "Monday and Tuesday", "3:00", "Computer Science building", 4, 0);
+                student1.addccourse(Calculus);
+                BindGrid(Calculus.cname);
+
+            }
+
+            if (CourseList.Text == "English")
+            {
+                Course Calculus = new Course("English", "Monday and Thursday", "1:00", "English building", 3, 0);
+                student1.addccourse(Calculus);
+                BindGrid(Calculus.cname);
+
+            }
+
+            if (CourseList.Text == "Data Structures")
+            {
+                Course Calculus = new Course("Data Structures", "Monday", "3:30", "Computer Science building", 3, 0);
+                student1.addccourse(Calculus);
+                BindGrid(Calculus.cname);
+
+            }
+
+            if (CourseList.Text == "COBOL")
+            {
+                Course Calculus = new Course("COBOL", "Friday", "1:30", "Computer Science building", 3, 0);
+                student1.addccourse(Calculus);
+                BindGrid(Calculus.cname);
+
+            }
+
+            if (CourseList.Text == "Software Engineering")
+            {
+                Course Calculus = new Course("Software Engineering", "Monday and Friday", "1:30", "Computer Science building", 3, 0);
+                student1.addccourse(Calculus);
+                BindGrid(Calculus.cname);
+
+            }
+
+            if (CourseList.Text == "History")
+            {
+                Course Calculus = new Course("History", "Tuesday and Thursday", "7:00", "History building", 3, 0);
+                student1.addccourse(Calculus);
+                BindGrid(Calculus.cname);
+
+            }
+
+            if (CourseList.Text == "Calculus 2")
+            {
+                Course Calculus = new Course("Calculus 2", "Tuesday, Wednesday, and Thursday", "9:00", "Mathematics building", 3, 0);
                 student1.addccourse(Calculus);
                 BindGrid(Calculus.cname);
 

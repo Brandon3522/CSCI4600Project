@@ -91,7 +91,7 @@ namespace CSCI4600Project
                     //////////////////// Save RegistrationClass object to xml file
                     XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
-                    FileStream file0 = new FileStream("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml", FileMode.OpenOrCreate);
+                    FileStream file0 = new FileStream(filePath, FileMode.OpenOrCreate);
 
                     write1.Serialize(file0, registration);
 
@@ -109,7 +109,7 @@ namespace CSCI4600Project
                     //////////////////// Save RegistrationClass object to xml file
                     XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
-                    FileStream file0 = new FileStream("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml", FileMode.OpenOrCreate);
+                    FileStream file0 = new FileStream(filePath, FileMode.OpenOrCreate);
 
                     write1.Serialize(file0, registration);
 
