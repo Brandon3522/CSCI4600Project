@@ -42,26 +42,7 @@
 
         </Grid>
 
-        <Grid Grid.Column="1">
-            <Label x:Name="LiveTimeLabel" Content="" HorizontalAlignment="Left" Margin="151,378,0,0" VerticalAlignment="Top" Height="31" Width="72">
-                <Label.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="White" Offset="0.474"/>
-                        <GradientStop Color="#FF080808" Offset="0.9"/>
-                    </LinearGradientBrush>
-                </Label.Background>
-            </Label>
-            <Label x:Name="LiveTimeLabel_Copy" Content="" HorizontalAlignment="Left" Margin="79,378,0,0" VerticalAlignment="Top" Height="31" Width="72">
-                <Label.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="White" Offset="0.474"/>
-                        <GradientStop Color="#FF080808" Offset="0.9"/>
-                    </LinearGradientBrush>
-                </Label.Background>
-            </Label>
-        </Grid>
+        <Grid Grid.Column="1"/>
 
 
     </Grid>
