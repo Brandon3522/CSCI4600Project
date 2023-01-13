@@ -49,7 +49,16 @@
       <Permission>false</Permission>
     </Student>
     <Student>
-      <ccourses />
+      <ccourses>
+        <Course>
+          <cname>C#</cname>
+          <days>Friday</days>
+          <time>8:00</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+      </ccourses>
       <fcourses />
       <StudentId>1</StudentId>
       <FirstName>Susan</FirstName>
@@ -104,5 +113,5 @@
       <Permission>true</Permission>
     </Staff>
   </staff>
-  <_UserLoggedIn>John</_UserLoggedIn>
+  <_UserLoggedIn>Tommy</_UserLoggedIn>
 </RegistrationClass>
