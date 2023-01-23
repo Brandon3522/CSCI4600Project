@@ -2,4 +2,4 @@
 
 Software Engineering final project.
 
-Student Registration System in Windows Presentation Foundation(WPF).
+Student Registration System in Windows Presentation Foundation (WPF).
