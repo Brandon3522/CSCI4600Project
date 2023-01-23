@@ -26,7 +26,7 @@ namespace CSCI4600Project
     /// </summary>
     public partial class MainWindow : Window
     {
-         RegistrationClass registrationClass = new RegistrationClass();
+        RegistrationClass registrationClass = new RegistrationClass();
 
         XmlDocument doc = new XmlDocument();
 
@@ -37,7 +37,7 @@ namespace CSCI4600Project
         {
             InitializeComponent();
 
-            // date.time
+            ///////////////////////// date.time /////////////////////////
             //DispatcherTimer LiveTime = new DispatcherTimer();
             //LiveTime.Interval = TimeSpan.FromSeconds(1);
             //LiveTime.Tick += timer_Tick;
@@ -46,7 +46,9 @@ namespace CSCI4600Project
             //LiveTime.Interval = TimeSpan.FromSeconds(1);
             //LiveTime.Tick += timer_Tick1;
             //LiveTime.Start();
+            ///////////////////////// date.time /////////////////////////
 
+            ///////////////////////// testing /////////////////////////
             //Student student0 = new Student(0, "English", "Billy", "Bob", "Password", "Male");
 
             //student0.addccourse(course);
@@ -70,8 +72,10 @@ namespace CSCI4600Project
             //student1.addccourse(course);
 
             //registrationClass.Addstudent(student1);
+            ///////////////////////// testing /////////////////////////
 
 
+            ///////////////////////// XML file operations /////////////////////////
             //XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
 
             //FileStream file0 = new FileStream("E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml", FileMode.Open);
@@ -82,10 +86,12 @@ namespace CSCI4600Project
 
             // Load XML file
             doc.Load(filePath);
+            ///////////////////////// XML file operations /////////////////////////
 
 
         }
 
+        // Time and date
         //void timer_Tick(object sender, EventArgs e)
         //{
         //    LiveTimeLabel.Content = DateTime.Now.ToString();
@@ -105,6 +111,7 @@ namespace CSCI4600Project
             registration.Show();
             this.Close();
         }
+
         // Login to system
         private void Login_Click(object sender, RoutedEventArgs e)
         {
@@ -121,7 +128,6 @@ namespace CSCI4600Project
             registrationClass = (RegistrationClass)write0.Deserialize(filestream);
 
             filestream.Close();
-            //
 
             if (UsernameText.Text == "" || PasswordText.Password == "")
             {

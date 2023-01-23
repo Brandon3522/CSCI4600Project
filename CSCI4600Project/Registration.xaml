@@ -14,16 +14,16 @@
     </Window.Background>
     <Grid>
         <Label Content="First Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="FirstNameText" HorizontalAlignment="Left" Height="25" Margin="94,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="FirstNameText" HorizontalAlignment="Left" Height="25" Margin="94,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193"/>
 
         <RadioButton x:Name="MaleRadio" Content="Male" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.507,1.421"/>
         <RadioButton x:Name="FemaleRadio" Content="Female" HorizontalAlignment="Left" Margin="108,90,0,0" VerticalAlignment="Top"/>
 
-        <Label Content="Password:" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="PasswordText" HorizontalAlignment="Left" Height="25" Margin="94,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PasswordText" HorizontalAlignment="Left" Height="25" Margin="94,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193"/>
 
         <Label Content="Major:" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="MajorComboBox" HorizontalAlignment="Left" Margin="77,178,0,0" VerticalAlignment="Top" Width="148">
+        <ComboBox x:Name="MajorComboBox" HorizontalAlignment="Left" Margin="94,178,0,0" VerticalAlignment="Top" Width="148">
             <ComboBoxItem Content="English"/>
             <ComboBoxItem Content="Computer Science"/>
             <ComboBoxItem Content="Mathematics"/>
@@ -32,13 +32,13 @@
             <ComboBoxItem Content="Engineering"/>
         </ComboBox>
 
-        <Button x:Name="Register" Content="Register" HorizontalAlignment="Left" Margin="12,369,0,0" VerticalAlignment="Top" Width="84" Click="Register_Click" Height="32"/>
+        <Button x:Name="Register" Content="Register" HorizontalAlignment="Left" Margin="10,369,0,0" VerticalAlignment="Top" Width="84" Click="Register_Click" Height="32"/>
 
         <Button x:Name="LoginScreen" Content="Login" HorizontalAlignment="Left" Margin="130,369,0,0" VerticalAlignment="Top" Width="84" Click="LoginScreen_Click" Height="32"/>
         <CheckBox x:Name="StudentCheck" Content="Student" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="StaffCheck" Content="Staff" HorizontalAlignment="Left" Margin="108,154,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.184,0.626"/>
         <Label Content="Last Name:" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="LastNameText" HorizontalAlignment="Left" Height="25" Margin="94,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="LastNameText" HorizontalAlignment="Left" Height="25" Margin="94,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193"/>
 
     </Grid>
 </Window>
