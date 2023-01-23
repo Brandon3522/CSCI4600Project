@@ -2,7 +2,16 @@
 <RegistrationClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <students>
     <Student>
-      <ccourses />
+      <ccourses>
+        <Course>
+          <cname>Software Engineering</cname>
+          <days>Monday and Friday</days>
+          <time>1:30</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+      </ccourses>
       <fcourses>
         <Course>
           <cname>English 1020</cname>
@@ -122,5 +131,5 @@
       <Permission>true</Permission>
     </Staff>
   </staff>
-  <_UserLoggedIn>Susan</_UserLoggedIn>
+  <_UserLoggedIn>John</_UserLoggedIn>
 </RegistrationClass>

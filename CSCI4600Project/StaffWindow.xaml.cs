@@ -69,6 +69,7 @@ namespace CSCI4600Project
 
         }
 
+        // Time and date
         //void timer_Tick(object sender, EventArgs e)
         //{
         //    LiveTimeLabel.Content = DateTime.Now.ToString();

@@ -10,7 +10,7 @@ namespace CSCI4600Project
     [Serializable]
     public class Student
     {
-        //Fields, Get/Set
+        // Fields, Get/Set
         public int StudentId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -18,11 +18,11 @@ namespace CSCI4600Project
         public string Gender { get; set; }
         public string major { get; set; }
         public bool Permission { get; set; }
-       public List<Course> ccourses;
-       public List<Course> fcourses;
+        public List<Course> ccourses;
+        public List<Course> fcourses;
 
 
-        //Student method
+        // Student constructor
         public Student(int StudentId, string major, string FirstName, string LastName, 
             string password, string gender, bool permission = false)
         {
@@ -39,6 +39,7 @@ namespace CSCI4600Project
 
         }
 
+        // Blank constructor for data serialization
         public Student()
         {
 
@@ -64,6 +65,7 @@ namespace CSCI4600Project
             return major;
         }
 
+        // Get student info
         public string studentinfo()
         {
             string s = "";
@@ -80,17 +82,20 @@ namespace CSCI4600Project
             s = FirstName + " " + LastName + " " + major;
             return s;
         }
+
+        // Add current course
         public void addccourse(Course course)
         {
             ccourses.Add(course);
         }
 
+        // Add finished course
         public void addfcourse(Course course)
         {
             fcourses.Add(course);
         }
 
-
+        // 
         public void endsemester()
         {
             foreach (Course c in ccourses)
@@ -99,6 +104,8 @@ namespace CSCI4600Project
             }
             ccourses = new List<Course>();
         }
+
+        // Calculate GPA based on finished courses
         public int calcgpa()
         {
             int h = 0;
@@ -114,7 +121,8 @@ namespace CSCI4600Project
                 int gpa = s / h;
                 return gpa;
         }
-        //Get information method
+
+        // Get current courses information: Not used
         public string Getccourseinfo(string s)
         {
             string t = "not a currently registered course";
@@ -128,6 +136,8 @@ namespace CSCI4600Project
             return t;
 
         }
+
+        // Get current courses information
         public string Getccoursesinfo()
         {
             string t = "";
@@ -148,6 +158,7 @@ namespace CSCI4600Project
 
         }
 
+        // Retrieve list of current courses
         public List<Course> CourseList()
         {
             List<Course> courses = new List<Course>();
@@ -165,11 +176,10 @@ namespace CSCI4600Project
                 throw new Exception("Exception: " + e.Message);
             }
 
-           
             return courses;
-
         }
 
+        // Find and return the given course
         public Course CcourseReturn(string courseName)
         {
             Course course1 = new Course();
@@ -180,13 +190,13 @@ namespace CSCI4600Project
                 {
                     course1 = c;
                     return course1;
-                }
-                    
+                }   
             }
 
             return null;
         }
 
+        // Find and return the info for all finished courses
         public string Getfcoursesinfo()
         {
             string t = "";
@@ -195,11 +205,10 @@ namespace CSCI4600Project
                 t = t + c.getfcourseinfo();
             }
 
-
             return t;
-
         }
 
+        // Not used
         public void removeccourse(string s)
         {
             int x = 0;
@@ -214,6 +223,7 @@ namespace CSCI4600Project
             }
         }
 
+        // Remove course from list of current courses
         public void RemoveCourse(Course course)
         {
             ccourses.Remove(course);
