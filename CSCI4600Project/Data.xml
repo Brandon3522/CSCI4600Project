@@ -38,7 +38,16 @@
       <Permission>false</Permission>
     </Student>
     <Student>
-      <ccourses />
+      <ccourses>
+        <Course>
+          <cname>C++</cname>
+          <days>Monday and Tuesday</days>
+          <time>8:00</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+      </ccourses>
       <fcourses />
       <StudentId>1</StudentId>
       <FirstName>Mary</FirstName>
@@ -113,5 +122,5 @@
       <Permission>true</Permission>
     </Staff>
   </staff>
-  <_UserLoggedIn>Tommy</_UserLoggedIn>
+  <_UserLoggedIn>Susan</_UserLoggedIn>
 </RegistrationClass>
