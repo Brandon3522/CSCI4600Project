@@ -11,6 +11,22 @@
           <chours>3</chours>
           <score>0</score>
         </Course>
+        <Course>
+          <cname>Data Structures</cname>
+          <days>Monday</days>
+          <time>3:30</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+        <Course>
+          <cname>Java</cname>
+          <days>Tuesday, Wednesday, and Thursday</days>
+          <time>9:00</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
       </ccourses>
       <fcourses>
         <Course>

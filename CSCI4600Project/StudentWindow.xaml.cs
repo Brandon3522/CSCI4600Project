@@ -27,7 +27,7 @@ namespace CSCI4600Project
     {
         RegistrationClass registration0 = new RegistrationClass();
         Student student1 = new Student();
-        string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
+        string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.xml");
         
         public StudentWindow()
         {
