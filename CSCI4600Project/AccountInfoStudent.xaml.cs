@@ -88,9 +88,9 @@ namespace CSCI4600Project
             //
             
 
-            if (registration0.HasfCourses(student1))
+            if (registration0.HasFinishedCourses(student1))
             {
-                CompletedClasses.Items.Add(student1.Getfcoursesinfo());
+                CompletedClasses.Items.Add(student1.GetFinishedCoursesinfo());
             }
 
             try

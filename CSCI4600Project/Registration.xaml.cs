@@ -93,7 +93,7 @@ namespace CSCI4600Project
                 string Fname = FirstNameText.Text;
                 string Lname = LastNameText.Text;
                 string pass = PasswordText.Text;
-                string major = MajorComboBox.Text;
+                string Major = MajorComboBox.Text;
 
                 if (MaleRadio.IsChecked == true)
                 {
@@ -107,7 +107,7 @@ namespace CSCI4600Project
                 if (StudentCheck.IsChecked == true)
                 {
                     // need to add user to file
-                    Student student = new Student(registrationID, major, Fname, Lname, pass, gender);
+                    Student student = new Student(registrationID, Major, Fname, Lname, pass, gender);
                     registration.Addstudent(student);
 
                     //////////////////// Save RegistrationClass object to xml file

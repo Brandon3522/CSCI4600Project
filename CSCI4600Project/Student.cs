@@ -16,26 +16,26 @@ namespace CSCI4600Project
         public string LastName { get; set; }
         public string Password { get; set; }
         public string Gender { get; set; }
-        public string major { get; set; }
+        public string Major { get; set; }
         public bool Permission { get; set; }
-        public List<Course> ccourses;
-        public List<Course> fcourses;
+        public List<Course> CurrentCourses;
+        public List<Course> FinishedCourses;
 
 
         // Student constructor
-        public Student(int StudentId, string major, string FirstName, string LastName, 
+        public Student(int StudentId, string Major, string FirstName, string LastName, 
             string password, string gender, bool permission = false)
         {
             StudentId += 1;
             this.StudentId = StudentId;
             this.FirstName = FirstName;
             this.LastName = LastName;
-            this.major = major;
+            this.Major = Major;
             this.Password = password;
             this.Gender = gender;
             this.Permission = permission;
-            ccourses = new List<Course>();
-            fcourses = new List<Course>();
+            CurrentCourses = new List<Course>();
+            FinishedCourses = new List<Course>();
 
         }
 
@@ -62,55 +62,38 @@ namespace CSCI4600Project
 
         public string GetMajor()
         {
-            return major;
-        }
-
-        // Get student info
-        public string studentinfo()
-        {
-            string s = "";
-            string t = "";
-            foreach (Course c in ccourses)
-            {
-                t = t + c.cname + " ";
-            }
-            foreach (Course c in fcourses)
-            {
-                t = t + c.cname + " ";
-            }
-
-            s = FirstName + " " + LastName + " " + major;
-            return s;
+            return Major;
         }
 
         // Add current course
         public void addccourse(Course course)
         {
-            ccourses.Add(course);
+            CurrentCourses.Add(course);
         }
 
         // Add finished course
         public void addfcourse(Course course)
         {
-            fcourses.Add(course);
+            FinishedCourses.Add(course);
         }
 
-        // 
+        // Add all current courses to finished courses
         public void endsemester()
         {
-            foreach (Course c in ccourses)
+            foreach (Course course in CurrentCourses)
             {
-                fcourses.Add(c);
+                FinishedCourses.Add(course);
             }
-            ccourses = new List<Course>();
+            CurrentCourses = new List<Course>();
         }
 
         // Calculate GPA based on finished courses
+        // Incorrect: Reimplement
         public int calcgpa()
         {
             int h = 0;
             int s = 0;
-            foreach (Course c in fcourses)
+            foreach (Course c in FinishedCourses)
             {
                 h += 1;
                 s += c.score;
@@ -123,30 +106,30 @@ namespace CSCI4600Project
         }
 
         // Get current courses information: Not used
-        public string Getccourseinfo(string s)
+        public string Getccourseinfo(string course_name)
         {
-            string t = "not a currently registered course";
-            foreach (Course c in ccourses)
+            string current_courses = "not a currently registered course";
+            foreach (Course course in CurrentCourses)
             {
-                if (s == c.cname)
+                if (course_name == course.cname)
                 {
-                    t = c.getinfo() + "\n";
+                    current_courses = course.getinfo() + "\n";
                 }
             }
-            return t;
+            return current_courses;
 
         }
 
         // Get current courses information
-        public string Getccoursesinfo()
+        public string GetCurrentCoursesinfo()
         {
-            string t = "";
+            string course_info = "";
 
             try
             {
-                foreach (Course c in ccourses)
+                foreach (Course course in CurrentCourses)
                 {
-                    t = t + c.getinfo() + "\n";
+                    course_info += course.getinfo() + "\n";
                 }
             }
             catch (Exception e)
@@ -154,7 +137,7 @@ namespace CSCI4600Project
 
                 throw new Exception("Exception: " + e.Message);
             }
-            return t;
+            return course_info;
 
         }
 
@@ -165,9 +148,9 @@ namespace CSCI4600Project
 
             try
             {
-                foreach (Course c in ccourses)
+                foreach (Course course in CurrentCourses)
                 {
-                    courses.Add(c);
+                    courses.Add(course);
                 }
             }
             catch (Exception e)
@@ -182,14 +165,14 @@ namespace CSCI4600Project
         // Find and return the given course
         public Course CcourseReturn(string courseName)
         {
-            Course course1 = new Course();
+            Course courseMatch = new Course();
 
-            foreach (Course c in ccourses)
+            foreach (Course course in CurrentCourses)
             {
-                if (courseName == c.cname)
+                if (courseName == course.cname)
                 {
-                    course1 = c;
-                    return course1;
+                    courseMatch = course;
+                    return courseMatch;
                 }   
             }
 
@@ -197,41 +180,41 @@ namespace CSCI4600Project
         }
 
         // Find and return the info for all finished courses
-        public string Getfcoursesinfo()
+        public string GetFinishedCoursesinfo()
         {
-            string t = "";
-            foreach (Course c in fcourses)
+            string course_info = "";
+            foreach (Course course in FinishedCourses)
             {
-                t = t + c.getfcourseinfo();
+                course_info += course.getfcourseinfo();
             }
 
-            return t;
+            return course_info;
         }
 
         // Not used
-        public void removeccourse(string s)
+        public void removeccourse(string coureseToRemove)
         {
-            int x = 0;
+            int counter = 0;
 
-            foreach (Course c in ccourses)
+            foreach (Course course in CurrentCourses)
             {
-                if (s == c.cname)
+                if (coureseToRemove == course.cname)
                 {
-                    ccourses.RemoveAt(x);
+                    CurrentCourses.RemoveAt(counter);
                 }
-                x += 1;
+                counter += 1;
             }
         }
 
         // Remove course from list of current courses
         public void RemoveCourse(Course course)
         {
-            ccourses.Remove(course);
+            CurrentCourses.Remove(course);
         }
 
         public override string ToString()
         {
-            return FirstName + " " + LastName + " | " + Gender + " | " + major + " | " + "\n";
+            return FirstName + " " + LastName + " | " + Gender + " | " + Major + "\n";
         }
 
     }

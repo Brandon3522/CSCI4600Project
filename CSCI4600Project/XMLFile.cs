@@ -21,7 +21,7 @@ namespace CSCI4600Project
         // Add course to Student
 
 
-        // Remove selected course from Student, ccourses
+        // Remove selected course from Student, CurrentCourses
 
 
 

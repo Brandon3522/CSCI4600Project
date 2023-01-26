@@ -2,7 +2,7 @@
 <RegistrationClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <students>
     <Student>
-      <ccourses>
+      <CurrentCourses>
         <Course>
           <cname>Software Engineering</cname>
           <days>Monday and Friday</days>
@@ -27,8 +27,8 @@
           <chours>3</chours>
           <score>0</score>
         </Course>
-      </ccourses>
-      <fcourses>
+      </CurrentCourses>
+      <FinishedCourses>
         <Course>
           <cname>English 1020</cname>
           <days>Monday and Tuesday</days>
@@ -53,17 +53,17 @@
           <chours>4</chours>
           <score>4</score>
         </Course>
-      </fcourses>
+      </FinishedCourses>
       <StudentId>1</StudentId>
       <FirstName>John</FirstName>
       <LastName>Smith</LastName>
       <Password>Password</Password>
       <Gender>Male</Gender>
-      <major>Computer Science</major>
+      <Major>Computer Science</Major>
       <Permission>false</Permission>
     </Student>
     <Student>
-      <ccourses>
+      <CurrentCourses>
         <Course>
           <cname>C++</cname>
           <days>Monday and Tuesday</days>
@@ -72,18 +72,18 @@
           <chours>3</chours>
           <score>0</score>
         </Course>
-      </ccourses>
-      <fcourses />
+      </CurrentCourses>
+      <FinishedCourses />
       <StudentId>1</StudentId>
       <FirstName>Mary</FirstName>
       <LastName>Ann</LastName>
       <Password>Password</Password>
       <Gender>Female</Gender>
-      <major>English</major>
+      <Major>English</Major>
       <Permission>false</Permission>
     </Student>
     <Student>
-      <ccourses>
+      <CurrentCourses>
         <Course>
           <cname>C#</cname>
           <days>Friday</days>
@@ -92,18 +92,18 @@
           <chours>3</chours>
           <score>0</score>
         </Course>
-      </ccourses>
-      <fcourses />
+      </CurrentCourses>
+      <FinishedCourses />
       <StudentId>1</StudentId>
       <FirstName>Susan</FirstName>
       <LastName>Dover</LastName>
       <Password>Dover12</Password>
       <Gender>Female</Gender>
-      <major>Engineering</major>
+      <Major>Engineering</Major>
       <Permission>false</Permission>
     </Student>
     <Student>
-      <ccourses>
+      <CurrentCourses>
         <Course>
           <cname>C++</cname>
           <days>Monday and Tuesday</days>
@@ -128,14 +128,14 @@
           <chours>3</chours>
           <score>0</score>
         </Course>
-      </ccourses>
-      <fcourses />
+      </CurrentCourses>
+      <FinishedCourses />
       <StudentId>1</StudentId>
       <FirstName>Tommy</FirstName>
       <LastName>Smith</LastName>
       <Password>Pass</Password>
       <Gender>Male</Gender>
-      <major>Engineering</major>
+      <Major>Engineering</Major>
       <Permission>false</Permission>
     </Student>
   </students>

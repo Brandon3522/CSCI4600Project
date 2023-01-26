@@ -47,11 +47,10 @@ namespace CSCI4600Project
             staff.Add(s);
         }
 
-
-        public bool HasfCourses(Student student)
+        public bool HasFinishedCourses(Student student)
         {
             bool hasCourse = false;
-            if (student.fcourses.Count >= 1)
+            if (student.FinishedCourses.Count >= 1)
             {
                 hasCourse = true;
                 return hasCourse;
@@ -103,22 +102,22 @@ namespace CSCI4600Project
             return result;
         }
 
-        public string getccoursesinfo()
+        public string getCurrentCoursesinfo()
         {
             string t = "";
             foreach (Student c in students)
             {
-                t = t + c.Getccoursesinfo();
+                t = t + c.GetCurrentCoursesinfo();
             }
             return t;
         }
 
-        public string getfcoursesinfo()
+        public string getFinishedCoursesinfo()
         {
             string t = "";
             foreach (Student c in students)
             {
-                t = t + c.Getfcoursesinfo();
+                t = t + c.GetFinishedCoursesinfo();
             }
             return t;
         }
@@ -134,20 +133,6 @@ namespace CSCI4600Project
                 }
                 x += 1;
             }
-        }
-        public string findstudent(string name)
-        {
-            string result = "student not found";
-
-            foreach (Student c in students)
-            {
-                if (c.FirstName == name)
-                {
-                    result = c.studentinfo();
-                }
-
-            }
-            return result;
         }
 
         public List<Student> DisplayStudents()
@@ -166,6 +151,7 @@ namespace CSCI4600Project
             students.Remove(student);
 
         }
+
         public void removestaff(int id)
         {
             int x = 0;
@@ -178,6 +164,7 @@ namespace CSCI4600Project
                 x += 1;
             }
         }
+
         public string findstaff(string name)
         {
             string result = "student not found";
