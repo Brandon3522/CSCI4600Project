@@ -113,7 +113,7 @@ namespace CSCI4600Project
             {
                 if (course_name == course.cname)
                 {
-                    current_courses = course.getinfo() + "\n";
+                    current_courses = course.getCurrentCourseInfo() + "\n";
                 }
             }
             return current_courses;
@@ -129,7 +129,7 @@ namespace CSCI4600Project
             {
                 foreach (Course course in CurrentCourses)
                 {
-                    course_info += course.getinfo() + "\n";
+                    course_info += course.getCurrentCourseInfo() + "\n";
                 }
             }
             catch (Exception e)
@@ -185,7 +185,7 @@ namespace CSCI4600Project
             string course_info = "";
             foreach (Course course in FinishedCourses)
             {
-                course_info += course.getfcourseinfo();
+                course_info += course.getFinishedCourseInfo();
             }
 
             return course_info;

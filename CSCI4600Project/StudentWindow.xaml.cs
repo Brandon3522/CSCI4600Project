@@ -219,7 +219,7 @@ namespace CSCI4600Project
 
             var selected0 = (Course)StudentListBox.SelectedItem;
 
-           MessageBox.Show(selected0.getinfo());
+           MessageBox.Show(selected0.getCurrentCourseInfo());
 
            student1.RemoveCourse(selected0);
 

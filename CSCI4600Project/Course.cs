@@ -38,12 +38,12 @@ namespace CSCI4600Project
             return cname + " | " + days + " | " + time + " | " + location + " | " + "Credit hours: " + chours + " | " + "Score: " + score + "\n";
         }
 
-        public string getinfo()
+        public string getCurrentCourseInfo()
         {
             return cname + " | " + days + " | " + time + " | " + location + " | " + "Credit hours: " + chours + " | " + "Score: " + score + "\n";
         }
 
-        public string getfcourseinfo()
+        public string getFinishedCourseInfo()
         {
             return cname + " | " + days + " | " + time + " | " + location + " | " + "Credit hours: " + chours + " | " + "Score: " + score + "\n";
         }
