@@ -138,42 +138,6 @@
       <Major>Engineering</Major>
       <Permission>false</Permission>
     </Student>
-    <Student>
-      <CurrentCourses>
-        <Course>
-          <cname>C#</cname>
-          <days>Friday</days>
-          <time>8:00</time>
-          <location>Computer Science building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-        <Course>
-          <cname>Java</cname>
-          <days>Tuesday, Wednesday, and Thursday</days>
-          <time>9:00</time>
-          <location>Computer Science building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-        <Course>
-          <cname>Calculus 2</cname>
-          <days>Tuesday, Wednesday, and Thursday</days>
-          <time>9:00</time>
-          <location>Mathematics building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-      </CurrentCourses>
-      <FinishedCourses />
-      <StudentId>0</StudentId>
-      <FirstName>b</FirstName>
-      <LastName>b</LastName>
-      <Password>b</Password>
-      <Gender>Male</Gender>
-      <Major>Computer Science</Major>
-      <Permission>false</Permission>
-    </Student>
   </students>
   <staff>
     <Staff>
@@ -183,5 +147,5 @@
       <Permission>true</Permission>
     </Staff>
   </staff>
-  <_UserLoggedIn>b</_UserLoggedIn>
+  <_UserLoggedIn>Brandon</_UserLoggedIn>
 </RegistrationClass>

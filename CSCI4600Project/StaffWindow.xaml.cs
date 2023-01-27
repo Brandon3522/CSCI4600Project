@@ -33,18 +33,8 @@ namespace CSCI4600Project
         {
             InitializeComponent();
 
-            // date.time
-            //DispatcherTimer LiveTime = new DispatcherTimer();
-            //LiveTime.Interval = TimeSpan.FromSeconds(1);
-            //LiveTime.Tick += timer_Tick;
-            //LiveTime.Start();
-            //DispatcherTimer LiveTime1 = new DispatcherTimer();
-            //LiveTime.Interval = TimeSpan.FromSeconds(1);
-            //LiveTime.Tick += timer_Tick1;
-            //LiveTime.Start();
-
+            //////////////// XML ////////////////////
             // Open file and deserialze to RegistrationClass object
-
             XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
 
             FileStream filestream = new FileStream(filePath, FileMode.Open);
@@ -52,38 +42,25 @@ namespace CSCI4600Project
             registration0 = (RegistrationClass)write0.Deserialize(filestream);
 
             filestream.Close();
-            //
+            //////////////// XML ////////////////////
 
             // Check file for FirstName that matches the logged in user
             string userName = "";
             userName = registration0.getUserLoggedIn();
             staff = registration0.FindStaff(userName);
-            //
 
             // Add students to List box
             foreach (var item in registration0.students)
             {
                 StudentsList.Items.Add(item);
             }
-            //
-
         }
-
-        // Time and date
-        //void timer_Tick(object sender, EventArgs e)
-        //{
-        //    LiveTimeLabel.Content = DateTime.Now.ToString();
-        //}
-
-        //void timer_Tick1(object sender, EventArgs e)
-        //{
-        //    LiveTimeLabel_Copy.Content = DateTime.Now.ToString("HH:mm:ss");
-        //}
 
         // View account information
         private void AccountButton_Click(object sender, RoutedEventArgs e)
         {
-            //////////////////// Save RegistrationClass object to xml file
+            //////////////// XML ////////////////////
+            // Save RegistrationClass object to xml file
             XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
             FileStream file0 = System.IO.File.Create(filePath);
@@ -91,16 +68,18 @@ namespace CSCI4600Project
             write1.Serialize(file0, registration0);
 
             file0.Close();
-            ////////////////////
+            //////////////// XML ////////////////////
 
             AccountInfoStaff accountInfoStaff = new AccountInfoStaff();
             accountInfoStaff.Show();
             this.Close();
         }
+
         // Logout
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-            //////////////////// Save RegistrationClass object to xml file
+            //////////////// XML ////////////////////
+            // Save RegistrationClass object to xml file
             XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
             FileStream file0 = System.IO.File.Create(filePath);
@@ -108,13 +87,15 @@ namespace CSCI4600Project
             write1.Serialize(file0, registration0);
 
             file0.Close();
-            ////////////////////
+            //////////////// XML ////////////////////
 
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
         }
-        // Remove student from Data Grid
+
+        // Remove student from list
+        // Add XML removal
         private void RemoveButton_Click(object sender, RoutedEventArgs e)
         {
             // Verify this is the student to be removed
