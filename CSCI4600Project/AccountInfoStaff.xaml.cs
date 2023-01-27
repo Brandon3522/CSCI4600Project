@@ -34,16 +34,7 @@ namespace CSCI4600Project
         {
             InitializeComponent();
 
-            // date.time
-            //DispatcherTimer LiveTime = new DispatcherTimer();
-            //LiveTime.Interval = TimeSpan.FromSeconds(1);
-            //LiveTime.Tick += timer_Tick;
-            //LiveTime.Start();
-            //DispatcherTimer LiveTime1 = new DispatcherTimer();
-            //LiveTime.Interval = TimeSpan.FromSeconds(1);
-            //LiveTime.Tick += timer_Tick1;
-            //LiveTime.Start();
-
+            //////////////// XML ////////////////////
             // Open file and deserialze to RegistrationClass object
             XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
 
@@ -52,7 +43,7 @@ namespace CSCI4600Project
             registration0 = (RegistrationClass)write0.Deserialize(filestream);
 
             filestream.Close();
-            //
+            //////////////// XML ////////////////////
 
             // Check file for FirstName that matches the logged in user
             string userName = "";
@@ -64,6 +55,7 @@ namespace CSCI4600Project
             FirstNameText.Text = userName;
             LastNameText.Text = staff.GetLastName();
 
+            // Assign saved gender
             if (staff.GetGender() == "Male")
             {
                 MaleRadioButton.IsChecked = true;
@@ -74,19 +66,7 @@ namespace CSCI4600Project
             }
 
             PassText.Text = "Admin";
-            //
-
         }
-
-        //void timer_Tick(object sender, EventArgs e)
-        //{
-        //    LiveTimeLabel.Content = DateTime.Now.ToString();
-        //}
-
-        //void timer_Tick1(object sender, EventArgs e)
-        //{
-        //    LiveTimeLabel_Copy.Content = DateTime.Now.ToString("HH:mm:ss");
-        //}
 
         // Update account info
         private void UpdateButton_Click(object sender, RoutedEventArgs e)

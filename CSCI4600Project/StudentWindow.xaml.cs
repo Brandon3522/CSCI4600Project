@@ -94,7 +94,7 @@ namespace CSCI4600Project
         }
 
         // Add course from combo box
-        // Fix this absolute mess!
+        // WTF is this??
         private void AddCourseButton_Click(object sender, RoutedEventArgs e)
         {
             // Add selected course from comboBox into StudentList

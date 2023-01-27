@@ -47,6 +47,7 @@ namespace CSCI4600Project
             staff.Add(s);
         }
 
+        // Check for finished courses
         public bool HasFinishedCourses(Student student)
         {
             bool hasCourse = false;
@@ -55,21 +56,20 @@ namespace CSCI4600Project
                 hasCourse = true;
                 return hasCourse;
             }
-            else
-                return hasCourse;
+            else return hasCourse;
         }
 
+        // Find students first name
         public string FindStudentName(string name)
         {
             string result = "student not found";
 
-            foreach (Student c in students)
+            foreach (Student student in students)
             {
-                if (c.FirstName == name)
+                if (student.FirstName == name)
                 {
-                    result = c.FirstName;
+                    result = student.FirstName;
                 }
-
             }
             return result;
         }
@@ -78,11 +78,11 @@ namespace CSCI4600Project
         {
             Student result = new Student();
 
-            foreach (Student c in students)
+            foreach (Student student in students)
             {
-                if (c.FirstName == name)
+                if (student.FirstName == name)
                 {
-                    result = c;
+                    result = student;
                 }
             }
             return result;
@@ -92,11 +92,11 @@ namespace CSCI4600Project
         {
             Staff result = new Staff();
 
-            foreach (Staff c in staff)
+            foreach (Staff student in staff)
             {
-                if (c.Firstname == name)
+                if (student.Firstname == name)
                 {
-                    result = c;
+                    result = student;
                 }
             }
             return result;
@@ -104,34 +104,34 @@ namespace CSCI4600Project
 
         public string getCurrentCoursesinfo()
         {
-            string t = "";
-            foreach (Student c in students)
+            string currentCourses = "";
+            foreach (Student student in students)
             {
-                t = t + c.GetCurrentCoursesinfo();
+                currentCourses += student.GetCurrentCoursesinfo();
             }
-            return t;
+            return currentCourses;
         }
 
         public string getFinishedCoursesinfo()
         {
-            string t = "";
-            foreach (Student c in students)
+            string finishedCourses= "";
+            foreach (Student student in students)
             {
-                t = t + c.GetFinishedCoursesinfo();
+                finishedCourses += student.GetFinishedCoursesinfo();
             }
-            return t;
+            return finishedCourses;
         }
 
         public void removestudent(int id)
         {
-            int x = 0;
-            foreach (Student c in students)
+            int counter = 0;
+            foreach (Student student in students)
             {
-                if (c.StudentId == id)
+                if (student.StudentId == id)
                 {
-                    students.RemoveAt(x);
+                    students.RemoveAt(counter);
                 }
-                x += 1;
+                counter += 1;
             }
         }
 
@@ -139,9 +139,9 @@ namespace CSCI4600Project
         {
             List<Student> result = new List<Student>();
 
-            foreach (Student c in students)
+            foreach (Student student in students)
             {
-                result.Add(c);
+                result.Add(student);
             }
             return result;
         }
@@ -149,19 +149,18 @@ namespace CSCI4600Project
         public void removeStudent(Student student)
         {
             students.Remove(student);
-
         }
 
         public void removestaff(int id)
         {
-            int x = 0;
-            foreach (Staff c in staff)
+            int counter = 0;
+            foreach (Staff st in staff)
             {
-                if (c.StaffId == id)
+                if (st.StaffId == id)
                 {
-                    staff.RemoveAt(x);
+                    staff.RemoveAt(counter);
                 }
-                x += 1;
+                counter += 1;
             }
         }
 
@@ -169,13 +168,12 @@ namespace CSCI4600Project
         {
             string result = "student not found";
 
-            foreach (Staff c in staff)
+            foreach (Staff st in staff)
             {
-                if (c.Firstname == name)
+                if (st.Firstname == name)
                 {
-                    result = c.info();
+                    result = st.info();
                 }
-
             }
             return result;
         }

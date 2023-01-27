@@ -40,7 +40,7 @@ namespace CSCI4600Project
 
         public string getCurrentCourseInfo()
         {
-            return cname + " | " + days + " | " + time + " | " + location + " | " + "Credit hours: " + chours + " | " + "Score: " + score + "\n";
+            return cname + " | " + days + " | " + time + " | " + location + " | " + "Credit hours: " + chours + "\n";
         }
 
         public string getFinishedCourseInfo()

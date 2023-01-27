@@ -27,6 +27,14 @@
           <chours>3</chours>
           <score>0</score>
         </Course>
+        <Course>
+          <cname>C#</cname>
+          <days>Friday</days>
+          <time>8:00</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
       </CurrentCourses>
       <FinishedCourses>
         <Course>
