@@ -25,28 +25,17 @@ namespace CSCI4600Project
     /// </summary>
     public partial class AccountInfoStudent : Window
     {
-        // Needs to bind completed courses to CompletedClasses list box
-        Student student = new Student(0, "Computer Science", "Billy", "Bob", "Pass", "Male");
         List<Course> courses = new List<Course>();
         string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
 
         RegistrationClass registration0 = new RegistrationClass();
-        Student student1 = new Student();
+        Student student = new Student();
        
         public AccountInfoStudent()
         {
             InitializeComponent();
 
-            // date.time
-            //DispatcherTimer LiveTime = new DispatcherTimer();
-            //LiveTime.Interval = TimeSpan.FromSeconds(1);
-            //LiveTime.Tick += timer_Tick;
-            //LiveTime.Start();
-            //DispatcherTimer LiveTime1 = new DispatcherTimer();
-            //LiveTime.Interval = TimeSpan.FromSeconds(1);
-            //LiveTime.Tick += timer_Tick1;
-            //LiveTime.Start();
-
+            //////////////// XML ////////////////////
             // Open file and deserialze to RegistrationClass object
             XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
 
@@ -55,25 +44,18 @@ namespace CSCI4600Project
             registration0 = (RegistrationClass)write0.Deserialize(filestream);
 
             filestream.Close();
-            //
+            //////////////// XML ////////////////////
 
             // Check file for FirstName that matches the logged in user
             string userName = "";
             userName = registration0.getUserLoggedIn();
-            student1 = registration0.FindStudent(userName);
-            //
-
-            // completed courses test
-            //Course C = new Course("English", "Mondays and tuesdays", "8:00", "English building", 4, 4);
-            //Course B = new Course("C++", "Mondays and tuesdays", "8:00", "CS building", 4, 3);
-            //student1.addfcourse(C);
-            //student1.addfcourse(B);
+            student = registration0.FindStudent(userName);
 
             // Populate account info wtih Student info
             FirstNameText.Text = userName;
             LastNameText.Text = student.GetLastName();
 
-            if (student1.GetGender() == "Male")
+            if (student.GetGender() == "Male")
             {
                 MaleRadioButton.IsChecked = true;
             }
@@ -84,38 +66,23 @@ namespace CSCI4600Project
 
             PassText.Text = student.GetPassword();
 
-            MajorCombo.Text = student1.GetMajor();
-            //
-            
+            MajorCombo.Text = student.GetMajor();       
 
-            if (registration0.HasFinishedCourses(student1))
+            if (registration0.HasFinishedCourses(student))
             {
-                CompletedClasses.Items.Add(student1.GetFinishedCoursesinfo());
+                CompletedClasses.Items.Add(student.GetFinishedCoursesinfo());
             }
 
             try
             {
-                GPAinfo.Content = student1.calcgpa();
+                GPAinfo.Content = student.calcgpa();
             }
             catch (Exception e)
             {
 
                 throw new Exception(e.Message);
             }
-
-            
-
         }
-
-        //void timer_Tick(object sender, EventArgs e)
-        //{
-        //    LiveTimeLabel.Content = DateTime.Now.ToString();
-        //}
-
-        //void timer_Tick1(object sender, EventArgs e)
-        //{
-        //    LiveTimeLabel_Copy.Content = DateTime.Now.ToString("HH:mm:ss");
-        //}
 
         // Update student information
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
@@ -125,6 +92,7 @@ namespace CSCI4600Project
 
 
         }
+
         // Navigate to Main Window
         private void MainWindowButton_Click(object sender, RoutedEventArgs e)
         {
