@@ -33,16 +33,6 @@ namespace CSCI4600Project
         {
             InitializeComponent();
 
-            // date.time
-            //DispatcherTimer LiveTime = new DispatcherTimer();
-            //LiveTime.Interval = TimeSpan.FromSeconds(1);
-            //LiveTime.Tick += timer_Tick;
-            //LiveTime.Start();
-            //DispatcherTimer LiveTime1 = new DispatcherTimer();
-            //LiveTime.Interval = TimeSpan.FromSeconds(1);
-            //LiveTime.Tick += timer_Tick1;
-            //LiveTime.Start();
-
             //////////////// XML ////////////////////
             // Open file and deserialze to RegistrationClass object
             XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
@@ -52,43 +42,24 @@ namespace CSCI4600Project
             registration0 = (RegistrationClass)write0.Deserialize(filestream);
 
             filestream.Close();
-            //
+            //////////////// XML ////////////////////
 
             // Check file for FirstName that matches the logged in user
             string userName = "";
             userName = registration0.getUserLoggedIn();
             student1 = registration0.FindStudent(userName);
-            //
-
-            // competed courses test
-            //Course C = new Course("English", "Monday and Tuesday", "8:00", "English building", 3, 3);
-            //Course B = new Course("C++", "Monday and Tuesday", "9:00", "Computer Science building", 3, 4);
-            //Course D = new Course("Calculus 2", "Monday and Thursday", "9:00", "Mathematics building", 4, 4);
-            //student1.addfcourse(C);
-            //student1.addfcourse(B);
-            //student1.addfcourse(D);
 
             // Label = current user
             StudentNameLabel.Content = userName;
 
             ListReload();
-
         }
-
-        //void timer_Tick(object sender, EventArgs e)
-        //{
-        //    LiveTimeLabel.Content = DateTime.Now.ToString();
-        //}
-
-        //void timer_Tick1(object sender, EventArgs e)
-        //{
-        //    LiveTimeLabel_Copy.Content = DateTime.Now.ToString("HH:mm:ss");
-        //}
 
         // Logout from system
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-            //////////////////// Save RegistrationClass object to xml file
+            //////////////// XML ////////////////////
+            // Save RegistrationClass object to xml file
             XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
             FileStream file0 = System.IO.File.Create(filePath);
@@ -96,16 +67,18 @@ namespace CSCI4600Project
             write1.Serialize(file0, registration0);
 
             file0.Close();
-            ////////////////////
-            
+            //////////////// XML ////////////////////
+
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
         }
+
         // View account information
         private void AccountButton_Click(object sender, RoutedEventArgs e)
         {
-            //////////////////// Save RegistrationClass object to xml file
+            //////////////// XML ////////////////////
+            // Save RegistrationClass object to xml file
             XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
             FileStream file0 = System.IO.File.Create(filePath);
@@ -113,19 +86,19 @@ namespace CSCI4600Project
             write1.Serialize(file0, registration0);
 
             file0.Close();
-            ////////////////////
+            //////////////// XML ////////////////////
 
             AccountInfoStudent accountInfoStudent = new AccountInfoStudent();
             accountInfoStudent.Show();
             this.Close();
         }
 
-        // switch statement to determine what course is selected
+        // Add course from combo box
+        // Fix this absolute mess!
         private void AddCourseButton_Click(object sender, RoutedEventArgs e)
         {
             // Add selected course from comboBox into StudentList
             // Add selected course to student course list
-            
             if (student1.CourseList().Count >= 5)
             {
                 MessageBox.Show("Only 5 classes or less allowed per semester", "Classes", MessageBoxButton.OK);
@@ -219,51 +192,18 @@ namespace CSCI4600Project
 
             var selected0 = (Course)StudentListBox.SelectedItem;
 
-           MessageBox.Show(selected0.getCurrentCourseInfo());
+            MessageBox.Show(selected0.getCurrentCourseInfo());
 
-           student1.RemoveCourse(selected0);
+            student1.RemoveCourse(selected0);
 
             StudentListBox.Items.Remove(selected0);
             ListReload();
-
-
-            /////////////////////////
-
-            //switch (selected)
-            //{
-            //    case "English":
-            //        student1.removeccourse("English");
-            //        break;
-
-            //    case "Cpp":
-            //        student1.removeccourse("Cpp");
-            //        break;
-
-            //    case "C#":
-            //        student1.removeccourse("C#");
-            //        break;
-
-            //    case "Python":
-            //        student1.removeccourse("Python");
-            //        break;
-
-            //    case "Data Structures":
-            //        student1.removeccourse("Data Structures");
-            //        break;
-
-            //    case "Calculus":
-            //        student1.removeccourse("Calculus");
-            //        break;
-
-            //    default:
-            //        MessageBox.Show(selected);
-            //        break;
-            //}
         }
 
+        // Reload current courses
         public void BindGrid(string course)
         {
-            // StudentListBox.Items.Add(student1.Getccourseinfo(course));
+
             try
             {
                 StudentListBox.Items.Add(student1.CcourseReturn(course));
@@ -295,6 +235,16 @@ namespace CSCI4600Project
             }
 
         }
-        
+
+        //////////////// Test ////////////////////
+        // completed courses test
+        //Course C = new Course("English", "Monday and Tuesday", "8:00", "English building", 3, 3);
+        //Course B = new Course("C++", "Monday and Tuesday", "9:00", "Computer Science building", 3, 4);
+        //Course D = new Course("Calculus 2", "Monday and Thursday", "9:00", "Mathematics building", 4, 4);
+        //student1.addfcourse(C);
+        //student1.addfcourse(B);
+        //student1.addfcourse(D);
+        //////////////// Test ////////////////////
+
     }
- }
+}
