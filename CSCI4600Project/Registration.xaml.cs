@@ -32,17 +32,7 @@ namespace CSCI4600Project
         {
             InitializeComponent();
 
-            // date.time
-            //DispatcherTimer LiveTime = new DispatcherTimer();
-            //LiveTime.Interval = TimeSpan.FromSeconds(1);
-            //LiveTime.Tick += timer_Tick;
-            //LiveTime.Start();
-            //DispatcherTimer LiveTime1 = new DispatcherTimer();
-            //LiveTime.Interval = TimeSpan.FromSeconds(1);
-            //LiveTime.Tick += timer_Tick1;
-            //LiveTime.Start();
-
-            ///////////// load xml
+            //////////////// XML ////////////////////
             XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
 
             FileStream filestream = new FileStream(filePath, FileMode.Open);
@@ -50,19 +40,8 @@ namespace CSCI4600Project
             registration = (RegistrationClass)write0.Deserialize(filestream);
 
             filestream.Close();
-            ////////////
-
+            //////////////// XML ////////////////////
         }
-
-        //void timer_Tick(object sender, EventArgs e)
-        //{
-        //    LiveTimeLabel.Content = DateTime.Now.ToString();
-        //}
-
-        //void timer_Tick1(object sender, EventArgs e)
-        //{
-        //    LiveTimeLabel_Copy.Content = DateTime.Now.ToString("HH:mm:ss");
-        //}
 
         // Return to Login
         private void LoginScreen_Click(object sender, RoutedEventArgs e)
@@ -75,8 +54,7 @@ namespace CSCI4600Project
         private void Register_Click(object sender, RoutedEventArgs e)
         {
             // Verify all information inputted
-            // Take user information and create Student or Staff based on selection
-            // Add the user to the Registration
+            
             // User should now be able to log in
             if (FirstNameText.Text == "" || LastNameText.Text == "" || PasswordText.Text == "" 
                 || MaleRadio.IsChecked == false && FemaleRadio.IsChecked == false
@@ -85,6 +63,7 @@ namespace CSCI4600Project
                 MessageBox.Show("Please input all information", "Invalid information", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
+            // Take user information and create Student or Staff based on selection
             else
             {
                 // registrationID needs more work
@@ -103,10 +82,10 @@ namespace CSCI4600Project
                 {
                     gender = "Female";
                 }
-                
+
+                // Add the user as Student and save to Registration
                 if (StudentCheck.IsChecked == true)
                 {
-                    // need to add user to file
                     Student student = new Student(registrationID, Major, Fname, Lname, pass, gender);
                     registration.Addstudent(student);
 
@@ -122,13 +101,15 @@ namespace CSCI4600Project
 
                     MessageBox.Show("Student registered", "Registration successful", MessageBoxButton.OK);
                 }
+
+                // Add the user as Admin and save to Registration
                 else
                 {
-                    // need to add user to file
                     Staff staff = new Staff(registrationID, Fname, Lname, gender);
                     registration.AddStaff(staff);
 
-                    //////////////////// Save RegistrationClass object to xml file
+                    //////////////// XML ////////////////////
+                    // Save RegistrationClass object to xml file
                     XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
                     FileStream file0 = new FileStream(filePath, FileMode.OpenOrCreate);
@@ -136,7 +117,7 @@ namespace CSCI4600Project
                     write1.Serialize(file0, registration);
 
                     file0.Close();
-                    ////////////////////
+                    //////////////// XML ////////////////////
 
                     MessageBox.Show("Staff registered", "Registration successful", MessageBoxButton.OK);
                 }
