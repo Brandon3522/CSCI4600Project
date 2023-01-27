@@ -26,7 +26,7 @@ namespace CSCI4600Project
         public Student(int StudentId, string Major, string FirstName, string LastName, 
             string password, string gender, bool permission = false)
         {
-            StudentId += 1;
+            this.StudentId += 1;
             this.StudentId = StudentId;
             this.FirstName = FirstName;
             this.LastName = LastName;

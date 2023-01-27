@@ -28,7 +28,7 @@ namespace CSCI4600Project
         // Bind student registration list to StudentList
         RegistrationClass registration0 = new RegistrationClass();
         Staff staff = new Staff();
-        string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.xml");
+        string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
 
         public AccountInfoStaff()
         {

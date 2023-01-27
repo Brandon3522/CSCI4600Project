@@ -28,7 +28,7 @@ namespace CSCI4600Project
         // Needs to bind completed courses to CompletedClasses list box
         Student student = new Student(0, "Computer Science", "Billy", "Bob", "Pass", "Male");
         List<Course> courses = new List<Course>();
-        string filePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.xml");
+        string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
 
         RegistrationClass registration0 = new RegistrationClass();
         Student student1 = new Student();
