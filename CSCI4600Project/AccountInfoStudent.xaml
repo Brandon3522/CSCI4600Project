@@ -38,7 +38,7 @@
             <TextBox x:Name="LastNameText" HorizontalAlignment="Left" Height="25" Margin="99,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
             <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Margin="10,368,0,0" VerticalAlignment="Top" Width="80" Click="UpdateButton_Click" Height="32"/>
             <Button x:Name="MainWindowButton" Content="Main Window" HorizontalAlignment="Left" Margin="121,368,0,0" VerticalAlignment="Top" Width="98" Click="MainWindowButton_Click" Height="32"/>
-            <ComboBox x:Name="MajorCombo" HorizontalAlignment="Left" Margin="100,161,0,0" VerticalAlignment="Top" Width="140">
+            <ComboBox x:Name="MajorCombo" HorizontalAlignment="Left" Margin="88,161,0,0" VerticalAlignment="Top" Width="152">
                 <ComboBoxItem Content="English"/>
                 <ComboBoxItem Content="Computer Science"/>
                 <ComboBoxItem Content="Mathematics"/>

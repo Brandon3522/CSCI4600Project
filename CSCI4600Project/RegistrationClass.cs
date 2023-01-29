@@ -119,18 +119,18 @@ namespace CSCI4600Project
             return finishedCourses;
         }
 
-        public void removestudent(int id)
-        {
-            int counter = 0;
-            foreach (Student student in students)
-            {
-                if (student.StudentId == id)
-                {
-                    students.RemoveAt(counter);
-                }
-                counter += 1;
-            }
-        }
+        //public void removestudent(int id)
+        //{
+        //    int counter = 0;
+        //    foreach (Student student in students)
+        //    {
+        //        if (student.StudentId == id)
+        //        {
+        //            students.RemoveAt(counter);
+        //        }
+        //        counter += 1;
+        //    }
+        //}
 
         public List<Student> DisplayStudents()
         {
@@ -148,18 +148,18 @@ namespace CSCI4600Project
             students.Remove(student);
         }
 
-        public void removestaff(int id)
-        {
-            int counter = 0;
-            foreach (Staff st in staff)
-            {
-                if (st.StaffId == id)
-                {
-                    staff.RemoveAt(counter);
-                }
-                counter += 1;
-            }
-        }
+        //public void removestaff(int id)
+        //{
+        //    int counter = 0;
+        //    foreach (Staff st in staff)
+        //    {
+        //        if (st.StaffId == id)
+        //        {
+        //            staff.RemoveAt(counter);
+        //        }
+        //        counter += 1;
+        //    }
+        //}
 
         public string findstaff(string name)
         {
@@ -177,10 +177,10 @@ namespace CSCI4600Project
         
         public void LoadRegistration()
         {
-            Student student0 = new Student(0, "English", "Bob", "Y", "Password", "Male");
-            Student student1 = new Student(1, "English", "Tom", "Y", "Password", "Male");
-            Student student2 = new Student(2, "CS", "Tomyyyyy", "Y", "Password", "Male");
-            Student student3 = new Student(3, "Engineering", "Bobbyyy", "Y", "Password", "Male");
+            Student student0 = new Student("English", "Bob", "Y", "Password", "Male");
+            Student student1 = new Student("English", "Tom", "Y", "Password", "Male");
+            Student student2 = new Student("CS", "Tomyyyyy", "Y", "Password", "Male");
+            Student student3 = new Student("Engineering", "Bobbyyy", "Y", "Password", "Male");
 
         }
 

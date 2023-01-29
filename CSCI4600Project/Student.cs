@@ -8,7 +8,7 @@ namespace CSCI4600Project
     public class Student
     {
         // Fields, Get/Set
-        public int StudentId { get; set; }
+        public Guid StudentId { get; set; }  // Global Unique Identifier
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Password { get; set; }
@@ -20,11 +20,10 @@ namespace CSCI4600Project
 
 
         // Student constructor
-        public Student(int StudentId, string Major, string FirstName, string LastName, 
+        public Student(string Major, string FirstName, string LastName, 
             string password, string gender, bool permission = false)
         {
-            this.StudentId += 1;
-            this.StudentId = StudentId;
+            this.StudentId = Guid.NewGuid();
             this.FirstName = FirstName;
             this.LastName = LastName;
             this.Major = Major;

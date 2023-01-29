@@ -2,166 +2,25 @@
 <RegistrationClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <students>
     <Student>
-      <CurrentCourses>
-        <Course>
-          <cname>Software Engineering</cname>
-          <days>Monday and Friday</days>
-          <time>1:30</time>
-          <location>Computer Science building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-        <Course>
-          <cname>Data Structures</cname>
-          <days>Monday</days>
-          <time>3:30</time>
-          <location>Computer Science building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-        <Course>
-          <cname>Java</cname>
-          <days>Tuesday, Wednesday, and Thursday</days>
-          <time>9:00</time>
-          <location>Computer Science building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-        <Course>
-          <cname>C#</cname>
-          <days>Friday</days>
-          <time>8:00</time>
-          <location>Computer Science building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-        <Course>
-          <cname>Python</cname>
-          <days>Wednesday</days>
-          <time>11:00</time>
-          <location>Computer Science building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-      </CurrentCourses>
-      <FinishedCourses>
-        <Course>
-          <cname>English 1020</cname>
-          <days>Monday and Tuesday</days>
-          <time>8:00</time>
-          <location>English building</location>
-          <chours>3</chours>
-          <score>3</score>
-        </Course>
-        <Course>
-          <cname>Ruby</cname>
-          <days>Monday and Tuesday</days>
-          <time>9:00</time>
-          <location>Computer Science building</location>
-          <chours>3</chours>
-          <score>4</score>
-        </Course>
-        <Course>
-          <cname>Calculus 3</cname>
-          <days>Monday and Thursday</days>
-          <time>9:00</time>
-          <location>Mathematics building</location>
-          <chours>4</chours>
-          <score>4</score>
-        </Course>
-      </FinishedCourses>
-      <StudentId>1</StudentId>
-      <FirstName>John</FirstName>
-      <LastName>Smith</LastName>
-      <Password>Password</Password>
+      <CurrentCourses />
+      <FinishedCourses />
+      <StudentId>397127db-214d-454e-9fd2-a6b4d8977ffc</StudentId>
+      <FirstName>j</FirstName>
+      <LastName>j</LastName>
+      <Password>j</Password>
       <Gender>Male</Gender>
       <Major>Computer Science</Major>
-      <Permission>false</Permission>
-    </Student>
-    <Student>
-      <CurrentCourses>
-        <Course>
-          <cname>C++</cname>
-          <days>Monday and Tuesday</days>
-          <time>8:00</time>
-          <location>Computer Science building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-      </CurrentCourses>
-      <FinishedCourses />
-      <StudentId>1</StudentId>
-      <FirstName>Mary</FirstName>
-      <LastName>Ann</LastName>
-      <Password>Password</Password>
-      <Gender>Female</Gender>
-      <Major>English</Major>
-      <Permission>false</Permission>
-    </Student>
-    <Student>
-      <CurrentCourses>
-        <Course>
-          <cname>C#</cname>
-          <days>Friday</days>
-          <time>8:00</time>
-          <location>Computer Science building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-      </CurrentCourses>
-      <FinishedCourses />
-      <StudentId>1</StudentId>
-      <FirstName>Susan</FirstName>
-      <LastName>Dover</LastName>
-      <Password>Dover12</Password>
-      <Gender>Female</Gender>
-      <Major>Engineering</Major>
-      <Permission>false</Permission>
-    </Student>
-    <Student>
-      <CurrentCourses>
-        <Course>
-          <cname>C++</cname>
-          <days>Monday and Tuesday</days>
-          <time>8:00</time>
-          <location>Computer Science building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-        <Course>
-          <cname>History</cname>
-          <days>Tuesday and Thursday</days>
-          <time>7:00</time>
-          <location>History building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-        <Course>
-          <cname>Java</cname>
-          <days>Tuesday, Wednesday, and Thursday</days>
-          <time>9:00</time>
-          <location>Computer Science building</location>
-          <chours>3</chours>
-          <score>0</score>
-        </Course>
-      </CurrentCourses>
-      <FinishedCourses />
-      <StudentId>1</StudentId>
-      <FirstName>Tommy</FirstName>
-      <LastName>Smith</LastName>
-      <Password>Pass</Password>
-      <Gender>Male</Gender>
-      <Major>Engineering</Major>
       <Permission>false</Permission>
     </Student>
   </students>
   <staff>
     <Staff>
-      <StaffId>0</StaffId>
+      <StaffId>b4c64909-bce5-49c3-a2d0-93d037930dcd</StaffId>
       <Firstname>Brandon</Firstname>
       <Lastname>S</Lastname>
+      <Gender>Male</Gender>
       <Permission>true</Permission>
     </Staff>
   </staff>
-  <_UserLoggedIn>John</_UserLoggedIn>
+  <_UserLoggedIn>Brandon</_UserLoggedIn>
 </RegistrationClass>

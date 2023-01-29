@@ -6,15 +6,15 @@ namespace CSCI4600Project
     [Serializable]
     public class Staff
     {
-        public int StaffId { get; set; }
+        public Guid StaffId { get; set; }  // Global Unique Identifier
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string Gender { get; set; }
         public bool Permission { get; set; }
-        public Staff(int sid, string fname, string lname, string gender, bool permission = true)
+
+        public Staff(string fname, string lname, string gender, bool permission = true)
         {
-            StaffId += 100;
-            this.StaffId = sid;
+            this.StaffId = Guid.NewGuid();
             this.Firstname = fname;
             this.Lastname = lname;
             this.Gender = gender;

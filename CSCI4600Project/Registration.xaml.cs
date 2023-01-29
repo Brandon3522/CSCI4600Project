@@ -54,7 +54,7 @@ namespace CSCI4600Project
             else
             {
                 // registrationID needs more work
-                int registrationID = 0;
+                //int registrationID = 0;
                 string gender = "";
                 string Fname = FirstNameText.Text;
                 string Lname = LastNameText.Text;
@@ -73,10 +73,11 @@ namespace CSCI4600Project
                 // Add the user as Student and save to Registration
                 if (StudentCheck.IsChecked == true)
                 {
-                    Student student = new Student(registrationID, Major, Fname, Lname, pass, gender);
+                    Student student = new Student(Major, Fname, Lname, pass, gender);
                     registration.Addstudent(student);
 
-                    //////////////////// Save RegistrationClass object to xml file
+                    //////////////// XML ////////////////////
+                    // Save RegistrationClass object to xml file
                     XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
                     FileStream file0 = new FileStream(filePath, FileMode.OpenOrCreate);
@@ -84,7 +85,7 @@ namespace CSCI4600Project
                     write1.Serialize(file0, registration);
 
                     file0.Close();
-                    ////////////////////
+                    //////////////// XML ////////////////////
 
                     MessageBox.Show("Student registered", "Registration successful", MessageBoxButton.OK);
                 }
@@ -92,7 +93,7 @@ namespace CSCI4600Project
                 // Add the user as Admin and save to Registration
                 else
                 {
-                    Staff staff = new Staff(registrationID, Fname, Lname, gender);
+                    Staff staff = new Staff(Fname, Lname, gender);
                     registration.AddStaff(staff);
 
                     //////////////// XML ////////////////////
