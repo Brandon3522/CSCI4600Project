@@ -17,13 +17,13 @@ namespace CSCI4600Project
         XmlDocument doc = new XmlDocument();
 
         // Change file path if cloning application
-        string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
+        string filePath = "./Data.xml";
 
         public MainWindow()
         {
             InitializeComponent();
 
-            ///////////////////////// XML file operations /////////////////////////
+            //////////////// XML ////////////////////
             //XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
 
             //FileStream file0 = new FileStream(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.xml"), FileMode.Open);
@@ -31,11 +31,11 @@ namespace CSCI4600Project
             //write0.Serialize(file0, registrationClass);
 
             //file0.Close();
+            //////////////// XML ////////////////////
 
             // Load XML file
             doc.Load(filePath);
-            ///////////////////////// XML file operations /////////////////////////
-        }     
+        }
 
         // Navigate to Registration Window
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
@@ -66,7 +66,7 @@ namespace CSCI4600Project
                 return;
             }
 
-            string user = UsernameText.Text;
+            string user = UsernameText.Text.ToLower();
 
             // Find, verify and save student as logged in
             if (registrationClass.FindStudentName(user) == user)

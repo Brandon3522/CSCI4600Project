@@ -13,7 +13,7 @@ namespace CSCI4600Project
     {
         RegistrationClass registration0 = new RegistrationClass();
         Staff staff = new Staff();
-        string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
+        string filePath = "./Data.xml";
 
         public StaffWindow()
         {

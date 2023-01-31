@@ -12,7 +12,7 @@ namespace CSCI4600Project
     public partial class AccountInfoStudent : Window
     {
         List<Course> courses = new List<Course>();
-        string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
+        string filePath = "./Data.xml";
 
         RegistrationClass registration0 = new RegistrationClass();
         Student student = new Student();

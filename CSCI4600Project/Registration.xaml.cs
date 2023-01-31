@@ -13,7 +13,7 @@ namespace CSCI4600Project
     public partial class Registration : Window
     {
         RegistrationClass registration = new RegistrationClass();
-        string filePath = "E:\\Spring 2021\\CSCI 4600\\Project\\CSCI4600Project\\CSCI4600Project\\Data.xml";
+        string filePath = "./Data.xml";
 
         public Registration()
         {
@@ -56,7 +56,7 @@ namespace CSCI4600Project
                 // registrationID needs more work
                 //int registrationID = 0;
                 string gender = "";
-                string Fname = FirstNameText.Text;
+                string Fname = FirstNameText.Text.ToLower();
                 string Lname = LastNameText.Text;
                 string pass = PasswordText.Text;
                 string Major = MajorComboBox.Text;

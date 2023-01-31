@@ -2,12 +2,73 @@
 <RegistrationClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <students>
     <Student>
-      <CurrentCourses />
-      <FinishedCourses />
+      <CurrentCourses>
+        <Course>
+          <cname>COBOL</cname>
+          <days>Friday</days>
+          <time>1:30</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+        <Course>
+          <cname>Data Structures</cname>
+          <days>Monday</days>
+          <time>3:30</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+        <Course>
+          <cname>Calculus 2</cname>
+          <days>Tuesday, Wednesday, and Thursday</days>
+          <time>9:00</time>
+          <location>Mathematics building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+      </CurrentCourses>
+      <FinishedCourses>
+        <Course>
+          <cname>English 1020</cname>
+          <days>Monday and Tuesday</days>
+          <time>8:00</time>
+          <location>English building</location>
+          <chours>3</chours>
+          <score>3</score>
+        </Course>
+        <Course>
+          <cname>Ruby</cname>
+          <days>Monday and Tuesday</days>
+          <time>9:00</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>4</score>
+        </Course>
+        <Course>
+          <cname>Calculus 3</cname>
+          <days>Monday and Thursday</days>
+          <time>9:00</time>
+          <location>Mathematics building</location>
+          <chours>4</chours>
+          <score>4</score>
+        </Course>
+      </FinishedCourses>
       <StudentId>397127db-214d-454e-9fd2-a6b4d8977ffc</StudentId>
       <FirstName>j</FirstName>
       <LastName>j</LastName>
       <Password>j</Password>
+      <Gender>Male</Gender>
+      <Major>Computer Science</Major>
+      <Permission>false</Permission>
+    </Student>
+    <Student>
+      <CurrentCourses />
+      <FinishedCourses />
+      <StudentId>0c7aac86-7545-4b83-8f13-f6cb88cbb2d4</StudentId>
+      <FirstName>b</FirstName>
+      <LastName>b</LastName>
+      <Password>b</Password>
       <Gender>Male</Gender>
       <Major>Computer Science</Major>
       <Permission>false</Permission>
@@ -22,5 +83,5 @@
       <Permission>true</Permission>
     </Staff>
   </staff>
-  <_UserLoggedIn>Brandon</_UserLoggedIn>
+  <_UserLoggedIn>b</_UserLoggedIn>
 </RegistrationClass>
