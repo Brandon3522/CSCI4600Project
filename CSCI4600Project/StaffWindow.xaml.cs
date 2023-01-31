@@ -11,7 +11,7 @@ namespace CSCI4600Project
     /// </summary>
     public partial class StaffWindow : Window
     {
-        RegistrationClass registration0 = new RegistrationClass();
+        RegistrationClass registration = new RegistrationClass();
         Staff staff = new Staff();
         string filePath = "./Data.xml";
 
@@ -25,18 +25,18 @@ namespace CSCI4600Project
 
             FileStream filestream = new FileStream(filePath, FileMode.Open);
 
-            registration0 = (RegistrationClass)write0.Deserialize(filestream);
+            registration = (RegistrationClass)write0.Deserialize(filestream);
 
             filestream.Close();
             //////////////// XML ////////////////////
 
             // Check file for FirstName that matches the logged in user
             string userName = "";
-            userName = registration0.getUserLoggedIn();
-            staff = registration0.FindStaff(userName);
+            userName = registration.getUserLoggedIn();
+            staff = registration.FindStaff(userName);
 
             // Add students to List box
-            foreach (var item in registration0.students)
+            foreach (var item in registration.students)
             {
                 StudentsList.Items.Add(item);
             }
@@ -51,7 +51,7 @@ namespace CSCI4600Project
 
             FileStream file0 = System.IO.File.Create(filePath);
 
-            write1.Serialize(file0, registration0);
+            write1.Serialize(file0, registration);
 
             file0.Close();
             //////////////// XML ////////////////////
@@ -70,7 +70,7 @@ namespace CSCI4600Project
 
             FileStream file0 = System.IO.File.Create(filePath);
 
-            write1.Serialize(file0, registration0);
+            write1.Serialize(file0, registration);
 
             file0.Close();
             //////////////// XML ////////////////////
@@ -90,26 +90,40 @@ namespace CSCI4600Project
 
             var selected = (Student)StudentsList.SelectedItem;
 
-            MessageBox.Show(selected.ToString());
-
-            registration0.removeStudent(selected);
-
-            StudentsList.Items.Clear();
-
-            try
+            if (MessageBox.Show("Do you want to remove this student?", "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                foreach (var item in registration0.DisplayStudents())
+                //MessageBox.Show(selected.ToString());
+
+                registration.removeStudent(selected);
+
+                StudentsList.Items.Clear();
+
+                try
                 {
-                    StudentsList.Items.Add(item);
+                    foreach (var item in registration.DisplayStudents())
+                    {
+                        StudentsList.Items.Add(item);
+                    }
                 }
-            }
-            catch (Exception a)
-            {
-                MessageBox.Show("Exception: " + a.Message);
-                throw new Exception(a.Message);
-            }
+                catch (Exception a)
+                {
+                    MessageBox.Show("Exception: " + a.Message);
+                    throw new Exception(a.Message);
+                }
 
+                //////////////// XML ////////////////////
+                // Save RegistrationClass object to xml file
+                XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
+                FileStream file0 = System.IO.File.Create(filePath);
+
+                write1.Serialize(file0, registration);
+
+                file0.Close();
+                //////////////// XML ////////////////////
+            }
         }
+
+
     }
 }

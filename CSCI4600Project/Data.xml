@@ -62,22 +62,11 @@
       <Major>Computer Science</Major>
       <Permission>false</Permission>
     </Student>
-    <Student>
-      <CurrentCourses />
-      <FinishedCourses />
-      <StudentId>0c7aac86-7545-4b83-8f13-f6cb88cbb2d4</StudentId>
-      <FirstName>b</FirstName>
-      <LastName>b</LastName>
-      <Password>b</Password>
-      <Gender>Male</Gender>
-      <Major>Computer Science</Major>
-      <Permission>false</Permission>
-    </Student>
   </students>
   <staff>
     <Staff>
       <StaffId>b4c64909-bce5-49c3-a2d0-93d037930dcd</StaffId>
-      <Firstname>Brandon</Firstname>
+      <Firstname>brandon</Firstname>
       <Lastname>S</Lastname>
       <Gender>Male</Gender>
       <Permission>true</Permission>

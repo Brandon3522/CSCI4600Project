@@ -100,6 +100,7 @@ namespace CSCI4600Project
             }
 
             // Find, verify, and save Admin as logged in
+            
             if (registrationClass.findstaff(user) == user && PasswordText.Password.Contains("Admin"))
             {
 

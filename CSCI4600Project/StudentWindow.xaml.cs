@@ -176,14 +176,15 @@ namespace CSCI4600Project
             // Remove selected course from ListBox
             // Remove course from student course list
 
-            var selected0 = (Course)StudentListBox.SelectedItem;
+            var selected = (Course)StudentListBox.SelectedItem;
 
-            MessageBox.Show(selected0.getCurrentCourseInfo());
+            if (MessageBox.Show("Do you want to remove this course?", "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                student1.RemoveCourse(selected);
 
-            student1.RemoveCourse(selected0);
-
-            StudentListBox.Items.Remove(selected0);
-            ListReload();
+                StudentListBox.Items.Remove(selected);
+                ListReload();
+            }            
         }
 
         // Reload current courses
