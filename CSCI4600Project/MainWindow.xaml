@@ -21,9 +21,9 @@
 
         <Label x:Name="PasswordLabel" Content="Password" HorizontalAlignment="Left" Margin="355,145,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
 
-        <Button x:Name="Login" Content="Login" HorizontalAlignment="Left" Margin="284,226,0,0" VerticalAlignment="Top" Width="108" Height="37" Click="Login_Click"/>
+        <Button x:Name="Login" Content="Login" HorizontalAlignment="Left" Margin="275,226,0,0" VerticalAlignment="Top" Width="108" Height="37" Click="Login_Click"/>
 
-        <Button x:Name="CreateAccount" Content="Create Account" HorizontalAlignment="Left" Margin="408,226,0,0" VerticalAlignment="Top" Width="108" Height="37" Click="CreateAccount_Click"/>
+        <Button x:Name="CreateAccount" Content="Create Account" HorizontalAlignment="Left" Margin="400,226,0,0" VerticalAlignment="Top" Width="108" Height="37" Click="CreateAccount_Click"/>
         <TextBox x:Name="UsernameText" HorizontalAlignment="Center" Height="25" Margin="0,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232"/>
         <PasswordBox x:Name="PasswordText" HorizontalAlignment="Center" Margin="0,173,0,0" VerticalAlignment="Top" Width="232" Height="25"/>
 
