@@ -87,7 +87,14 @@ namespace CSCI4600Project
             // Add selected course to student course list
             if (student1.CourseList().Count >= 5)
             {
-                MessageBox.Show("Only 5 classes or less allowed per semester", "Classes", MessageBoxButton.OK);
+                MessageBox.Show("Only 5 classes or less allowed per semester.", "Classes", MessageBoxButton.OK);
+                return;
+            }
+
+            // Check for same course in current courses
+            if (StudentListBox.Items.Contains(CourseList.Text))
+            {
+                MessageBox.Show("You have already selected this course.", "Classes", MessageBoxButton.OK);
                 return;
             }
 
@@ -170,7 +177,6 @@ namespace CSCI4600Project
 
         }
 
-        // switch statement to determine what course is removed
         private void RemoveCourseButton_Click(object sender, RoutedEventArgs e)
         {
             // Remove selected course from ListBox

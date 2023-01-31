@@ -53,8 +53,6 @@ namespace CSCI4600Project
             // Take user information and create Student or Staff based on selection
             else
             {
-                // registrationID needs more work
-                //int registrationID = 0;
                 string gender = "";
                 string Fname = FirstNameText.Text.ToLower();
                 string Lname = LastNameText.Text;
