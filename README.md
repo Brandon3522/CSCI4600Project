@@ -4,7 +4,7 @@ Software Engineering final project.
 
 Student Registration System in Windows Presentation Foundation (WPF).
 
-- What I Learned
+- ## What I Learned
   - Data persistence utilizing XML file
   - Serializing and deserializing objects 
   - Class inheritance
