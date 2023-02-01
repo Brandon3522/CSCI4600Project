@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Controls;
 
 namespace CSCI4600Project
 {
@@ -54,6 +55,45 @@ namespace CSCI4600Project
                 return hasCourse;
             }
             else return hasCourse;
+        }
+
+        // Update student account info
+        public void UpdateStudent(Student studentToUpdate, string firstName, string lastName, 
+            string password, string major, string gender)
+        {
+            foreach (Student student in students)
+            {
+                if (studentToUpdate != null && student == studentToUpdate)
+                {
+                    student.FirstName = firstName;
+                    student.LastName = lastName;
+                    student.Password = password;
+                    student.Major = major;
+                    student.Gender = gender;
+
+                    // Update current logged in user
+                    _UserLoggedIn = firstName;
+                }
+            }
+        }
+
+        // Update staff account info
+        public void UpdateStaff(Staff staffToUpdate, string firstName, string lastName, 
+            string password, string gender)
+        {
+            foreach (Staff staff in staff)
+            {
+                if (staffToUpdate != null && staff == staffToUpdate)
+                {
+                    staff.Firstname = firstName;
+                    staff.Lastname = lastName;
+                    staff.Gender = gender;
+                    staff.Password = password;
+
+                    // Update current logged in user
+                    _UserLoggedIn = firstName;
+                }
+            }
         }
 
         // Find students first name

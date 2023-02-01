@@ -75,20 +75,51 @@ namespace CSCI4600Project
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             // Verfiy information isn't blank
+            if (FirstNameText.Text == "" || LastNameText.Text == "" || PassText.Text == ""
+                || MaleRadioButton.IsChecked == false && FemaleRadioButton.IsChecked == false)
+            {
+                MessageBox.Show("Please input all information.", "Invalid information", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
+            // Gather and update account information
+            else
+            {
+                string firstNameUpdate = FirstNameText.Text.ToLower();
+                string lastNameUpdate = LastNameText.Text;
+                string passwordUpdate = PassText.Text;
+                string majorUpdate = MajorCombo.Text;
+                string genderUpdate = "";
 
-            // Update student information, needs to be updated in Registration file
-            // Update first name
+                if (MaleRadioButton.IsChecked == true)
+                {
+                    genderUpdate = "Male";
+                }
+                else
+                {
+                    genderUpdate = "Female";
+                }
 
-            // Update last name
+                // Update student in students registration list
+                registration.UpdateStudent(student, firstNameUpdate, lastNameUpdate, passwordUpdate, 
+                    majorUpdate, genderUpdate);
 
-            // Update gender
+                //////////////// XML ////////////////////
+                // Save RegistrationClass object to xml file
+                XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
 
-            // Update password
+                FileStream file0 = System.IO.File.Create(filePath);
 
-            // Update major
+                write1.Serialize(file0, registration);
 
+                file0.Close();
+                //////////////// XML ////////////////////
 
+                // Update currently logged in user to new first name
+                //registration.UserLoggedIn(student.FirstName);
+
+                MessageBox.Show("Information updated.", "Update Successful", MessageBoxButton.OK);
+
+            }
         }
 
         // Add finished courses to list box

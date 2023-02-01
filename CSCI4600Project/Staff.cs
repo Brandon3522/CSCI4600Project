@@ -11,6 +11,7 @@ namespace CSCI4600Project
         public string Lastname { get; set; }
         public string Gender { get; set; }
         public bool Permission { get; set; }
+        public string Password { get; set; }
 
         public Staff(string fname, string lname, string gender, bool permission = true)
         {

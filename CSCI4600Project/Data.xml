@@ -62,6 +62,70 @@
       <Major>Computer Science</Major>
       <Permission>false</Permission>
     </Student>
+    <Student>
+      <CurrentCourses>
+        <Course>
+          <cname>C#</cname>
+          <days>Friday</days>
+          <time>8:00</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+        <Course>
+          <cname>COBOL</cname>
+          <days>Friday</days>
+          <time>1:30</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+        <Course>
+          <cname>C#</cname>
+          <days>Friday</days>
+          <time>8:00</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+      </CurrentCourses>
+      <FinishedCourses />
+      <StudentId>a0dd65b1-abe9-4f2a-8aeb-4823613be7a0</StudentId>
+      <FirstName>e</FirstName>
+      <LastName>e</LastName>
+      <Password>e</Password>
+      <Gender>Male</Gender>
+      <Major>Computer Science</Major>
+      <Permission>false</Permission>
+    </Student>
+    <Student>
+      <CurrentCourses>
+        <Course>
+          <cname>C++</cname>
+          <days>Monday and Tuesday</days>
+          <time>8:00</time>
+          <location>Computer Science building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+        <Course>
+          <cname>Calculus 2</cname>
+          <days>Tuesday, Wednesday, and Thursday</days>
+          <time>9:00</time>
+          <location>Mathematics building</location>
+          <chours>3</chours>
+          <score>0</score>
+        </Course>
+      </CurrentCourses>
+      <FinishedCourses />
+      <StudentId>96de3f41-967e-4b44-983b-fdd79254ae80</StudentId>
+      <FirstName>bob</FirstName>
+      <LastName>bob</LastName>
+      <Password>bob</Password>
+      <Gender>Female</Gender>
+      <Major>Computer Science</Major>
+      <Permission>false</Permission>
+    </Student>
   </students>
   <staff>
     <Staff>
@@ -72,5 +136,5 @@
       <Permission>true</Permission>
     </Staff>
   </staff>
-  <_UserLoggedIn>b</_UserLoggedIn>
+  <_UserLoggedIn>bob</_UserLoggedIn>
 </RegistrationClass>
