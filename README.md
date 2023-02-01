@@ -5,6 +5,7 @@ Software Engineering final project.
 Student Registration System in Windows Presentation Foundation (WPF).
 
 ## What I Learned
+  - Create, Read, Update, and Delete (CRUD) operations
   - Data persistence utilizing XML file
   - Serializing and deserializing objects 
   - Class inheritance
