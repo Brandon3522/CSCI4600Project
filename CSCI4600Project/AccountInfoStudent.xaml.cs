@@ -100,7 +100,6 @@ namespace CSCI4600Project
             }
         }
 
-
         // Navigate to Main Window
         private void MainWindowButton_Click(object sender, RoutedEventArgs e)
         {
