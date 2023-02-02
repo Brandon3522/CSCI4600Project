@@ -16,22 +16,12 @@ namespace CSCI4600Project
 
         XmlDocument doc = new XmlDocument();
 
-        // Change file path if cloning application
+        // May need to change file path if cloning application
         string filePath = "./Data.xml";
 
         public MainWindow()
         {
             InitializeComponent();
-
-            //////////////// XML ////////////////////
-            //XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
-
-            //FileStream file0 = new FileStream(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.xml"), FileMode.Open);
-
-            //write0.Serialize(file0, registrationClass);
-
-            //file0.Close();
-            //////////////// XML ////////////////////
 
             // Load XML file
             doc.Load(filePath);
@@ -100,7 +90,6 @@ namespace CSCI4600Project
             }
 
             // Find, verify, and save Admin as logged in
-            
             if (registrationClass.findstaff(user) == user && PasswordText.Password.Contains("Admin"))
             {
 
@@ -123,30 +112,12 @@ namespace CSCI4600Project
                 this.Close();
 
                 // Need to update
-                if (!PasswordText.Password.Contains("Admin") || registrationClass.findstaff(user) != user)
-                {
+                //if (!PasswordText.Password.Contains("Admin") || registrationClass.findstaff(user) != user)
+                //{
                     
-                }
+                //}
 
             }
-            //if (PasswordText.Text.Contains("Admin"))
-            //{
-            //    StaffWindow staffWindow = new StaffWindow();
-            //    staffWindow.Show();
-            //    this.Close();
-            //}
-            //else
-            //{
-            //    // Check registration file for user
-            //    // If found allow access to Student or Staff window
-
-
-            //    //StudentWindow studentWindow = new StudentWindow();
-            //    //studentWindow.Show();
-            //    //this.Close();
-            //}
-
-
         }
 
         ///////////////////////// testing /////////////////////////

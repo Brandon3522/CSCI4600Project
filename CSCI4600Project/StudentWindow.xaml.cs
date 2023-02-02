@@ -11,7 +11,8 @@ namespace CSCI4600Project
     /// </summary>
     public partial class StudentWindow : Window
     {
-        RegistrationClass registration0 = new RegistrationClass();
+        // Initialization
+        RegistrationClass registration = new RegistrationClass();
         Student student1 = new Student();
         string filePath = "./Data.xml";
         
@@ -25,15 +26,15 @@ namespace CSCI4600Project
 
             FileStream filestream = new FileStream(filePath, FileMode.Open);
 
-            registration0 = (RegistrationClass)write0.Deserialize(filestream);
+            registration = (RegistrationClass)write0.Deserialize(filestream);
 
             filestream.Close();
             //////////////// XML ////////////////////
 
             // Check file for FirstName that matches the logged in user
             string userName = "";
-            userName = registration0.getUserLoggedIn();
-            student1 = registration0.FindStudent(userName);
+            userName = registration.getUserLoggedIn();
+            student1 = registration.FindStudent(userName);
 
             // Label = current user
             StudentNameLabel.Content = userName;
@@ -50,7 +51,7 @@ namespace CSCI4600Project
 
             FileStream file0 = System.IO.File.Create(filePath);
 
-            write1.Serialize(file0, registration0);
+            write1.Serialize(file0, registration);
 
             file0.Close();
             //////////////// XML ////////////////////
@@ -69,7 +70,7 @@ namespace CSCI4600Project
 
             FileStream file0 = System.IO.File.Create(filePath);
 
-            write1.Serialize(file0, registration0);
+            write1.Serialize(file0, registration);
 
             file0.Close();
             //////////////// XML ////////////////////
@@ -174,14 +175,12 @@ namespace CSCI4600Project
                 student1.addccourse(Java);
                 BindGrid(Java.cname);
             }
-
         }
 
         private void RemoveCourseButton_Click(object sender, RoutedEventArgs e)
         {
             // Remove selected course from ListBox
             // Remove course from student course list
-
             var selected = (Course)StudentListBox.SelectedItem;
 
             if (MessageBox.Show("Do you want to remove this course?", "Confirmation", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
@@ -196,7 +195,6 @@ namespace CSCI4600Project
         // Reload current courses
         public void BindGrid(string course)
         {
-
             try
             {
                 StudentListBox.Items.Add(student1.CcourseReturn(course));
@@ -226,7 +224,6 @@ namespace CSCI4600Project
                 MessageBox.Show("Exception: " + e.Message);
                 throw new Exception("Oh No, Exception: " + e.Message);
             }
-
         }
 
         //////////////// Test ////////////////////

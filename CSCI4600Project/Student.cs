@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace CSCI4600Project
 {
@@ -163,13 +164,22 @@ namespace CSCI4600Project
         {
             Course courseMatch = new Course();
 
-            foreach (Course course in CurrentCourses)
+            try
             {
-                if (courseName == course.cname)
+                foreach (Course course in CurrentCourses)
                 {
-                    courseMatch = course;
-                    return courseMatch;
-                }   
+                    if (courseName == course.cname)
+                    {
+                        courseMatch = course;
+                        return courseMatch;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Exception: " + e.Message);
+                throw new Exception();
             }
 
             return null;
