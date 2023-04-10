@@ -72,7 +72,7 @@ namespace CSCI4600Project
                 if (StudentCheck.IsChecked == true)
                 {
                     Student student = new Student(Major, Fname, Lname, pass, gender);
-                    registration.Addstudent(student);
+                    registration.Addstudent(student); 
 
                     //////////////// XML ////////////////////
                     // Save RegistrationClass object to xml file

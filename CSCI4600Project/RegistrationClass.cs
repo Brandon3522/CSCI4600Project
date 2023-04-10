@@ -10,7 +10,7 @@ namespace CSCI4600Project
         //Student list
         public List<Student> students;
         public List<Staff> staff;
-        public string _UserLoggedIn { get; set; }
+        public string UserLoggedIn { get; set; }
 
         //Registration method
         public RegistrationClass()
@@ -21,17 +21,12 @@ namespace CSCI4600Project
 
         public RegistrationClass(string userName)
         {
-            this._UserLoggedIn = userName;
+            this.UserLoggedIn = userName;
         }
 
-        public string getUserLoggedIn()
+        public void CurrentUser(string user)
         {
-            return _UserLoggedIn;
-        }
-
-        public void UserLoggedIn(string user)
-        {
-            _UserLoggedIn = user;
+            UserLoggedIn = user;
         }
 
         //Add Registration Info Method
@@ -72,7 +67,7 @@ namespace CSCI4600Project
                     student.Gender = gender;
 
                     // Update current logged in user
-                    _UserLoggedIn = firstName;
+                    UserLoggedIn = firstName;
                 }
             }
         }
@@ -91,7 +86,7 @@ namespace CSCI4600Project
                     staff.Password = password;
 
                     // Update current logged in user
-                    _UserLoggedIn = firstName;
+                    UserLoggedIn = firstName;
                 }
             }
         }
@@ -139,39 +134,6 @@ namespace CSCI4600Project
             return result;
         }
 
-        public string getCurrentCoursesinfo()
-        {
-            string currentCourses = "";
-            foreach (Student student in students)
-            {
-                currentCourses += student.GetCurrentCoursesinfo();
-            }
-            return currentCourses;
-        }
-
-        public string getFinishedCoursesinfo()
-        {
-            string finishedCourses= "";
-            foreach (Student student in students)
-            {
-                finishedCourses += student.GetFinishedCoursesinfo();
-            }
-            return finishedCourses;
-        }
-
-        //public void removestudent(int id)
-        //{
-        //    int counter = 0;
-        //    foreach (Student student in students)
-        //    {
-        //        if (student.StudentId == id)
-        //        {
-        //            students.RemoveAt(counter);
-        //        }
-        //        counter += 1;
-        //    }
-        //}
-
         public List<Student> DisplayStudents()
         {
             List<Student> result = new List<Student>();
@@ -187,19 +149,6 @@ namespace CSCI4600Project
         {
             students.Remove(student);
         }
-
-        //public void removestaff(int id)
-        //{
-        //    int counter = 0;
-        //    foreach (Staff st in staff)
-        //    {
-        //        if (st.StaffId == id)
-        //        {
-        //            staff.RemoveAt(counter);
-        //        }
-        //        counter += 1;
-        //    }
-        //}
 
         public string findstaff(string name)
         {

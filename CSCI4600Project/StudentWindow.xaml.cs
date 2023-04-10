@@ -33,7 +33,7 @@ namespace CSCI4600Project
 
             // Check file for FirstName that matches the logged in user
             string userName = "";
-            userName = registration.getUserLoggedIn();
+            userName = registration.UserLoggedIn;
             student1 = registration.FindStudent(userName);
 
             // Label = current user

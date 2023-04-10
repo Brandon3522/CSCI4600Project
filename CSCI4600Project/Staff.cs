@@ -27,21 +27,6 @@ namespace CSCI4600Project
 
         }
 
-        public string GetLastName()
-        {
-            return Lastname;
-        }
-
-        public string GetGender()
-        {
-            return Gender;
-        }
-
-        public string GetFirstName()
-        {
-            return Firstname;
-        }
-
         public string info()
         {
             string s = Firstname;

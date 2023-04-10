@@ -78,6 +78,7 @@
       <DependentUpon>StudentWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TimeDate.cs" />
+    <Compile Include="Utilities.cs" />
     <Compile Include="XMLFile.cs" />
     <Page Include="AccountInfoStaff.xaml">
       <SubType>Designer</SubType>

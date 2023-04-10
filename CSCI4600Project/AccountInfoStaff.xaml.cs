@@ -32,16 +32,16 @@ namespace CSCI4600Project
 
             // Check file for FirstName that matches the logged in user
             string userName = "";
-            userName = registration.getUserLoggedIn();
+            userName = registration.UserLoggedIn;
             staff = registration.FindStaff(userName);
 
 
             // Populate account info with Staff info
             FirstNameText.Text = userName;
-            LastNameText.Text = staff.GetLastName();
+            LastNameText.Text = staff.Lastname;
 
             // Assign saved gender
-            if (staff.GetGender() == "Male")
+            if (staff.Gender == "Male")
             {
                 MaleRadioButton.IsChecked = true;
             }
@@ -95,7 +95,7 @@ namespace CSCI4600Project
                 //////////////// XML ////////////////////
 
                 // Update currently logged in user to new first name
-                //registration.UserLoggedIn(student.FirstName);
+                //registration.CurrentUser(student.FirstName);
 
                 MessageBox.Show("Information updated.", "Update Successful", MessageBoxButton.OK);
 
