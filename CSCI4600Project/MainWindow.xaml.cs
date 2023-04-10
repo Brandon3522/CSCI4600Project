@@ -12,7 +12,7 @@ namespace CSCI4600Project
     /// </summary>
     public partial class MainWindow : Window
     {
-        RegistrationClass registrationClass = new RegistrationClass();
+        RegistrationClass registration = new RegistrationClass();
 
         XmlDocument doc = new XmlDocument();
 
@@ -38,16 +38,8 @@ namespace CSCI4600Project
         // Login to system
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            //////////////// XML ////////////////////
-            // Open file and deserialze to RegistrationClass object
-            XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
-
-            FileStream filestream = new FileStream(filePath, FileMode.Open);
-
-            registrationClass = (RegistrationClass)write0.Deserialize(filestream);
-
-            filestream.Close();
-            //////////////// XML ////////////////////
+            // Read XML file
+            registration = XMLFile.ReadFromXmlFile<RegistrationClass>(filePath);
 
             // Check empty input
             if (UsernameText.Text == "" || PasswordText.Password == "")
@@ -59,22 +51,12 @@ namespace CSCI4600Project
             string user = UsernameText.Text.ToLower();
 
             // Find, verify and save student as logged in
-            if (registrationClass.FindStudentName(user) == user)
+            if (registration.FindStudentName(user) == user)
             {
-                //string CurrentUser = user;
+                registration.CurrentUser(user);
 
-                registrationClass.CurrentUser(user);
-
-                //////////////// XML ////////////////////
                 // Save RegistrationClass object to xml file
-                XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
-
-                FileStream file0 = System.IO.File.Create(filePath);
-
-                write1.Serialize(file0, registrationClass);
-
-                file0.Close();
-                //////////////// XML ////////////////////
+                XMLFile.WriteToXmlFile<RegistrationClass>(filePath, registration);
 
                 MessageBox.Show("User logged in as Student", "Success", MessageBoxButton.OK);
                 StudentWindow studentWindow = new StudentWindow();
@@ -84,27 +66,19 @@ namespace CSCI4600Project
             }
 
             // Display message if invalid login
-            else if (registrationClass.FindStudentName(user) != user && registrationClass.findstaff(user) != user)
+            else if (registration.FindStudentName(user) != user && registration.findstaff(user) != user)
             {
                 MessageBox.Show("Please enter a valid username / password", "Invalid", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             // Find, verify, and save Admin as logged in
-            if (registrationClass.findstaff(user) == user && PasswordText.Password.Contains("Admin"))
+            if (registration.findstaff(user) == user && PasswordText.Password.Contains("Admin"))
             {
 
-                registrationClass.CurrentUser(user);
+                registration.CurrentUser(user);
 
-                //////////////// XML ////////////////////
                 // Save RegistrationClass object to xml file
-                XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
-
-                FileStream file0 = System.IO.File.Create(filePath);
-
-                write1.Serialize(file0, registrationClass);
-
-                file0.Close();
-                //////////////// XML ////////////////////
+                XMLFile.WriteToXmlFile<RegistrationClass>(filePath, registration);
 
                 MessageBox.Show("User logged in as Admin", "Success", MessageBoxButton.OK);
                 StaffWindow staffWindow = new StaffWindow();
@@ -112,7 +86,7 @@ namespace CSCI4600Project
                 this.Close();
 
                 // Need to update
-                //if (!PasswordText.Password.Contains("Admin") || registrationClass.findstaff(user) != user)
+                //if (!PasswordText.Password.Contains("Admin") || registration.findstaff(user) != user)
                 //{
                     
                 //}
@@ -130,9 +104,9 @@ namespace CSCI4600Project
 
         ////student2.addccourse(course1);
 
-        //registrationClass.Addstudent(student0);
-        //registrationClass.Addstudent(student2);
-        //registrationClass.Addstudent(student3);
+        //registration.Addstudent(student0);
+        //registration.Addstudent(student2);
+        //registration.Addstudent(student3);
 
         //Student student1 = new Student(1, "CS", "Tom", "Bob", "Password", "Male");
 
@@ -143,7 +117,7 @@ namespace CSCI4600Project
         //student1.addccourse(course1);
         //student1.addccourse(course);
 
-        //registrationClass.Addstudent(student1);
+        //registration.Addstudent(student1);
         ///////////////////////// testing /////////////////////////
 
     }
