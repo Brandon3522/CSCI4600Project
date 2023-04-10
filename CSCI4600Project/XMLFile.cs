@@ -13,37 +13,6 @@ namespace CSCI4600Project
 {
     public static class XMLFile
     {
-        /*
-        XmlSerializer xmlSerializer;
-        FileStream fileStream;
-        public String FilePath { get; set; }
-
-        public XMLFile()
-        {
-            xmlSerializer = new XmlSerializer(typeof(RegistrationClass));
-
-            FilePath = "./Data.xml";
-        }
-
-        public void Serialize(RegistrationClass registration)
-        {
-            FileStream filestream = System.IO.File.Create(FilePath);
-
-            xmlSerializer.Serialize(filestream, registration);
-
-            filestream.Close();
-        }
-
-        public void Deserialize(RegistrationClass registration)
-        {
-            FileStream filestream = new FileStream(FilePath, FileMode.Open);
-
-            registration = (RegistrationClass)xmlSerializer.Deserialize(filestream);
-
-            filestream.Close();
-        }
-        */
-
         public static void WriteToXmlFile<T>(string filePath, T objectToWrite, bool append = false) where T : new()
         {
             TextWriter writer = null;
@@ -75,23 +44,5 @@ namespace CSCI4600Project
                     reader.Close();
             }
         }
-
-
-
-
-
-
-
-
-        // Add user to File
-
-
-        // Check file for user information
-
-
-        // Add course to Student
-
-
-        // Remove selected course from Student, CurrentCourses
     }
 }
