@@ -42,6 +42,11 @@ namespace CSCI4600Project
             {
                 if (reader != null)
                     reader.Close();
+                else
+                {
+                    // Create new XML file if none exist at given file path
+
+                }
             }
         }
     }
