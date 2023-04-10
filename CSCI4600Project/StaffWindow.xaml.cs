@@ -19,16 +19,8 @@ namespace CSCI4600Project
         {
             InitializeComponent();
 
-            //////////////// XML ////////////////////
-            // Open file and deserialze to RegistrationClass object
-            XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
-
-            FileStream filestream = new FileStream(filePath, FileMode.Open);
-
-            registration = (RegistrationClass)write0.Deserialize(filestream);
-
-            filestream.Close();
-            //////////////// XML ////////////////////
+            // Read XML file
+            registration = XMLFile.ReadFromXmlFile<RegistrationClass>(filePath);
 
             // Check file for FirstName that matches the logged in user
             string userName = "";
@@ -45,16 +37,8 @@ namespace CSCI4600Project
         // View account information
         private void AccountButton_Click(object sender, RoutedEventArgs e)
         {
-            //////////////// XML ////////////////////
             // Save RegistrationClass object to xml file
-            XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
-
-            FileStream file0 = System.IO.File.Create(filePath);
-
-            write1.Serialize(file0, registration);
-
-            file0.Close();
-            //////////////// XML ////////////////////
+            XMLFile.WriteToXmlFile<RegistrationClass>(filePath, registration);
 
             AccountInfoStaff accountInfoStaff = new AccountInfoStaff();
             accountInfoStaff.Show();
@@ -64,16 +48,8 @@ namespace CSCI4600Project
         // Logout
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-            //////////////// XML ////////////////////
             // Save RegistrationClass object to xml file
-            XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
-
-            FileStream file0 = System.IO.File.Create(filePath);
-
-            write1.Serialize(file0, registration);
-
-            file0.Close();
-            //////////////// XML ////////////////////
+            XMLFile.WriteToXmlFile<RegistrationClass>(filePath, registration);
 
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
@@ -111,16 +87,8 @@ namespace CSCI4600Project
                     throw new Exception(a.Message);
                 }
 
-                //////////////// XML ////////////////////
                 // Save RegistrationClass object to xml file
-                XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
-
-                FileStream file0 = System.IO.File.Create(filePath);
-
-                write1.Serialize(file0, registration);
-
-                file0.Close();
-                //////////////// XML ////////////////////
+                XMLFile.WriteToXmlFile<RegistrationClass>(filePath, registration);
             }
         }
 

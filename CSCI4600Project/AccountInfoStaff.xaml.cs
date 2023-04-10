@@ -19,16 +19,8 @@ namespace CSCI4600Project
         {
             InitializeComponent();
 
-            //////////////// XML ////////////////////
-            // Open file and deserialze to RegistrationClass object
-            XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
-
-            FileStream filestream = new FileStream(filePath, FileMode.Open);
-
-            registration = (RegistrationClass)write0.Deserialize(filestream);
-
-            filestream.Close();
-            //////////////// XML ////////////////////
+            // Read XML file
+            registration = XMLFile.ReadFromXmlFile<RegistrationClass>(filePath);
 
             // Check file for FirstName that matches the logged in user
             string userName = "";
@@ -83,16 +75,8 @@ namespace CSCI4600Project
                 // Update staff in staff registration list
                 registration.UpdateStaff(staff, firstNameUpdate, lastNameUpdate, passwordUpdate, genderUpdate);
 
-                //////////////// XML ////////////////////
-                // Save RegistrationClass object to xml file
-                XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
-
-                FileStream file0 = System.IO.File.Create(filePath);
-
-                write1.Serialize(file0, registration);
-
-                file0.Close();
-                //////////////// XML ////////////////////
+                // Save Registration object to xml file
+                XMLFile.WriteToXmlFile<RegistrationClass>(filePath, registration);
 
                 // Update currently logged in user to new first name
                 //registration.CurrentUser(student.FirstName);

@@ -19,15 +19,8 @@ namespace CSCI4600Project
         {
             InitializeComponent();
 
-            //////////////// XML ////////////////////
-            XmlSerializer write0 = new XmlSerializer(typeof(RegistrationClass));
-
-            FileStream filestream = new FileStream(filePath, FileMode.Open);
-
-            registration = (RegistrationClass)write0.Deserialize(filestream);
-
-            filestream.Close();
-            //////////////// XML ////////////////////
+            // Read XML file
+            registration = XMLFile.ReadFromXmlFile<RegistrationClass>(filePath);
         }
 
         // Return to Login
@@ -72,18 +65,10 @@ namespace CSCI4600Project
                 if (StudentCheck.IsChecked == true)
                 {
                     Student student = new Student(Major, Fname, Lname, pass, gender);
-                    registration.Addstudent(student); 
+                    registration.Addstudent(student);
 
-                    //////////////// XML ////////////////////
                     // Save RegistrationClass object to xml file
-                    XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
-
-                    FileStream file0 = new FileStream(filePath, FileMode.OpenOrCreate);
-
-                    write1.Serialize(file0, registration);
-
-                    file0.Close();
-                    //////////////// XML ////////////////////
+                    XMLFile.WriteToXmlFile<RegistrationClass>(filePath, registration);
 
                     MessageBox.Show("Student registered", "Registration successful", MessageBoxButton.OK);
                 }
@@ -94,16 +79,8 @@ namespace CSCI4600Project
                     Staff staff = new Staff(Fname, Lname, gender);
                     registration.AddStaff(staff);
 
-                    //////////////// XML ////////////////////
                     // Save RegistrationClass object to xml file
-                    XmlSerializer write1 = new XmlSerializer(typeof(RegistrationClass));
-
-                    FileStream file0 = new FileStream(filePath, FileMode.OpenOrCreate);
-
-                    write1.Serialize(file0, registration);
-
-                    file0.Close();
-                    //////////////// XML ////////////////////
+                    XMLFile.WriteToXmlFile<RegistrationClass>(filePath, registration);
 
                     MessageBox.Show("Staff registered", "Registration successful", MessageBoxButton.OK);
                 }
