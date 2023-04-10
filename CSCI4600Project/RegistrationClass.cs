@@ -134,39 +134,6 @@ namespace CSCI4600Project
             return result;
         }
 
-        public string getCurrentCoursesinfo()
-        {
-            string currentCourses = "";
-            foreach (Student student in students)
-            {
-                currentCourses += student.GetCurrentCoursesinfo();
-            }
-            return currentCourses;
-        }
-
-        public string getFinishedCoursesinfo()
-        {
-            string finishedCourses= "";
-            foreach (Student student in students)
-            {
-                finishedCourses += student.GetFinishedCoursesinfo();
-            }
-            return finishedCourses;
-        }
-
-        //public void removestudent(int id)
-        //{
-        //    int counter = 0;
-        //    foreach (Student student in students)
-        //    {
-        //        if (student.StudentId == id)
-        //        {
-        //            students.RemoveAt(counter);
-        //        }
-        //        counter += 1;
-        //    }
-        //}
-
         public List<Student> DisplayStudents()
         {
             List<Student> result = new List<Student>();
@@ -182,19 +149,6 @@ namespace CSCI4600Project
         {
             students.Remove(student);
         }
-
-        //public void removestaff(int id)
-        //{
-        //    int counter = 0;
-        //    foreach (Staff st in staff)
-        //    {
-        //        if (st.StaffId == id)
-        //        {
-        //            staff.RemoveAt(counter);
-        //        }
-        //        counter += 1;
-        //    }
-        //}
 
         public string findstaff(string name)
         {

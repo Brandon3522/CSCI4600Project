@@ -48,22 +48,6 @@ namespace CSCI4600Project
             CurrentCourses.Add(course);
         }
 
-        // Add finished course
-        public void addfcourse(Course course)
-        {
-            FinishedCourses.Add(course);
-        }
-
-        // Add all current courses to finished courses
-        public void endsemester()
-        {
-            foreach (Course course in CurrentCourses)
-            {
-                FinishedCourses.Add(course);
-            }
-            CurrentCourses = new List<Course>();
-        }
-
         // Calculate GPA based on finished courses
         // Incorrect: Reimplement
         public int calcgpa()
@@ -80,42 +64,6 @@ namespace CSCI4600Project
 
                 int gpa = s / h;
                 return gpa;
-        }
-
-        // Get current courses information: Not used
-        public string Getccourseinfo(string course_name)
-        {
-            string current_courses = "not a currently registered course";
-            foreach (Course course in CurrentCourses)
-            {
-                if (course_name == course.cname)
-                {
-                    current_courses = course.getCurrentCourseInfo() + "\n";
-                }
-            }
-            return current_courses;
-
-        }
-
-        // Get current courses information
-        public string GetCurrentCoursesinfo()
-        {
-            string course_info = "";
-
-            try
-            {
-                foreach (Course course in CurrentCourses)
-                {
-                    course_info += course.getCurrentCourseInfo() + "\n";
-                }
-            }
-            catch (Exception e)
-            {
-
-                throw new Exception("Exception: " + e.Message);
-            }
-            return course_info;
-
         }
 
         // Retrieve list of current courses
@@ -163,33 +111,6 @@ namespace CSCI4600Project
             }
 
             return null;
-        }
-
-        // Find and return the info for all finished courses
-        public string GetFinishedCoursesinfo()
-        {
-            string course_info = "";
-            foreach (Course course in FinishedCourses)
-            {
-                course_info += course.getFinishedCourseInfo();
-            }
-
-            return course_info;
-        }
-
-        // Not used
-        public void removeccourse(string coureseToRemove)
-        {
-            int counter = 0;
-
-            foreach (Course course in CurrentCourses)
-            {
-                if (coureseToRemove == course.cname)
-                {
-                    CurrentCourses.RemoveAt(counter);
-                }
-                counter += 1;
-            }
         }
 
         // Remove course from list of current courses
