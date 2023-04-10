@@ -10,7 +10,7 @@ namespace CSCI4600Project
         //Student list
         public List<Student> students;
         public List<Staff> staff;
-        public string _UserLoggedIn { get; set; }
+        public string UserLoggedIn { get; set; }
 
         //Registration method
         public RegistrationClass()
@@ -21,17 +21,12 @@ namespace CSCI4600Project
 
         public RegistrationClass(string userName)
         {
-            this._UserLoggedIn = userName;
+            this.UserLoggedIn = userName;
         }
 
-        public string getUserLoggedIn()
+        public void CurrentUser(string user)
         {
-            return _UserLoggedIn;
-        }
-
-        public void UserLoggedIn(string user)
-        {
-            _UserLoggedIn = user;
+            UserLoggedIn = user;
         }
 
         //Add Registration Info Method
@@ -72,7 +67,7 @@ namespace CSCI4600Project
                     student.Gender = gender;
 
                     // Update current logged in user
-                    _UserLoggedIn = firstName;
+                    UserLoggedIn = firstName;
                 }
             }
         }
@@ -91,7 +86,7 @@ namespace CSCI4600Project
                     staff.Password = password;
 
                     // Update current logged in user
-                    _UserLoggedIn = firstName;
+                    UserLoggedIn = firstName;
                 }
             }
         }

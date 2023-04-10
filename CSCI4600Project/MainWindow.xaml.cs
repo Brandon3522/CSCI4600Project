@@ -61,9 +61,9 @@ namespace CSCI4600Project
             // Find, verify and save student as logged in
             if (registrationClass.FindStudentName(user) == user)
             {
-                //string UserLoggedIn = user;
+                //string CurrentUser = user;
 
-                registrationClass.UserLoggedIn(user);
+                registrationClass.CurrentUser(user);
 
                 //////////////// XML ////////////////////
                 // Save RegistrationClass object to xml file
@@ -93,7 +93,7 @@ namespace CSCI4600Project
             if (registrationClass.findstaff(user) == user && PasswordText.Password.Contains("Admin"))
             {
 
-                registrationClass.UserLoggedIn(user);
+                registrationClass.CurrentUser(user);
 
                 //////////////// XML ////////////////////
                 // Save RegistrationClass object to xml file

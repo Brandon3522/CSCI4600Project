@@ -42,26 +42,6 @@ namespace CSCI4600Project
 
         }
 
-        public string GetLastName()
-        {
-            return LastName;
-        }
-
-        public string GetPassword()
-        {
-            return Password;
-        }
-
-        public string GetGender()
-        {
-            return Gender;
-        }
-
-        public string GetMajor()
-        {
-            return Major;
-        }
-
         // Add current course
         public void addccourse(Course course)
         {
