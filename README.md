@@ -9,7 +9,7 @@ Student Registration System in Windows Presentation Foundation (WPF).
   - Data persistence utilizing XML file
   - Serializing and deserializing objects 
   - Class inheritance
-  - Implementing my first User Interface (UI), although not a very good one
+  - Implementing my first User Interface (UI)
   - Using a design pattern would have helped with tight coupling in the project
     - Model-View-ViewModel (MVVM)
 
