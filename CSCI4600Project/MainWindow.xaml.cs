@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace CSCI4600Project
@@ -16,15 +17,22 @@ namespace CSCI4600Project
 
         XmlDocument doc = new XmlDocument();
 
-        // May need to change file path if cloning application
         string filePath = "./Data.xml";
 
         public MainWindow()
         {
             InitializeComponent();
 
-            // Load XML file
-            doc.Load(filePath);
+            if (!File.Exists(filePath))
+            {
+                XElement rootNode = new XElement("RegistrationClass");
+                rootNode.Save(filePath);
+            }
+            else
+            {
+                // Load XML file
+                doc.Load(filePath);
+            }
         }
 
         // Navigate to Registration Window

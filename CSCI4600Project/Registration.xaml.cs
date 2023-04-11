@@ -70,6 +70,14 @@ namespace CSCI4600Project
                     // Save RegistrationClass object to xml file
                     XMLFile.WriteToXmlFile<RegistrationClass>(filePath, registration);
 
+                    // Clear fields
+                    FirstNameText.Text = "";
+                    LastNameText.Text = "";
+                    PasswordText.Text = "";
+                    MajorComboBox.Text = "";
+                    MaleRadio.IsChecked = false;
+                    StudentCheck.IsChecked = false;
+
                     MessageBox.Show("Student registered", "Registration successful", MessageBoxButton.OK);
                 }
 
@@ -81,6 +89,14 @@ namespace CSCI4600Project
 
                     // Save RegistrationClass object to xml file
                     XMLFile.WriteToXmlFile<RegistrationClass>(filePath, registration);
+
+                    // Clear fields
+                    FirstNameText.Text = "";
+                    LastNameText.Text = "";
+                    PasswordText.Text = "";
+                    MajorComboBox.Text = "";
+                    MaleRadio.IsChecked = false;
+                    StaffCheck.IsChecked = false;
 
                     MessageBox.Show("Staff registered", "Registration successful", MessageBoxButton.OK);
                 }
